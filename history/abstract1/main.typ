@@ -24,5 +24,3 @@
 }
 
 Hello, world!
-
-#image("assets/typst.png")

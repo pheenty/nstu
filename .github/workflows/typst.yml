@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-        #with: # this is needed so we can apply MAX_AGE (see below)
-        #  fetch-depth: 0 # commented out by default so the example in this template is always compiled
+        with: # this is needed so we can apply MAX_AGE (see below)
+          fetch-depth: 0
       - run: git lfs pull
       - uses: hustcer/setup-nu@v3
       - uses: typst-community/setup-typst@v5
