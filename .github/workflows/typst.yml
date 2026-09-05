@@ -1,0 +1,33 @@
+name: Compile and Deploy Typst
+
+on:
+  push:
+    branches: [ "master" ]
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  typst:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        #with: # this is needed so we can apply MAX_AGE (see below)
+        #  fetch-depth: 0 # commented out by default so the example in this template is always compiled
+      - run: git lfs pull
+      - uses: hustcer/setup-nu@v3
+      - uses: typst-community/setup-typst@v5
+      # if you need extra fonts you can use fontist tool (or just repos where possible)
+      #- uses: fontist/setup-fontist@v2
+      #- run: fontist install "Times New Roman" --confirm-license
+      - run: .github/workflows/compile_typst.nu
+        env:
+          # only compile documents that were changed less than long ago to save on build time
+          # this includes other files in the directory with the main.typ
+          # to disable, just comment out the fetch-depth (above)
+          MAX_AGE: "45day"
+          PDFS: "_site"
+          TYPST_FONT_PATHS: "~/.fontist/fonts"
+      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/deploy-pages@v4
