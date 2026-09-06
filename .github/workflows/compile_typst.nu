@@ -10,7 +10,7 @@ ls **/main.typ
     # we also want to include documents whose assets were changed,
     # but we do not want to compile everything if a template was changed.
     let dir = $in | path dirname
-    let changed_at = ^git log --format=%ci $dir | into datetime
+    let changed_at = ^git log --max-count=1 --format=%ci $dir | into datetime
     $changed_at > $oldest
 }
 | par-each {
