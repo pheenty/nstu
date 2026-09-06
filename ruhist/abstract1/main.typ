@@ -9,19 +9,19 @@
 
 = Введение
 
-#lorem(200) согласно @orlov2018 @kirillov2016 @vorobjeva2019
+#lorem(250)
 
 #pagebreak()
 
 = Основная часть
 
-#lorem(300)
+#lorem(750) согласно @orlov2018 @kirillov2016 @vorobjeva2019
 
 #pagebreak()
 
-= Вывод
+= Заключение
 
-#lorem(100)
+#lorem(250)
 
 #pagebreak()
 
