@@ -96,6 +96,7 @@ $ y = f(x) | x, y in RR $
     {x in RR | x > 0}\, alpha in {x in RR without ZZ | x <= 0},
   ) $
 
+  #v(3cm)
   #plot(($y = x^2$,), (x => calc.pow(x, 2),))
 ]
 
@@ -106,6 +107,7 @@ $ y = f(x) | x, y in RR $
 
   Очень распространена экспонента --- $y = e^x$. Кстати, это единственная функция, чья производная $f prime$ равна ей самой, то есть $(d f(x)) / (d x) = f(x)$.
 
+  #v(3cm)
   #plot(($y = e^x$,), (calc.exp,), xs: (-7, 3))
 ]
 
@@ -120,6 +122,7 @@ $ y = f(x) | x, y in RR $
   - Десятичные $log_10 x = lg x$
   - Двоичные $log_2 x$ // no lb gg
 
+  #v(3cm)
   #let ln(x) = if x > 0 { calc.ln(x) } else { -65 } // it wants function defined on whole domain
   #plot(($y = ln x$,), (ln,), xs: (-1, 9), ys: (-7, 3))
 ]
@@ -132,6 +135,7 @@ $ y = f(x) | x, y in RR $
 
   Синус и косинус имеют область значений $[-1; 1]$ и период $2 pi$. Тангенс и котангенс же имеют период $pi$, а также бесконечное количество точек разрыва второго порядка.
 
+  #v(3cm)
   #plot((
     $y = sin x$, $y = cos x$
   ), (
@@ -164,6 +168,7 @@ $ y = f(x) | x, y in RR $
 - *Параметрическое* задание: координаты задаются через _параметр_ $t$:
   $ y(x) = cases(x = f(t), y = g(t)) $
 
+  #v(3cm)
   #plot((
     $y(x) = cases(x = cos t, y = sin t)$,
   ), (
@@ -180,6 +185,7 @@ $ y = f(x) | x, y in RR $
 
   Положение точки задается расстоянием $rho$ и углом $theta$. Связь с декартовыми координатами: $x = rho cos theta$, $y = rho sin theta$.
 
+  #v(3cm)
   #plot((
     $rho = theta$,
   ), (

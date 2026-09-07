@@ -34,7 +34,7 @@
         // holy fucking shit
         // todo unhardcode
         let offset = (5.3, 6.6)
-        let circles = 5
+        let circles = 7
 
         for r in range(1, circles) {
           circle(offset, radius: r, stroke: (dash: "dotted"))
