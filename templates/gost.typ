@@ -14,8 +14,9 @@
 
   set par(
     leading: 0.75em,
+    spacing: 0.75em,
     justify: true,
-    first-line-indent: 1.25cm,
+    first-line-indent: (amount: 1.25cm, all: true),
   )
 
   set heading(numbering: "1.1.")
@@ -24,14 +25,18 @@
     set align(center)
 
     let unnumbered = ("Введение", "Источники", "Заключение")
-    let it = if unnumbered.contains(it.body.text) {
-      counter(heading).update(n => n - 1) // Roll the heading number back
+    let it = if unnumbered.contains(it.body.at("text", default: none) ) {
+      counter(heading).update(n => n - 1) // roll the heading number back
       it.body
     } else {
       it
     }
 
-    block(above: 1.5em, below: 1em, it)
+    block(
+      above: 1.5em,
+      below: 1.5em,
+      it
+    )
   }
 
   body

@@ -13,11 +13,7 @@
 
     Доклад по дисциплине "История России" \
 
-    #if seminary != none {
-      text[
-        #seminary \
-      ]
-    }
+    #seminary \
 
     #v(2fr)
 
@@ -29,9 +25,7 @@
   align(right)[
     Доклад
     #if authors.len() > 1 { "подготовили студенты" } else { "подготовил студент" } \
-    #for author in authors.sorted() [
-      #author \
-    ]
+    #authors.sorted().join(linebreak()) \
     группы АИ-62 \
 
     #v(1fr)
