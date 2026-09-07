@@ -22,8 +22,9 @@
       y-tick-step: 1, y-min: ys.at(0), y-max: ys.at(1),
       legend-style: (padding: .3,),
       {
-        for (fn, label) in fns.zip(labels) {
-          plot.add(fn, domain: xs, label: label, samples: 250)
+        for (num, (fn, label)) in fns.zip(labels).enumerate() {
+          let style = if calc.rem(num, 2) != 0 {(stroke: (dash: "dashed"))} else {(:)} // default
+          plot.add(fn, domain: xs, label: label, samples: 333, style: style )
         }
       }
     )
