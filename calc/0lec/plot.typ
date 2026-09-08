@@ -1,4 +1,4 @@
-// might want to make this generic for future math stuff but for now it's in linalg/0lec
+// might want to make this generic for future math stuff but for now it's here
 // todo: combine kinds of math into one dir? idk
 
 #let plot(
