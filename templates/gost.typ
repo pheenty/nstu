@@ -24,7 +24,7 @@
     set text(weight: "bold", size: 14pt, hyphenate: false)
     set align(center)
 
-    let unnumbered = ("Введение", "Источники", "Заключение")
+    let unnumbered = ("Введение", "Заключение")
     let it = if unnumbered.contains(it.body.at("text", default: none) ) {
       counter(heading).update(n => n - 1) // roll the heading number back
       it.body

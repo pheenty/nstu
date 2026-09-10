@@ -1,7 +1,7 @@
 #let title_page(
   theme,
   seminary: none,
-  authors: ("Фёдор Лукин",),
+  authors: ("Лукин Фёдор",),
 ) = {
   set text(hyphenate: false)
   align(center)[

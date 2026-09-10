@@ -1,0 +1,29 @@
+vorobjeva2019:
+  type: book
+  author: Воробьева, Э. А.
+  title: История России с начала государственности до 1917 г.
+  publisher: Издательство НГТУ
+  date: 2019
+  location: Новосибирск
+  page-total: 379
+
+kirillov2016:
+  type: book
+  author:
+    - Кириллов, В. В.
+    - Бравина, М. А.
+  title: "История России: учебник для СПО"
+  publisher: Издательство Юрайт
+  date: 2016
+  location: М.
+  page-total: 502
+
+orlov2018:
+  type: book
+  # fucking crutch for evading gost "Орлов А. С. и др."
+  title: "История России: учебник / А. С. Орлов, В. А. Георгиев, Н. Г. Георгиева, Т. А. Сивохина"
+  publisher: Издательство Проспект
+  date: 2018
+  location: М.
+  edition: 4
+  page-total: 528
