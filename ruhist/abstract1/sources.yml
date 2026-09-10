@@ -3,8 +3,7 @@
   author: Петрухин, В. Я.
   title: "«Из варяг в греки»: начало исторического пути России"
   parent:
-    title: "Славянский альманах"
-    issue: 1996
+    title: Славянский альманах
   date: 1997
   url: https://cyberleninka.ru/article/n/iz-varyag-v-greki-nachalo-istoricheskogo-puti-rossii
 
@@ -13,26 +12,26 @@
   author:
     - Максимова, Е. Р.
     - Муканалиева, А. Р.
-  title: "Крещение Руси"
+  title: Крещение Руси
   parent:
-    title: "Бюллетень медицинских Интернет-конференций"
+    title: Бюллетень медицинских Интернет-конференций
     volume: 5
     issue: 12
-    issn: "2224-6150"
+    issn: 2224-6150
   date: 2015
-  page: "1571"
+  pages: 1571
   url: https://cyberleninka.ru/article/n/kreschenie-rusi
 
 великоепосольство:
   type: article
-  author: Гольцева, Татьяна Николаевна
+  author: Гольцева, Т. Н.
   title: "«Великое посольство» 1697–1698 гг. как опыт личного восприятия Петром I западноевропейской архитектуры"
   parent:
-    title: "Architecture and Modern Information Technologies"
+    title: Architecture and Modern Information Technologies
     volume: 60
     issue: 3
   date: 2022
-  page: "40-64"
+  page: 40-64
   doi: 10.24412/1998-4839-2022-3-40-64
   url: https://cyberleninka.ru/article/n/velikoe-posolstvo-1697-1698-gg-kak-opyt-lichnogo-vospriyatiya-petrom-i-zapadnoevropeyskoy-arhitektury
 
@@ -43,10 +42,10 @@
     - Горшкова, Н. Д.
   title: "Реформы Петра I: содержание и их влияние на развитие России"
   parent:
-    title: "Международный журнал гуманитарных и естественных наук"
-    issue: 11-3
+    title: Международный журнал гуманитарных и естественных наук
+    issue: 11 (3)
   date: 2021
-  page: "97-100"
+  page: 97-100
   doi: 10.24411/2500-1000-2021-1135
   url: https://cyberleninka.ru/article/n/reformy-petra-i-soderzhanie-i-ih-vliyanie-na-razvitie-rossii
 
@@ -57,18 +56,17 @@
     - Богданов, С. В.
   title: "Венский конгресс 1814–1815 годов и его участники: коммуникативные инструменты, ошибки, достижения"
   parent:
-    title: "Государственное управление. Электронный вестник"
+    title: Государственное управление. Электронный вестник
     issue: 40
   date: 2013-10
   url: https://cyberleninka.ru/article/n/venskiy-kongress-1814-1815-godov-i-ego-uchastniki-kommunikativnye-instrumenty-oshibki-dostizheniya
 
 ссср:
   type: article
-  author: Еремин, Андрей Геннадьевич
-  title: "Участие СССР в переделе сфер влияния в период формирования биполярной системы международных отношений (1945–1964 гг.)"
+  author: Еремин, А. Г.
+  title: Участие СССР в переделе сфер влияния в период формирования биполярной системы международных отношений (1945–1964 гг.)
   parent:
-    title: "Историческая и социально-образовательная мысль"
-    volume: 11
-    issue: 1
+    title: Историческая и социально-образовательная мысль
+    issue: 1 (11)
   date: 2012
   url: https://cyberleninka.ru/article/n/uchastie-sssr-v-peredele-sfer-vliyaniya-v-period-formirovaniya-bipolyarnoy-sistemy-mezhdunarodnyh-otnosheniy-1945-1964-gg
