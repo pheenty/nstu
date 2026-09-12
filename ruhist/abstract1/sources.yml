@@ -5,6 +5,7 @@
   parent:
     title: Славянский альманах
   date: 1997
+  page-range: 63-67
   url: https://cyberleninka.ru/article/n/iz-varyag-v-greki-nachalo-istoricheskogo-puti-rossii
 
 крещение:
@@ -19,7 +20,7 @@
     issue: 12
     issn: 2224-6150
   date: 2015
-  pages: 1571
+  page-range: 1571
   url: https://cyberleninka.ru/article/n/kreschenie-rusi
 
 великоепосольство:
@@ -31,7 +32,7 @@
     volume: 60
     issue: 3
   date: 2022
-  page: 40-64
+  page-range: 40-64
   doi: 10.24412/1998-4839-2022-3-40-64
   url: https://cyberleninka.ru/article/n/velikoe-posolstvo-1697-1698-gg-kak-opyt-lichnogo-vospriyatiya-petrom-i-zapadnoevropeyskoy-arhitektury
 
@@ -45,7 +46,7 @@
     title: Международный журнал гуманитарных и естественных наук
     issue: 11 (3)
   date: 2021
-  page: 97-100
+  page-range: 97-99
   doi: 10.24411/2500-1000-2021-1135
   url: https://cyberleninka.ru/article/n/reformy-petra-i-soderzhanie-i-ih-vliyanie-na-razvitie-rossii
 
@@ -59,6 +60,7 @@
     title: Государственное управление. Электронный вестник
     issue: 40
   date: 2013-10
+  page-range: 237-271
   url: https://cyberleninka.ru/article/n/venskiy-kongress-1814-1815-godov-i-ego-uchastniki-kommunikativnye-instrumenty-oshibki-dostizheniya
 
 ссср:
@@ -69,4 +71,5 @@
     title: Историческая и социально-образовательная мысль
     issue: 1 (11)
   date: 2012
+  page-range: 31-33
   url: https://cyberleninka.ru/article/n/uchastie-sssr-v-peredele-sfer-vliyaniya-v-period-formirovaniya-bipolyarnoy-sistemy-mezhdunarodnyh-otnosheniy-1945-1964-gg
