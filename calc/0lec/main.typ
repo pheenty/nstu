@@ -1,5 +1,5 @@
 #import "../../templates/gost.typ": format
-#import "plot.typ": plot
+#import "../plot.typ": plot
 
 #show: format
 
@@ -58,18 +58,18 @@ $ y = f(x) | x, y in RR $
 Элементы поведения функций --- некоторые свойства, присущие функции на определенном множестве аргументов или на всей её области определения $D(f)$.
 
 1. *Знакопостоянство:*
-   - Функция _положительна_ на множестве аргументов $A$, если $forall x in A : f(x) > 0$.
-   - Функция _отрицательна_, если $forall x in A : f(x) < 0$.
+  - Функция _положительна_ на множестве аргументов $A$, если $forall x in A : f(x) > 0$.
+  - Функция _отрицательна_, если $forall x in A : f(x) < 0$.
 2. *Монотонность:*
-   - Функция _возрастает_, если $forall x_1, x_2 in A : x_1 < x_2 => f(x_1) < f(x_2)$.
-   - Функция _убывает_, если $forall x_1, x_2 in A : x_1 < x_2 => f(x_1) > f(x_2)$.
+  - Функция _возрастает_, если $forall x_1, x_2 in A : x_1 < x_2 => f(x_1) < f(x_2)$.
+  - Функция _убывает_, если $forall x_1, x_2 in A : x_1 < x_2 => f(x_1) > f(x_2)$.
 3. *Ограниченность:*
-   - Функция _ограничена сверху_, если $exists M: forall x in A: f(x) < M$.
-   - Функция _ограничена снизу_, если $exists m: forall x in A: f(x) > m$.
+  - Функция _ограничена сверху_, если $exists M: forall x in A: f(x) < M$.
+  - Функция _ограничена снизу_, если $exists m: forall x in A: f(x) > m$.
 4. *Периодичность:* Функция _периодична_, если $exists T != 0: forall x in A: f(x) = f(x+T)$.
 5. *Четность и нечетность:*
-   - Функция _чётная_, если $forall x in A : f(-x) = f(x)$.
-   - Функция _нечетная_, если $forall x in A : f(-x) = -f(x)$.
+  - Функция _чётная_, если $forall x in A : f(-x) = f(x)$.
+  - Функция _нечетная_, если $forall x in A : f(-x) = -f(x)$.
 
 = Обратная и сложная функции
 
@@ -89,12 +89,14 @@ $ y = f(x) | x, y in RR $
   Область определения зависит от показателя степени.
 
   // not technically fully correct but whatever
-  $ D(f) = cases(
-    RR\, alpha in NN,
-    RR without {0}\, alpha in ZZ without NN,
-    {x in RR | x >= 0}\, alpha in {x in RR without ZZ | x > 0},
-    {x in RR | x > 0}\, alpha in {x in RR without ZZ | x <= 0},
-  ) $
+  $
+    D(f) = cases(
+      RR\, alpha in NN,
+      RR without {0}\, alpha in ZZ without NN,
+      {x in RR | x >= 0}\, alpha in {x in RR without ZZ | x > 0},
+      {x in RR | x > 0}\, alpha in {x in RR without ZZ | x <= 0},
+    )
+  $
 
   #v(3cm)
   #plot(($y = x^2$,), (x => calc.pow(x, 2),))
@@ -136,14 +138,18 @@ $ y = f(x) | x, y in RR $
   Синус и косинус имеют область значений $[-1; 1]$ и период $2 pi$. Тангенс и котангенс же имеют период $pi$, а также бесконечное количество точек разрыва второго порядка.
 
   #v(3cm)
-  #plot((
-    $y = sin x$, $y = cos x$
-  ), (
-    calc.sin, calc.cos,
-  ),
+  #plot(
+    (
+      $y = sin x$,
+      $y = cos x$,
+    ),
+    (
+      calc.sin,
+      calc.cos,
+    ),
     xs: (-3.5, 3.5),
     ys: (-1.5, 1.5),
-    trig: true
+    trig: true,
   )
 
   /* it sucks because of discontinuities
@@ -161,22 +167,24 @@ $ y = f(x) | x, y in RR $
 ]
 
 #block(breakable: false)[
-= Явно и неявно заданные функции. Параметрическое задание функций
+  = Явно и неявно заданные функции. Параметрическое задание функций
 
-- *Явное* задание: функция записана в виде $y = f(x)$.
-- *Неявное* задание: функция задана уравнением $F(x, y) = 0$.
-- *Параметрическое* задание: координаты задаются через _параметр_ $t$:
-  $ y(x) = cases(x = f(t), y = g(t)) $
+  - *Явное* задание: функция записана в виде $y = f(x)$.
+  - *Неявное* задание: функция задана уравнением $F(x, y) = 0$.
+  - *Параметрическое* задание: координаты задаются через _параметр_ $t$:
+    $ y(x) = cases(x = f(t), y = g(t)) $
 
-  #v(3cm)
-  #plot((
-    $y(x) = cases(x = cos t, y = sin t)$,
-  ), (
-    t => (calc.cos(t), calc.sin(t)),
-  ),
-    xs: (0, 6.3),
-    ys: (-1.05, 1.05),
-  )
+    #v(3cm)
+    #plot(
+      (
+        $y(x) = cases(x = cos t, y = sin t)$,
+      ),
+      (
+        t => (calc.cos(t), calc.sin(t)),
+      ),
+      xs: (0, 6.3),
+      ys: (-1.05, 1.05),
+    )
 ]
 
 
@@ -186,13 +194,15 @@ $ y = f(x) | x, y in RR $
   Положение точки задается расстоянием $rho$ и углом $theta$. Связь с декартовыми координатами: $x = rho cos theta$, $y = rho sin theta$.
 
   #v(3cm)
-  #plot((
-    $rho = theta$,
-  ), (
-    theta => (theta * calc.cos(theta), theta * calc.sin(theta)),
-  ),
+  #plot(
+    (
+      $rho = theta$,
+    ),
+    (
+      theta => (theta * calc.cos(theta), theta * calc.sin(theta)),
+    ),
     xs: (0, 12),
     ys: (-12, 8),
-    polar: true
+    polar: true,
   )
 ]

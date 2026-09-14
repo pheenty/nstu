@@ -1,4 +1,46 @@
-изварягвгреки:
+# Учебники
+
+учебник-воробьева:
+  type: book
+  author: Воробьева, Э. А.
+  title: История России с начала государственности до 1917 г.
+  publisher:
+    name: Издательство НГТУ
+    location: Новосибирск
+  date: 2019
+  page-total: 379
+
+учебник-кириллов:
+  type: book
+  author:
+    - Кириллов, В. В.
+    - Бравина, М. А.
+  title: "История России: учебник для СПО" # для СВО
+  publisher:
+    name: Юрайт
+    location: М.
+  date: 2016
+  page-total: 502
+
+учебник-орлов:
+  type: book
+  author:
+    - Орлов, А. С.
+    - Георгиев, В. А.
+    - Георгиева, Н. Г.
+    - Сивохина, Т. А.
+  note: many # это пиздец
+  title: "История России: учебник"
+  date: 2018
+  publisher:
+    name: Проспект
+    location: М.
+  edition: 4
+  page-total: 528
+
+# 1 реферат
+
+из-варяг-в-греки:
   type: article
   author: Петрухин, В. Я.
   title: "«Из варяг в греки»: начало исторического пути России"
@@ -8,7 +50,7 @@
   page-range: 63-67
   url: https://cyberleninka.ru/article/n/iz-varyag-v-greki-nachalo-istoricheskogo-puti-rossii
 
-крещение:
+крещение-руси:
   type: article
   author:
     - Максимова, Е. Р.
@@ -23,7 +65,7 @@
   page-range: 1571
   url: https://cyberleninka.ru/article/n/kreschenie-rusi
 
-великоепосольство:
+великое-посольство:
   type: article
   author: Гольцева, Т. Н.
   title: "«Великое посольство» 1697–1698 гг. как опыт личного восприятия Петром I западноевропейской архитектуры"
@@ -33,10 +75,9 @@
     issue: 3
   date: 2022
   page-range: 40-64
-  doi: 10.24412/1998-4839-2022-3-40-64
   url: https://cyberleninka.ru/article/n/velikoe-posolstvo-1697-1698-gg-kak-opyt-lichnogo-vospriyatiya-petrom-i-zapadnoevropeyskoy-arhitektury
 
-реформыпетра1:
+реформы-петра1:
   type: article
   author:
     - Калашникова, Е. Б.
@@ -47,10 +88,9 @@
     issue: 11 (3)
   date: 2021
   page-range: 97-99
-  doi: 10.24411/2500-1000-2021-1135
   url: https://cyberleninka.ru/article/n/reformy-petra-i-soderzhanie-i-ih-vliyanie-na-razvitie-rossii
 
-венскийконгресс:
+венский-конгресс:
   type: article
   author:
     - Хазин, А. Л.
@@ -63,7 +103,7 @@
   page-range: 237-271
   url: https://cyberleninka.ru/article/n/venskiy-kongress-1814-1815-godov-i-ego-uchastniki-kommunikativnye-instrumenty-oshibki-dostizheniya
 
-ссср:
+биполярка-ссср:
   type: article
   author: Еремин, А. Г.
   title: Участие СССР в переделе сфер влияния в период формирования биполярной системы международных отношений (1945–1964 гг.)

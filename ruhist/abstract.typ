@@ -1,45 +1,56 @@
-#let title_page(
+#import "../templates/gost.typ": format
+
+#let abstract(
   theme,
   seminary: none,
   authors: ("Лукин Фёдор",),
+  body,
 ) = {
-  set text(hyphenate: false)
-  align(center)[
+  show: format
+  set bibliography(title: [Список литературы], style: "ponomarev.csl")
 
-    Федеральное государственное бюджетное образовательное учреждение высшего образования \
-    "Новосибирский государственный технический университет" \
+  {
+    set text(hyphenate: false)
+    align(center)[
 
-    #v(3fr)
+      Федеральное государственное бюджетное образовательное учреждение высшего образования \
+      "Новосибирский государственный технический университет" \
 
-    Доклад по дисциплине "История России" \
+      #v(3fr)
 
-    #seminary \
+      Доклад по дисциплине "История России" \
 
-    #v(2fr)
+      #seminary \
 
-    Тема: #theme \
+      #v(2fr)
 
-    #v(2fr)
-  ]
+      Тема: #theme \
 
-  align(right)[
-    Доклад
-    #if authors.len() > 1 { "подготовили студенты" } else { "подготовил студент" } \
-    #authors.sorted().join(linebreak()) \
-    группы АИ-62 \
+      #v(2fr)
+    ]
 
-    #v(1fr)
+    align(right)[
+      Доклад
+      #if authors.len() > 1 { "подготовили студенты" } else {
+        "подготовил студент"
+      } \
+      #authors.sorted().join(linebreak()) \
+      группы АИ-62 \
 
-    Проверил: старший преподаватель \
-    Пономарев Илья Игоревич \
-  ]
+      #v(1fr)
 
-  v(2fr)
+      Проверил: старший преподаватель \
+      Пономарев Илья Игоревич \
+    ]
 
-  align(center)[
-    Новосибирск
-    #datetime.today().year()
-  ]
+    v(2fr)
+
+    align(center)[
+      Новосибирск
+      #datetime.today().year()
+    ]
+  }
 
   pagebreak()
+  body
 }

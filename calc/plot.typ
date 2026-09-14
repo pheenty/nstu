@@ -17,16 +17,22 @@
     plot.plot(
       size: (11, 11),
       axis-style: if polar { none } else { "school-book" },
-      x-tick-step: if trig { calc.pi/2 } else { 1 },
-      x-format: if trig { plot.formats.multiple-of } else { plot.formats.decimal },
-      y-tick-step: 1, y-min: ys.at(0), y-max: ys.at(1),
-      legend-style: (padding: .3,),
+      x-tick-step: if trig { calc.pi / 2 } else { 1 },
+      x-format: if trig { plot.formats.multiple-of } else {
+        plot.formats.decimal
+      },
+      y-tick-step: 1,
+      y-min: ys.at(0),
+      y-max: ys.at(1),
+      legend-style: (padding: .3),
       {
         for (num, (fn, label)) in fns.zip(labels).enumerate() {
-          let style = if calc.rem(num, 2) != 0 {(stroke: (dash: "dashed"))} else {(:)} // default
-          plot.add(fn, domain: xs, label: label, samples: 333, style: style )
+          let style = if calc.rem(num, 2) != 0 {
+            (stroke: (dash: "dashed"))
+          } else { (:) } // default
+          plot.add(fn, domain: xs, label: label, samples: 333, style: style)
         }
-      }
+      },
     )
 
     if polar {
@@ -41,7 +47,14 @@
         }
         for angle in range(0, 360, step: 45) {
           let r = angle * calc.pi / 180
-          line(offset, (offset.at(0) + circles * calc.cos(r), offset.at(1) + circles * calc.sin(r)), stroke: (dash: "dotted"))
+          line(
+            offset,
+            (
+              offset.at(0) + circles * calc.cos(r),
+              offset.at(1) + circles * calc.sin(r),
+            ),
+            stroke: (dash: "dotted"),
+          )
         }
       })
     }
