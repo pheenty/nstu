@@ -34,7 +34,7 @@
       #if authors.len() > 1 { "подготовили студенты" } else {
         "подготовил студент"
       } \
-      #authors.sorted().join(linebreak()) \
+      #authors.sorted(key: (content => content.text)).join(linebreak()) \
       группы АИ-62 \
 
       #v(1fr)

@@ -172,25 +172,25 @@
 
       <choose>
         <if variable="publisher-place publisher" match="any">
-          <group prefix=". – " delimiter=", ">
+          <group prefix=". — " delimiter=", ">
             <text macro="publisher"/>
             <text macro="issued-year"/>
           </group>
         </if>
         <else-if variable="issued">
-          <text macro="issued-year" prefix=". – "/>
+          <text macro="issued-year" prefix=". — "/>
         </else-if>
       </choose>
 
       <choose>
         <if macro="locators">
-          <text macro="locators" prefix=". – "/>
+          <text macro="locators" prefix=". — "/>
         </if>
       </choose>
 
       <choose>
         <if macro="page">
-          <text macro="page" prefix=". – "/>
+          <text macro="page" prefix=". — "/>
         </if>
       </choose>
 
