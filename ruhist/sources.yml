@@ -1,5 +1,3 @@
-# Учебники
-
 учебник-воробьева:
   type: book
   author: Воробьева, Э. А.
@@ -38,9 +36,7 @@
   edition: 4
   page-total: 528
 
-# 1 реферат
-
-из-варяг-в-греки:
+1-из-варяг-в-греки:
   type: article
   author: Петрухин, В. Я.
   title: "«Из варяг в греки»: начало исторического пути России"
@@ -50,7 +46,7 @@
   page-range: 63-67
   url: https://cyberleninka.ru/article/n/iz-varyag-v-greki-nachalo-istoricheskogo-puti-rossii
 
-крещение-руси:
+1-крещение-руси:
   type: article
   author:
     - Максимова, Е. Р.
@@ -65,7 +61,7 @@
   page-range: 1571
   url: https://cyberleninka.ru/article/n/kreschenie-rusi
 
-великое-посольство:
+1-великое-посольство:
   type: article
   author: Гольцева, Т. Н.
   title: "«Великое посольство» 1697–1698 гг. как опыт личного восприятия Петром I западноевропейской архитектуры"
@@ -77,7 +73,7 @@
   page-range: 40-64
   url: https://cyberleninka.ru/article/n/velikoe-posolstvo-1697-1698-gg-kak-opyt-lichnogo-vospriyatiya-petrom-i-zapadnoevropeyskoy-arhitektury
 
-реформы-петра1:
+1-реформы-петра1:
   type: article
   author:
     - Калашникова, Е. Б.
@@ -90,7 +86,7 @@
   page-range: 97-99
   url: https://cyberleninka.ru/article/n/reformy-petra-i-soderzhanie-i-ih-vliyanie-na-razvitie-rossii
 
-венский-конгресс:
+1-венский-конгресс:
   type: article
   author:
     - Хазин, А. Л.
@@ -103,7 +99,7 @@
   page-range: 237-271
   url: https://cyberleninka.ru/article/n/venskiy-kongress-1814-1815-godov-i-ego-uchastniki-kommunikativnye-instrumenty-oshibki-dostizheniya
 
-биполярка-ссср:
+1-биполярка-ссср:
   type: article
   author: Еремин, А. Г.
   title: Участие СССР в переделе сфер влияния в период формирования биполярной системы международных отношений (1945–1964 гг.)
@@ -113,3 +109,36 @@
   date: 2012
   page-range: 31-33
   url: https://cyberleninka.ru/article/n/uchastie-sssr-v-peredele-sfer-vliyaniya-v-period-formirovaniya-bipolyarnoy-sistemy-mezhdunarodnyh-otnosheniy-1945-1964-gg
+
+2-русские-и-печенеги:
+  type: article
+  author: Киселева, Марина Владимировна
+  title: "Русские и печенеги: от конфликта к конфедерации"
+  parent:
+    title: Вестник ТГУ
+    issue: 7 (63)
+  date: 2008
+  page-range: 321-326
+  url: https://cyberleninka.ru/article/n/russkie-i-pechenegi-ot-konflikta-k-konfederatsii
+
+2-становление-руси:
+  type: article
+  author: Поляков, Александр Николаевич
+  title: Становление территории Древней Руси
+  parent:
+    title: Вестник ОГУ
+    issue: 4 (140)
+  date: 2012
+  page-range: 95-102
+  url: https://cyberleninka.ru/article/n/stanovlenie-territorii-drevney-rusi
+
+2-брачная-дипломатия-рюриковичей:
+  type: article
+  author: Чугунная, Елена Сергеевна
+  title: Брачная дипломатия Рюриковичей как фактор укрепления международных отношений
+  parent:
+    title: The Newman in Foreign Policy
+    issue: 33 (77)
+  date: 2016
+  page-range: 49-51
+  url: https://cyberleninka.ru/article/n/brachnaya-diplomatiya-ryurikovichey-kak-faktor-ukrepleniya-mezhdunarodnyh-otnosheniy
