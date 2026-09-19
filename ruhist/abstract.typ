@@ -3,7 +3,7 @@
 #let abstract(
   theme,
   seminary: none,
-  authors: ("Лукин Фёдор",),
+  authors: ([Лукин Фёдор],),
   body,
 ) = {
   show: format
@@ -34,7 +34,7 @@
       #if authors.len() > 1 { "подготовили студенты" } else {
         "подготовил студент"
       } \
-      #authors.sorted(key: (content => content.text)).join(linebreak()) \
+      #authors.sorted(key: (content => content.text)).join([,\ ]) \
       группы АИ-62 \
 
       #v(1fr)

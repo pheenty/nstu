@@ -51,7 +51,7 @@ void f_16(int *A, int a) {
 // -1 for error
 int f_17(int *A, int len) {
   if (len < 30000) {
-    return -1;
+    return EXIT_FAILURE;
   }
 
   int a, j, k, s, n;
@@ -257,7 +257,7 @@ void f_29(int *A, int n, int v) {
 }
 
 void f_30(int *A, int n, int v, int m) {
-    int i, a, s, j;
+  int i, a, s, j;
 
   for (i = 0, a = 2; a < v && i < m - 1; a++) {
     for (s = 0, j = 0; j < i; j++)
@@ -273,76 +273,76 @@ void f_30(int *A, int n, int v, int m) {
   A[i] = 0;
 }
 
-/*
-void f_31() {
+// -1 for err
+int f_31(int *c, int n) {
+  int i, j;
 
   for (i = 0; i < n - 1; i++)
-
     for (j = i + 1; j < n; j++)
-
       if (c[i] == c[j])
         return i;
 
-  return -1;
+  return EXIT_FAILURE;
 }
 
-void f_32() {
+// -1 for err
+int f_32(int *c, int n) {
+  int s, i, k, j, b = -1;
 
   for (s = 0, i = 0; i < n; i++) {
-
     for (k = 0, j = 0; j < n; j++)
-
       if (c[i] == c[j])
         k++;
 
     if (k > s)
       s = k, b = i;
   }
+
+  return b;
 }
 
-void f_33() {
+// -1 for err
+int f_33(int *A, int n) {
+  int s, i, k, j, b = -1;
 
   for (s = 0, i = 0; i < n - 1; i++)
-
     if (A[i] == A[i + 1]) {
-
       for (k = 2; i + k < n && A[i] == A[i + k]; k++)
         ;
 
       if (k > s)
         s = k, b = i;
     }
+
+  return b;
 }
 
-void f_34() {
+int f_34(int n) {
+  int k, m;
 
   for (k = 0, m = 1; m <= n; k++, m = m * 2)
     ;
 
   return k - 1;
 }
-}
 
-void f_35() {
+void f_35(int *c, int n) {
+  int k, i, j;
 
-  for (i = 0, j = n - 1; i < j; i++, j--)
-
-  {
+  for (i = 0, j = n - 1; i < j; i++, j--) {
     k = c[i];
     c[i] = c[j];
     c[j] = k;
   }
 }
 
-void f_36() {
+// -1 for err
+int f_36(int *c, int n, int k1, int k2) {
+  int i, j;
 
   for (i = 0; i < n; i++) {
-
     for (j = k1 = k2 = 0; j < n; j++)
-
-      if (c[i] != c[j])
-
-      {
+      if (c[i] != c[j]) {
         if (c[i] < c[j])
           k1++;
         else
@@ -353,9 +353,10 @@ void f_36() {
       return i;
   }
 
-  return -1;
+  return EXIT_FAILURE;
 }
 
+/*
 void f_37() {
 
   for (s = 0, i = 0; i < n - 1; i++) {
@@ -401,9 +402,7 @@ void f_39() {
 }
 
 void f_40() {
-
   for (s = 0, i = 0; i < n && A[i] > 0; i++)
-
     s = s + A[i];
 }
 
@@ -671,7 +670,7 @@ void print_buf(int *buf, int len) {
 int main(int argc, char *argv[]) {
   if (argc < 2) {
     eprintf("Usage: prac1 <num>");
-    return -1;
+    return EXIT_FAILURE;
   }
 
   int result;
@@ -684,7 +683,7 @@ int main(int argc, char *argv[]) {
   int *buf2 = malloc(buf_len * sizeof(int));
   if (buf == NULL || buf2 == NULL) {
     eprintf("Alloc fault");
-    return -1;
+    return EXIT_FAILURE;
   } else {
     for (int i = 0; i < buf_len; i++) {
       buf[i] = 1; // same ^
@@ -694,7 +693,7 @@ int main(int argc, char *argv[]) {
 
   long fn = strtol(argv[1], NULL, 10);
   // if (errno != 0) {
-  //   return -1;
+  //   return EXIT_FAILURE;
   // }
 
   switch (fn) {
@@ -762,7 +761,7 @@ int main(int argc, char *argv[]) {
   case 30:
     f_30(buf, buf_len, arg, arg2);
     break;
-    /* case 31:
+  case 31:
     f_31();
     break;
   case 32:
@@ -780,76 +779,77 @@ int main(int argc, char *argv[]) {
   case 36:
     f_36();
     break;
+    /*
   case 37:
     f_37();
     break;
-  case 38:
-    f_38();
-    break;
-  case 39:
-    f_39();
-    break;
-  case 40:
-    f_40();
-    break;
-  case 41:
-    f_41();
-    break;
-  case 42:
-    f_42();
-    break;
-  case 43:
-    f_43();
-    break;
-  case 44:
-    f_44();
-    break;
-  case 45:
-    f_45();
-    break;
-  case 46:
-    f_46();
-    break;
-  case 47:
-    f_47();
-    break;
-  case 48:
-    f_48();
-    break;
-  case 49:
-    f_49();
-    break;
-  case 50:
-    f_50();
-    break;
-  case 51:
-    f_51();
-    break;
-  case 52:
-    f_52();
-    break;
-  case 53:
-    f_53();
-    break;
-  case 54:
-    f_54();
-    break;
-  case 55:
-    f_55();
-    break;
-  case 56:
-    f_56();
-    break;
-  case 57:
-    f_57();
-    break;
-  case 58:
-    f_58();
-    break; */
+case 38:
+        f_38();
+        break;
+      case 39:
+        f_39();
+        break;
+      case 40:
+        f_40();
+        break;
+      case 41:
+        f_41();
+        break;
+      case 42:
+        f_42();
+        break;
+      case 43:
+        f_43();
+        break;
+      case 44:
+        f_44();
+        break;
+      case 45:
+        f_45();
+        break;
+      case 46:
+        f_46();
+        break;
+      case 47:
+        f_47();
+        break;
+      case 48:
+        f_48();
+        break;
+      case 49:
+        f_49();
+        break;
+      case 50:
+        f_50();
+        break;
+      case 51:
+        f_51();
+        break;
+      case 52:
+        f_52();
+        break;
+      case 53:
+        f_53();
+        break;
+      case 54:
+        f_54();
+        break;
+      case 55:
+        f_55();
+        break;
+      case 56:
+        f_56();
+        break;
+      case 57:
+        f_57();
+        break;
+      case 58:
+        f_58();
+        break; */
   default:
     eprintf("task must be 13 to 58");
-    return -1;
+    return EXIT_FAILURE;
   }
 
-  return 0;
+  return EXIT_SUCCESS;
 }
