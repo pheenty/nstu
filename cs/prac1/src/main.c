@@ -762,22 +762,22 @@ int main(int argc, char *argv[]) {
     f_30(buf, buf_len, arg, arg2);
     break;
   case 31:
-    f_31();
+    f_31(buf, buf_len);
     break;
   case 32:
-    f_32();
+    f_32(buf, buf_len);
     break;
   case 33:
-    f_33();
+    f_33(buf, buf_len);
     break;
   case 34:
-    f_34();
+    f_34(arg);
     break;
   case 35:
-    f_35();
+    f_35(buf, buf_len);
     break;
   case 36:
-    f_36();
+    f_36(buf, buf_len, arg, arg2);
     break;
     /*
   case 37:
