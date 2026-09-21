@@ -6,7 +6,7 @@
   language: "ru",
   compact-mode: true,
   heading-color: black,
-  it
+  it,
 )
 
 = Краткая биография
