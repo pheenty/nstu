@@ -2,15 +2,14 @@
   set page(
     paper: "a4",
     margin: (left: 30mm, right: 15mm, top: 20mm, bottom: 20mm),
-    numbering: (..args) => {
-      let page = args.at(0)
+    numbering: (page, ..args) => {
       if page > 1 { page }
     },
     number-align: center,
   )
 
   set text(
-    font: "Liberation Serif",
+    font: "Liberation Serif", // technically should be Times New Roman but who gives a fuck
     size: 14pt,
     lang: "ru",
   )
@@ -27,7 +26,13 @@
     set text(weight: "bold", size: 14pt, hyphenate: false)
     set align(center)
 
-    let unnumbered = ("Введение", "Заключение")
+    let unnumbered = (
+      "Введение",
+      "Заключение",
+      "Источники",
+      "Список литературы",
+    )
+
     let it = if unnumbered.contains(it.body.at("text", default: none)) {
       counter(heading).update(n => n - 1) // roll the heading number back
       it.body
@@ -41,6 +46,8 @@
       it,
     )
   }
+
+  show " —": [~---] // why can't you just search by content bruh
 
   body
 }

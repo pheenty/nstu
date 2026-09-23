@@ -1,0 +1,179 @@
+учебник-воробьева:
+  type: book
+  author: Воробьева, Э. А.
+  title: История России с начала государственности до 1917 г.
+  publisher:
+    name: Издательство НГТУ
+    location: Новосибирск
+  date: 2019
+  page-total: 379
+
+учебник-кириллов:
+  type: book
+  author:
+    - Кириллов, В. В.
+    - Бравина, М. А.
+  title: "История России: учебник для СПО" # для СВО
+  publisher:
+    name: Юрайт
+    location: М.
+  date: 2016
+  page-total: 502
+
+учебник-орлов:
+  type: book
+  author:
+    - Орлов, А. С.
+    - Георгиев, В. А.
+    - Георгиева, Н. Г.
+    - Сивохина, Т. А.
+  note: many # это пиздец
+  title: "История России: учебник"
+  date: 2018
+  publisher:
+    name: Проспект
+    location: М.
+  edition: 4
+  page-total: 528
+
+1-из-варяг-в-греки:
+  type: article
+  author: Петрухин, В. Я.
+  title: "«Из варяг в греки»: начало исторического пути России"
+  parent:
+    title: Славянский альманах
+  date: 1997
+  page-range: 63-67
+  url: https://cyberleninka.ru/article/n/iz-varyag-v-greki-nachalo-istoricheskogo-puti-rossii
+
+1-крещение-руси:
+  type: article
+  author:
+    - Максимова, Е. Р.
+    - Муканалиева, А. Р.
+  title: Крещение Руси
+  parent:
+    title: Бюллетень медицинских Интернет-конференций
+    volume: 5
+    issue: 12
+    issn: 2224-6150
+  date: 2015
+  page-range: 1571
+  url: https://cyberleninka.ru/article/n/kreschenie-rusi
+
+1-великое-посольство:
+  type: article
+  author: Гольцева, Т. Н.
+  title: "«Великое посольство» 1697–1698 гг. как опыт личного восприятия Петром I западноевропейской архитектуры"
+  parent:
+    title: Architecture and Modern Information Technologies
+    volume: 60
+    issue: 3
+  date: 2022
+  page-range: 40-64
+  url: https://cyberleninka.ru/article/n/velikoe-posolstvo-1697-1698-gg-kak-opyt-lichnogo-vospriyatiya-petrom-i-zapadnoevropeyskoy-arhitektury
+
+1-реформы-петра1:
+  type: article
+  author:
+    - Калашникова, Е. Б.
+    - Горшкова, Н. Д.
+  title: "Реформы Петра I: содержание и их влияние на развитие России"
+  parent:
+    title: Международный журнал гуманитарных и естественных наук
+    issue: 11 (3)
+  date: 2021
+  page-range: 97-99
+  url: https://cyberleninka.ru/article/n/reformy-petra-i-soderzhanie-i-ih-vliyanie-na-razvitie-rossii
+
+1-венский-конгресс:
+  type: article
+  author:
+    - Хазин, А. Л.
+    - Богданов, С. В.
+  title: "Венский конгресс 1814–1815 годов и его участники: коммуникативные инструменты, ошибки, достижения"
+  parent:
+    title: Государственное управление. Электронный вестник
+    issue: 40
+  date: 2013-10
+  page-range: 237-271
+  url: https://cyberleninka.ru/article/n/venskiy-kongress-1814-1815-godov-i-ego-uchastniki-kommunikativnye-instrumenty-oshibki-dostizheniya
+
+1-биполярка-ссср:
+  type: article
+  author: Еремин, А. Г.
+  title: Участие СССР в переделе сфер влияния в период формирования биполярной системы международных отношений (1945–1964 гг.)
+  parent:
+    title: Историческая и социально-образовательная мысль
+    issue: 1 (11)
+  date: 2012
+  page-range: 31-33
+  url: https://cyberleninka.ru/article/n/uchastie-sssr-v-peredele-sfer-vliyaniya-v-period-formirovaniya-bipolyarnoy-sistemy-mezhdunarodnyh-otnosheniy-1945-1964-gg
+
+2-русские-и-печенеги:
+  type: article
+  author: Киселева, Марина Владимировна
+  title: "Русские и печенеги: от конфликта к конфедерации"
+  parent:
+    title: Вестник ТГУ
+    issue: 7 (63)
+  date: 2008
+  page-range: 321-326
+  url: https://cyberleninka.ru/article/n/russkie-i-pechenegi-ot-konflikta-k-konfederatsii
+
+2-становление-руси:
+  type: article
+  author: Поляков, Александр Николаевич
+  title: Становление территории Древней Руси
+  parent:
+    title: Вестник ОГУ
+    issue: 4 (140)
+  date: 2012
+  page-range: 95-102
+  url: https://cyberleninka.ru/article/n/stanovlenie-territorii-drevney-rusi
+
+2-брачная-дипломатия-рюриковичей:
+  type: article
+  author: Чугунная, Елена Сергеевна
+  title: Брачная дипломатия Рюриковичей как фактор укрепления международных отношений
+  parent:
+    title: The Newman in Foreign Policy
+    issue: 33 (77)
+  date: 2016
+  page-range: 49-51
+  url: https://cyberleninka.ru/article/n/brachnaya-diplomatiya-ryurikovichey-kak-faktor-ukrepleniya-mezhdunarodnyh-otnosheniy
+
+3-москва-тверь:
+  type: article
+  author: Андреева, Екатерина Александровна
+  title: "Противостояние Москвы и Твери на страницах Устюжской летописи: оригинальный взгляд на известные события"
+  parent:
+    title: ГДЛ
+    issue: 22
+  date: 2023
+  page-range: 385-406
+  url: https://cyberleninka.ru/article/n/protivostoyanie-moskvy-i-tveri-na-stranitsah-ustyuzhskoy-letopisi-originalnyy-vzglyad-na-izvestnye-sobytiya
+
+3-узбеки:
+  type: article
+  author: Селезнев, Юрий Васильевич
+  title: "Московский князь в походе хана Узбека: штрихи к хронологии пребывания в Орде князя Юрия Даниловича Московского и Владимирского"
+  parent:
+    title: ИАЭК
+    volume: 21
+    issue: 4
+  date: 2025
+  page-range: 416-422
+  url: https://cyberleninka.ru/article/n/moskovskiy-knyaz-v-pohode-hana-uzbeka-shtrihi-k-hronologii-prebyvaniya-v-orde-knyazya-yuriya-danilovicha-moskovskogo-i
+
+3-этника-приневья:
+  type: article
+  author: Чибисов, Борис Игоревич
+  title: Этнический состав населения Приневья и южного Приладожья в конце XV в.
+  parent:
+    title: Финно-угорский мир
+    volume: 12
+    issue: 1
+  date: 2020
+  page-range: 62-72
+  url: https://cyberleninka.ru/article/n/etnicheskiy-sostav-naseleniya-prinevya-i-yuzhnogo-priladozhya-v-kontse-xv-v
