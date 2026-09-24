@@ -1,13 +1,13 @@
-#import "shared.typ": Size
-
 #let format(body) = {
   set page(
     paper: "a4",
-    margin: (left: 20mm, right: 20mm, top: 20mm, bottom: 25mm),
-    numbering: (page, ..args) => {
-      if page > 1 { page }
+    margin: (top: 20mm, outside: 15mm, rest: 25mm),
+    footer: context {
+      // "book" numbering
+      let real_page = here().page()
+      let outside = if calc.even(real_page) { left } else { right } // why is it not built in
+      if real_page > 1 { align(outside)[#counter(page).get().first()] }
     },
-    number-align: center,
   )
 
   set text(

@@ -1,11 +1,10 @@
 #let format(body) = {
   set page(
     paper: "a4",
-    margin: (left: 30mm, right: 15mm, top: 20mm, bottom: 20mm),
+    margin: (left: 30mm, right: 15mm, rest: 20mm),
     numbering: (page, ..args) => {
       if page > 1 { page }
     },
-    number-align: center,
   )
 
   set text(

@@ -1,50 +1,50 @@
 #import "../templates/gost.typ"
-#import "../templates/shared.typ": *
+#import "../templates/title.typ": *
 
 #let abstract(
   theme,
   seminary: none,
   authors: ([Лукин Фёдор],),
+  group: [АИ-62],
+  year: datetime.today().year(),
   body,
 ) = context {
   show: gost.format
-  start(size: Size.Big)[
-    #block[
-      Федеральное государственное бюджетное образовательное учреждение высшего образования \
-      "Новосибирский государственный технический университет" \
+  title[
+    Федеральное государственное бюджетное образовательное учреждение \ высшего образования \
+    "Новосибирский государственный технический университет"
 
-      #v(3fr)
+    #v(3fr)
 
-      Доклад по дисциплине "История России" \
+    Доклад по дисциплине "История России" \
+    #seminary
 
-      #seminary \
+    #v(2fr)
 
-      #v(2fr)
+    Тема: #theme
 
-      Тема: #theme \
+    #v(2fr)
 
-      #v(2fr)
+    #align(right)[
+      Доклад #if authors.len() > 1 [подготовили студенты] else [подготовил студент] \
+      #authors.sorted(key: (content => content.text)).join[,\ ] \
+      группы #group
 
-      #align(right)[
-        Доклад #if authors.len() > 1 { [подготовили студенты] } else { [подготовил студент] } \
-        #authors.sorted(key: (content => content.text)).join([,\ ]) \
-        группы АИ-62 \
+      #v(1fr)
 
-        #v(1fr)
-
-        Проверил: старший преподаватель \
-        Пономарев Илья Игоревич \
-      ]
-
-      #v(2fr)
-
-      Новосибирск #datetime.today().year()
+      Проверил: старший преподаватель \
+      Пономарев Илья Игоревич
     ]
+
+    #v(2fr)
+
+    Новосибирск #year
   ]
 
   body
   pagebreak()
 
+  // biblography shit
   layout(size => {
     // i don't fucking know why 10 but it doesn't work if it's less
     let exists(bib) = measure(bib, width: page.width).height > 10pt
