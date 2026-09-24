@@ -1,4 +1,5 @@
 #import "../templates/gost.typ"
+#import "../templates/shared.typ": *
 
 #let abstract(
   theme,
@@ -7,11 +8,8 @@
   body,
 ) = context {
   show: gost.format
-
-  {
-    set text(hyphenate: false)
-    align(center)[
-
+  start(size: Size.Big)[
+    #block[
       Федеральное государственное бюджетное образовательное учреждение высшего образования \
       "Новосибирский государственный технический университет" \
 
@@ -26,28 +24,24 @@
       Тема: #theme \
 
       #v(2fr)
+
+      #align(right)[
+        Доклад #if authors.len() > 1 { [подготовили студенты] } else { [подготовил студент] } \
+        #authors.sorted(key: (content => content.text)).join([,\ ]) \
+        группы АИ-62 \
+
+        #v(1fr)
+
+        Проверил: старший преподаватель \
+        Пономарев Илья Игоревич \
+      ]
+
+      #v(2fr)
+
+      Новосибирск #datetime.today().year()
     ]
+  ]
 
-    align(right)[
-      Доклад #if authors.len() > 1 { [подготовили студенты] } else { [подготовил студент] } \
-      #authors.sorted(key: (content => content.text)).join([,\ ]) \
-      группы АИ-62 \
-
-      #v(1fr)
-
-      Проверил: старший преподаватель \
-      Пономарев Илья Игоревич \
-    ]
-
-    v(2fr)
-
-    align(center)[
-      Новосибирск
-      #datetime.today().year()
-    ]
-  }
-
-  pagebreak()
   body
   pagebreak()
 

@@ -1,3 +1,5 @@
+#import "shared.typ": Size
+
 #let format(body) = {
   set page(
     paper: "a4",
@@ -28,32 +30,4 @@
   }
 
   body
-}
-
-#let Size = (
-  "Big": 0, // title on its own page and outline on the new one
-  "Medium": 1, // title and outline on one page
-  "Small": 2, // embedded title
-)
-
-#let start(title, size: Size.Small) = {
-  if size == Size.Big {
-    v(5fr)
-    start(title, size: Size.Small) // yes
-    v(8fr)
-    pagebreak()
-    outline()
-    pagebreak()
-  } else if size == Size.Medium {
-    v(5fr)
-    start(title, size: Size.Small)
-    v(8fr)
-    outline()
-    v(3fr)
-    pagebreak()
-  } else if size == Size.Small {
-    align(center, title)
-  } else {
-    panic("invalid size")
-  }
 }
