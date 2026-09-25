@@ -1,5 +1,5 @@
 #let title(body, with_outline: false) = {
-  set heading(outlined: false)
+  set heading(numbering: none, outlined: false)
   set text(hyphenate: false)
 
   if with_outline {
