@@ -15,7 +15,6 @@
 }
 
 #let uni_title(
-  type,
   theme,
   authors: ([Лукин Фёдор],),
   checker,
@@ -23,18 +22,15 @@
   uni: [ Федеральное государственное бюджетное образовательное учреждение \ высшего образования \ "Новосибирский государственный технический университет" ],
   city: [Новосибирск],
   authors_fmt: (authors, group) => [
-    #if authors.len() > 1 [Подготовили студенты] else [Подготовил студент] \
-    #authors.join[,\ ] \
-    группы #group
+    #if authors.len() > 1 [Выполнили студенты] else [Выполнил студент] группы #group \
+    #authors.join[,\ ]
   ],
-  checker_fmt: checker => [ Проверил: #checker ],
+  checker_fmt: checker => [ Проверил #checker ],
   year: datetime.today().year(),
 ) = {
   title[
     #uni
     #v(3fr)
-    #type
-    #v(2fr)
     #theme
     #v(2fr)
     #align(right)[

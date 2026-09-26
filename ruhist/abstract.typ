@@ -11,8 +11,12 @@
 ) = context {
   show: gost.format
   uni_title(
-    [ Доклад по дисциплине "История России" \ #seminary ],
-    [ Тема: #theme ],
+    [
+      Доклад по дисциплине "История России" \
+      #seminary
+      #v(2fr)
+      Тема: #theme
+    ],
     authors: authors,
     [старший преподаватель \ Пономарев Илья Игоревич ],
     authors_fmt: (
