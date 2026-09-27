@@ -16,8 +16,8 @@
 
 #let uni_title(
   theme,
-  authors: ([Лукин Фёдор],),
-  checker,
+  authors: ([Лукин Фёдор Петрович],),
+  reviewer,
   group: [АИ-62],
   uni: [ Федеральное государственное бюджетное образовательное учреждение \ высшего образования \ "Новосибирский государственный технический университет" ],
   city: [Новосибирск],
@@ -25,18 +25,17 @@
     #if authors.len() > 1 [Выполнили студенты] else [Выполнил студент] группы #group \
     #authors.join[,\ ]
   ],
-  checker_fmt: checker => [ Проверил #checker ],
   year: datetime.today().year(),
 ) = {
   title[
     #uni
     #v(3fr)
-    #theme
+    #theme.intersperse(v(2fr)).sum()
     #v(2fr)
     #align(right)[
       #authors_fmt(authors, group)
       #v(1fr)
-      #checker_fmt(checker)
+      #reviewer
     ]
     #v(2fr)
     #city #year
