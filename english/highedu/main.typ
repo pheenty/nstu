@@ -18,7 +18,7 @@
   meanwhile
   align(
     center + bottom,
-     link(src, image("assets/" + path, height: 40%) + caption),
+    link(src, image("assets/" + path, height: 40%) + caption),
   )
 }
 
@@ -32,7 +32,11 @@
 - One of the most prominent universities in the country is *Novosibirsk State University (NSU)*.
 #pause
 - NSU is uniquely located in *Akademgorodok* (lit. Academic Town) within Novosibirsk, surrounded by world-class research institutes.
-#img("highedu.jpg", "https://unsplash.com/photos/graduates-in-light-blue-gowns-iggWDxHTAUQ", "Photo by Joshua Hoehne on Unsplash")
+#img(
+  "highedu.jpg",
+  "https://unsplash.com/photos/graduates-in-light-blue-gowns-iggWDxHTAUQ",
+  "Photo by Joshua Hoehne on Unsplash",
+)
 
 = History of the Foundation
 
@@ -62,7 +66,11 @@
 - *Student Body:* ~8,600 students, including 1,400 international students from nearly 60 countries.
 #pause
 - *Schedule System:* Two-week system with six 90-minute class blocks (09:00 -- 19:45) to minimize gaps between lectures.
-#img("chalkboard.jpg", "https://unsplash.com/photos/a-chalkboard-with-some-writing-on-it-gYrYa37fAKI", "Photo by Artturi Jalli on Unsplash")
+#img(
+  "chalkboard.jpg",
+  "https://unsplash.com/photos/a-chalkboard-with-some-writing-on-it-gYrYa37fAKI",
+  "Photo by Artturi Jalli on Unsplash",
+)
 
 == Career Paths & Employment
 The graduate employment rate is *close to 100%*:
