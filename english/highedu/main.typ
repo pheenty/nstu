@@ -14,6 +14,14 @@
 
 #title-slide()
 
+#let img(path, src, caption) = {
+  meanwhile
+  align(
+    center + bottom,
+     link(src, image("assets/" + path, height: 40%) + caption),
+  )
+}
+
 = Introduction
 
 == Higher Education in Russia
@@ -24,6 +32,7 @@
 - One of the most prominent universities in the country is *Novosibirsk State University (NSU)*.
 #pause
 - NSU is uniquely located in *Akademgorodok* (lit. Academic Town) within Novosibirsk, surrounded by world-class research institutes.
+#img("highedu.jpg", "https://unsplash.com/photos/graduates-in-light-blue-gowns-iggWDxHTAUQ", "Photo by Joshua Hoehne on Unsplash")
 
 = History of the Foundation
 
@@ -53,6 +62,7 @@
 - *Student Body:* ~8,600 students, including 1,400 international students from nearly 60 countries.
 #pause
 - *Schedule System:* Two-week system with six 90-minute class blocks (09:00 -- 19:45) to minimize gaps between lectures.
+#img("chalkboard.jpg", "https://unsplash.com/photos/a-chalkboard-with-some-writing-on-it-gYrYa37fAKI", "Photo by Artturi Jalli on Unsplash")
 
 == Career Paths & Employment
 The graduate employment rate is *close to 100%*:
@@ -164,13 +174,14 @@ The graduate employment rate is *close to 100%*:
 #pause
 *Answer: A) Total Dictation*
 
+#focus-slide[
+  Thank you for your attention!
+]
+
 = References
 
 == Sources Used
 
-- *NSU Graduate Employment Statistics:* \ #link("https://www.nsu.ru/n/career/statistika/monitoring-trudoustroystva-vypusknikov-2024-2025/")
-- *About Novosibirsk State University & History:* \ #link("https://www.nsu.ru/n/university/")
-
-#focus-slide[
-  Thank you for your attention!
-]
+- *NSU Graduate Employment Statistics:* \ https://www.nsu.ru/n/career/statistika/monitoring-trudoustroystva-vypusknikov-2024-2025/
+- *About Novosibirsk State University & History:* \ https://www.nsu.ru/n/university/
+- *Graphical assets*: \ https://unsplash.com/
