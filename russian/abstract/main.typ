@@ -1,5 +1,5 @@
-#import "../../templates/gost.typ": format
-#import "../../templates/title.typ": uni_title
+#import "/templates/gost.typ": format
+#import "/templates/title.typ": uni_title
 
 #show: format
 #uni_title(

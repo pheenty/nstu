@@ -1,5 +1,5 @@
-#import "../templates/gost.typ"
-#import "../templates/title.typ": *
+#import "/templates/gost.typ"
+#import "/templates/title.typ": *
 
 #let abstract(
   theme,

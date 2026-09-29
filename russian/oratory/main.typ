@@ -1,5 +1,5 @@
-#import "../../templates/title.typ": *
-#import "../../templates/freeform.typ": format
+#import "/templates/title.typ": *
+#import "/templates/freeform.typ": format
 #show: format
 
 #v(5fr)
