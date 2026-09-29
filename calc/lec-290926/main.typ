@@ -9,7 +9,7 @@
 
 #v(1em)
 
-== Переменные сложных функций
+== Производные сложных функций
 $
   (f(x) g(x)) prime = f prime(x) * g(x) + f(x) * g prime(x) \
   (f(x) / g(x)) prime = (f prime(x) * g(x) - f(x) * g prime(x)) / (g(x))^2 \
