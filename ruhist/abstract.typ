@@ -10,6 +10,7 @@
   body,
 ) = context {
   show: gost.format
+  set enum(numbering: "1)")
 
   uni_title(
     (
