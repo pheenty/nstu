@@ -177,3 +177,36 @@
   date: 2020
   page-range: 62-72
   url: https://cyberleninka.ru/article/n/etnicheskiy-sostav-naseleniya-prinevya-i-yuzhnogo-priladozhya-v-kontse-xv-v
+
+4-качество-управления:
+  type: article
+  author: Братченко, Светлана Анатольевна
+  title: Качество государственного управления при Иване III и его преемниках (1462--1606 гг.)
+  parent:
+    title: Вопросы теоретической экономики
+    issue: 1
+  date: 2022
+  page-range: 163-185
+  url: https://cyberleninka.ru/article/n/kachestvo-gosudarstvennogo-upravleniya-pri-ivane-iii-i-ego-preemnikah-1462-1606-gg
+
+4-государь:
+  type: article
+  author: Корзинин, Александр Леонидович
+  title: «Государь всея Руси» Иван III и русская аристократия
+  parent:
+    title: Исторический формат
+    issue: 1 (5)
+  date: 2016
+  page-range: 163-180
+  url: https://cyberleninka.ru/article/n/gosudar-vseya-rusi-ivan-iii-i-russkaya-aristokratiya
+
+4-экономическая-политика:
+  type: article
+  author: Ярославцев, В. Г.
+  title: Экономическая политика Ивана III И Василия III
+  parent:
+    title: Экономика и социум
+    issue: 12 (43)
+  date: 2017
+  page-range: 1358-1360
+  url: https://cyberleninka.ru/article/n/ekonomicheskaya-politika-ivana-iii-i-vasiliya-iii

@@ -1,11 +1,9 @@
 #import "/templates/freeform.typ": format
-
 #show: format
 #set align(center + horizon)
 
 = Математический анализ
 Лекция 29.09.2026
-
 
 #v(1fr)
 == Правила дифференцирования

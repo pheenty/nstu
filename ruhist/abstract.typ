@@ -10,6 +10,7 @@
   body,
 ) = context {
   show: gost.format
+
   uni_title(
     (
       [ Доклад по дисциплине "История России" \ #seminary ],
