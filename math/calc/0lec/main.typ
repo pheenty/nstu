@@ -1,6 +1,7 @@
 #import "/templates/freeform.typ": format
-#import "/templates/title.typ": *
-#import "../plot.typ": plot
+#import "/templates/title.typ": title
+#import "../../plot.typ": plot_fn
+#import "../../utils.typ": *
 
 #show: format
 #title(
@@ -94,7 +95,7 @@ $ y = f(x) | x, y in RR $
   $
 
   #v(3cm)
-  #plot(($y = x^2$,), (x => calc.pow(x, 2),))
+  #plot_fn(($y = x^2$,), (x => calc.pow(x, 2),))
 ]
 
 #block(breakable: false)[
@@ -105,7 +106,7 @@ $ y = f(x) | x, y in RR $
   Очень распространена экспонента --- $y = e^x$. Кстати, это единственная функция, чья производная $f prime$ равна ей самой, то есть $(d f(x)) / (d x) = f(x)$.
 
   #v(3cm)
-  #plot(($y = e^x$,), (calc.exp,), xs: (-7, 3))
+  #plot_fn(($y = e^x$,), (calc.exp,), xs: (-7, 3))
 ]
 
 #block(breakable: false)[
@@ -117,11 +118,11 @@ $ y = f(x) | x, y in RR $
   Наиболее широкое применение имеют следующие виды логарифмов:
   - *Натуральные* $log_e x = ln x$
   - *Десятичные* $log_10 x = lg x$
-  - *Двоичные* $log_2 x$ // no lb gg
+  - *Двоичные* $log_2 x = lb x$
 
   #v(3cm)
   #let ln(x) = if x > 0 { calc.ln(x) } else { -65 } // it wants function defined on whole domain
-  #plot(($y = ln x$,), (ln,), xs: (-1, 9), ys: (-7, 3))
+  #plot_fn(($y = ln x$,), (ln,), xs: (-1, 9), ys: (-7, 3))
 ]
 
 
@@ -133,7 +134,7 @@ $ y = f(x) | x, y in RR $
   Синус и косинус имеют область значений $[-1; 1]$ и период $2 pi$. Тангенс и котангенс же имеют период $pi$, а также бесконечное количество точек разрыва второго порядка.
 
   #v(3cm)
-  #plot(
+  #plot_fn(
     (
       $y = sin x$,
       $y = cos x$,
@@ -170,7 +171,7 @@ $ y = f(x) | x, y in RR $
     $ y(x) = cases(x = f(t), y = g(t)) $
 
     #v(3cm)
-    #plot(
+    #plot_fn(
       (
         $y(x) = cases(x = cos t, y = sin t)$,
       ),
@@ -189,7 +190,7 @@ $ y = f(x) | x, y in RR $
   Положение точки задается расстоянием $rho$ и углом $theta$. Связь с декартовыми координатами: $x = rho cos theta$, $y = rho sin theta$.
 
   #v(3cm)
-  #plot(
+  #plot_fn(
     (
       $rho = theta$,
     ),

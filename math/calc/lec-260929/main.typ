@@ -1,4 +1,6 @@
 #import "/templates/freeform.typ": format
+#import "../../utils.typ": *
+
 #show: format
 #set align(center + horizon)
 
@@ -42,8 +44,7 @@
   $ (arcsin x) prime = 1 / sqrt(1 - x^2) $,
   $ (arccos x) prime = (-1) / sqrt(1 - x^2) $,
 
-  $ ("arctg" x) prime = 1 / (1 + x^2) $,
-  $ ("arcctg" x) prime = (-1) / (1 + x^2) $,
+  $ (arctg x) prime = 1 / (1 + x^2) $, $ (arcctg x) prime = (-1) / (1 + x^2) $,
 )
 
 #v(2fr)
