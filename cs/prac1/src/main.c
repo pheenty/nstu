@@ -38,6 +38,7 @@ int f_15(int a) {
   return s;
 }
 
+// impure
 void f_16(int *A, int a) {
   int i, n;
 
@@ -49,9 +50,10 @@ void f_16(int *A, int a) {
 }
 
 // -1 for error
+// impure
 int f_17(int *A, int len) {
   if (len < 30000) {
-    return EXIT_FAILURE;
+    return -1;
   }
 
   int a, j, k, s, n;
@@ -69,6 +71,7 @@ int f_17(int *A, int len) {
   return 0;
 }
 
+// impure
 void f_18(int *A, int v) {
   int j, a, s, n, k;
 
@@ -83,6 +86,7 @@ void f_18(int *A, int v) {
   }
 }
 
+// impure
 void f_19(int *A, int n) {
   int i, j;
 
@@ -97,6 +101,7 @@ void f_19(int *A, int n) {
   }
 }
 
+// impure
 void f_20(int *A, int n) {
   int i, k, j;
 
@@ -110,6 +115,7 @@ void f_20(int *A, int n) {
   n--; // ??
 }
 
+// impure
 void f_21(int *A, int v) {
   int i, a, n;
 
@@ -126,6 +132,7 @@ void f_21(int *A, int v) {
   A[i] = 0;
 }
 
+// impure
 void f_22(int *A, int v) {
   int i, a, n, s;
 
@@ -143,6 +150,7 @@ void f_22(int *A, int v) {
   A[i] = 0;
 }
 
+// impure B
 void f_23(int *A, int *B, int n) {
   int j, i, m;
 
@@ -159,6 +167,7 @@ void f_23(int *A, int *B, int n) {
   B[j] = 0;
 }
 
+// impure
 void f_24(int *A, int *B, int n) {
   int j, i, s, m;
 
@@ -176,6 +185,7 @@ void f_24(int *A, int *B, int n) {
   B[j] = 0;
 }
 
+// impure
 void f_25(int *A, int n) {
   int i, m, j;
 
@@ -195,6 +205,7 @@ void f_25(int *A, int n) {
   }
 }
 
+// impure
 void f_26(int *A, int n) {
   int j, i, s, m;
 
@@ -215,6 +226,7 @@ void f_26(int *A, int n) {
   }
 }
 
+// impure
 void f_27(int *A, int n, int val) {
   int i, m;
 
@@ -229,7 +241,7 @@ void f_27(int *A, int n, int val) {
   A[i] = 0;
 }
 
-void f_28(int *A, int n) {
+int f_28(int *A, int n) {
   int v, i, s;
 
   v = A[0] + 1;
@@ -242,11 +254,12 @@ void f_28(int *A, int n) {
         s = 1;
         break;
       }
-
   } while (s == 1);
+
+  return v;
 }
 
-void f_29(int *A, int n, int v) {
+int f_29(int *A, int n, int v) {
   int i;
 
   for (i = 0; i < n; i++)
@@ -254,8 +267,11 @@ void f_29(int *A, int n, int v) {
       v--;
       i = -1;
     }
+
+  return i;
 }
 
+// impure
 void f_30(int *A, int n, int v, int m) {
   int i, a, s, j;
 
@@ -282,7 +298,7 @@ int f_31(int *c, int n) {
       if (c[i] == c[j])
         return i;
 
-  return EXIT_FAILURE;
+  return -1;
 }
 
 // -1 for err
@@ -326,6 +342,7 @@ int f_34(int n) {
   return k - 1;
 }
 
+// impure
 void f_35(int *c, int n) {
   int k, i, j;
 
@@ -353,44 +370,44 @@ int f_36(int *c, int n, int k1, int k2) {
       return i;
   }
 
-  return EXIT_FAILURE;
+  return -1;
 }
 
-/*
-void f_37() {
+int f_37(int *c, int n) {
+  int s, i, j, m, b;
 
   for (s = 0, i = 0; i < n - 1; i++) {
-
     for (j = i + 1, m = 0; j < n; j++)
-
       if (c[i] == c[j])
         m++;
 
     if (m > s)
       s = m, b = i;
   }
+
+  return b;
 }
 
-void f_38() {
+int f_38(int *c, int n) {
+  int i, k, m, b;
 
   for (i = k = m = 0; i < n - 1; i++)
-
     if (c[i] == c[i + 1])
       k++;
-
     else {
-
       if (k > m)
         m = k, b = i - k - 1;
 
       k = 0;
     }
+
+  return b;
 }
 
-void f_39() {
+int f_39(int *A, int n) {
+  int s, i;
 
   for (s = 0, i = 0; i < n; i++) {
-
     if (A[i] < 0)
       continue;
 
@@ -399,56 +416,64 @@ void f_39() {
 
     s = s + A[i];
   }
+
+  return s;
 }
 
-void f_40() {
+int f_40(int *A, int n) {
+  int s, i;
+
   for (s = 0, i = 0; i < n && A[i] > 0; i++)
     s = s + A[i];
+
+  return s;
 }
 
-void f_41() {
+int f_41(int *A, int n) {
+  int k, s, i;
 
   for (k = 0, s = 0, i = 0; i < n && k == 0; i++) {
-
     if (A[i] < 0)
       k = 1;
 
     s = s + A[i];
   }
+
+  return s;
 }
 
-void f_42() {
+int f_42(int *A, int n) {
+  int s1, s2, i, j;
 
   for (s1 = 0, s2 = 0, i = 0, j = n - 1; i <= j;) {
-
     if (s1 < s2)
       s1 += A[i], i++;
-
     else
       s2 += A[j], j--;
   }
 
-  return i;
+  return i; // ?
 }
 
-void f_43() {
+int f_43(int *A, int n) {
+  int s, i;
 
   for (s = 0, i = 0; i < n; i++) {
-
     if (i % 2 == 0)
       s = s + A[i];
-
     else
       s = s - A[i];
   }
+
+  return s;
 }
 
-void f_44() {
+// impure B
+void f_44(int *A, int *B, int n) {
+  int j, k, i;
 
   for (j = 0; n != 0; j++) {
-
     for (k = 0, i = 1; i < n; i++)
-
       if (A[i] < A[k])
         k = i;
 
@@ -461,49 +486,46 @@ void f_44() {
   }
 }
 
-void f_45() {
+// impure A B
+void f_45(int *A, int *B, int n) {
+  int j, max, k, i;
 
   for (j = 0, max = A[0]; j < n; j++)
-
     if (A[j] > max)
       max = A[j];
 
   for (j = 0; j < n; j++) {
-
     for (k = 0, i = 1; i < n; i++)
-
       if (A[i] < A[k])
         k = i;
 
     B[j] = A[k];
-
     A[k] = max + 1;
   }
 }
 
-void f_46() {
+// impure
+void f_46(int *A, int n) {
+  int k, i, c;
 
   while (n != 0) {
-
     for (k = 0, i = 1; i < n; i++)
-
       if (A[i] < A[k])
         k = i;
 
     c = A[k];
     A[k] = A[n - 1];
     A[n - 1] = c;
-
     n--;
   }
 }
 
-void f_47() {
+// impure
+void f_47(int *A, int v) {
+  int j, a, k, s, n;
 
   for (j = 0, a = 10; a < v; a++) {
-
     for (s = 0, n = a, s = 0; n != 0; n = n / 10) {
-
       k = n % 10;
 
       if (k != 0 && a % k != 0) {
@@ -517,154 +539,197 @@ void f_47() {
   }
 }
 
-void f_48() {
+// impure
+void f_48(int *A, int n) {
+  int i, j;
 
   for (i = 0; i < n - 1; i++)
-
     if (A[i] == A[i + 1]) {
-
       for (j = i; j < n - 2; j++)
         A[j] = A[j + 2];
 
       n = n - 2;
-
       i--;
     }
 }
 
-void f_49() {
+// -1 for error
+int f_49(int *A, int n) {
+  if (n < 10)
+    return -1;
+
+  int i, k;
 
   for (i = 0, k = -1; i < 10; i++) {
-
     if (A[i] < 0)
       continue;
 
     if (k == -1)
       k = i;
-
-    else
-
-        if (A[i] < A[k])
+    else if (A[i] < A[k])
       k = i;
   }
+
+  return 0;
 }
 
-void f_50() {
+// -1 for error
+int f_50(int *A, int n) {
+  if (n < 10)
+    return -1;
+
+  int i, s, k;
 
   for (i = 0, s = 0, k = 0; i < 10; i++)
-
     if (A[i] < 0)
       k = 1;
-
     else {
-
       if (k == 1)
         s++;
 
       k = 0;
     }
+
+  return 0;
 }
 
-void f_51() {
+// -1 for error
+int f_51(int *A, int n) {
+  if (n < 10)
+    return -1;
+
+  int i, s;
 
   for (i = 0, s = 0; i < 10; i++)
-
     if (A[i] > s)
       s = A[i];
+
+  return s;
 }
 
-void f_52() {
+// -1 for error
+int f_52(int *A, int n) {
+  if (n < 10)
+    return -1;
+
+  int i, k;
 
   for (i = 1, k = 0; i < 10; i++)
-
     if (A[i] > A[k])
       k = i;
+
+  return k;
 }
 
-void f_53() {
+// -1 for error
+int f_53(int *A, int n) {
+  if (n < 10)
+    return -1;
 
-  for (i = 0, k = -1; i < 10; i++)
+  int i, k;
 
-  {
+  for (i = 0, k = -1; i < 10; i++) {
     if (A[i] < 0)
       continue;
 
     if (k == -1)
       k = i;
-
-    else
-
-        if (A[i] < A[k])
+    else if (A[i] < A[k])
       k = i;
   }
+
+  return k;
 }
 
-void f_54() {
+// -1 for error
+int f_54(int *A, int n) {
+  if (n < 10)
+    return -1;
 
-  for (i = 0, k = -1; i < 10; i++)
+  int i, k;
 
-  {
+  for (i = 0, k = -1; i < 10; i++) {
     if (A[i] < 0)
       continue;
 
     if (k == -1 || A[i] < A[k])
       k = i;
   }
+
+  return k;
 }
 
-void f_55() {
+// -1 for error
+int f_55(int *A, int n) {
+  if (n < 10)
+    return -1;
+
+  int i, s;
 
   for (i = 0, s = 0; i < 10; i++)
-
     if (A[i] > 0)
       s++;
+
+  return s;
 }
 
-void f_56() {
+// -1 for error
+int f_56(int *A, int n) {
+  if (n < 10)
+    return -1;
+
+  int i, s;
 
   for (i = 1, s = 0; i < 10; i++)
-
     if (A[i] > 0 && A[i - 1] < 0)
       s++;
+
+  return s;
 }
 
-void f_57() {
+// -1 for error
+int f_57(int *A, int n) {
+  if (n < 10)
+    return -1;
+
+  int i, s, k;
 
   for (i = 1, s = 0, k = 0; i < 10; i++) {
-
     if (A[i - 1] < A[i])
       k++;
-
     else {
-
       if (k > s)
         s = k;
 
       k = 0;
     }
   }
+
+  return s;
 }
 
-void f_58() {
+// -1 for error
+int f_58(int *A, int n) {
+  if (n < 10)
+    return -1;
+
+  int i, s, k;
 
   for (i = 0, s = 0, k = 0; i < 10; i++)
-
     if (A[i] < 0)
       k = 1;
-
-    else
-
-    {
+    else {
       if (k == 1)
         s++;
       k = 0;
     }
+
+  return s;
 }
-*/
 
 void print_buf(int *buf, int len) {
   for (int i = 0; i < len; i++)
-    printf("%d  ", buf[i]);
+    printf("%d ", buf[i]);
 }
 
 int main(int argc, char *argv[]) {
@@ -699,15 +764,15 @@ int main(int argc, char *argv[]) {
   switch (fn) {
   case 13:
     result = f_13(arg);
-    printf("s = %d", result);
+    printf("%d", result);
     break;
   case 14:
     result = f_14(arg);
-    printf("s = %d", result);
+    printf("%d", result);
     break;
   case 15:
     result = f_15(arg);
-    printf("s = %d", result);
+    printf("%d", result);
     break;
   case 16:
     f_16(buf, buf_len);
@@ -715,7 +780,7 @@ int main(int argc, char *argv[]) {
     break;
   case 17:
     result = f_17(buf, buf_len);
-    if (result == 0)
+    if (result == -1)
       eprintf("f17 error");
     else
       print_buf(buf, buf_len);
@@ -730,122 +795,202 @@ int main(int argc, char *argv[]) {
     break;
   case 20:
     f_20(buf, buf_len);
+    print_buf(buf, buf_len);
     break;
   case 21:
     f_21(buf, buf_len);
+    print_buf(buf, buf_len);
     break;
   case 22:
     f_22(buf, buf_len);
+    print_buf(buf, buf_len);
     break;
   case 23:
     f_23(buf, buf2, buf_len);
+    print_buf(buf2, buf_len);
     break;
   case 24:
     f_24(buf, buf2, buf_len);
+    print_buf(buf, buf_len);
     break;
   case 25:
     f_25(buf, buf_len);
+    print_buf(buf, buf_len);
     break;
   case 26:
     f_26(buf, buf_len);
+    print_buf(buf, buf_len);
     break;
   case 27:
     f_27(buf, buf_len, arg);
+    print_buf(buf, buf_len);
     break;
   case 28:
-    f_28(buf, buf_len);
+    result = f_28(buf, buf_len);
+    printf("%d", result);
     break;
   case 29:
-    f_29(buf, buf_len, arg);
+    result = f_29(buf, buf_len, arg);
+    printf("%d", result);
     break;
   case 30:
     f_30(buf, buf_len, arg, arg2);
+    print_buf(buf, buf_len);
     break;
   case 31:
-    f_31(buf, buf_len);
+    result = f_31(buf, buf_len);
+    if (result == -1)
+      eprintf("f31 error");
+    else
+      printf("%d", result);
     break;
   case 32:
-    f_32(buf, buf_len);
+    result = f_32(buf, buf_len);
+    if (result == -1)
+      eprintf("f32 error");
+    else
+      printf("%d", result);
     break;
   case 33:
-    f_33(buf, buf_len);
+    result = f_33(buf, buf_len);
+    if (result == -1)
+      eprintf("f33 error");
+    else
+      printf("%d", result);
     break;
   case 34:
-    f_34(arg);
+    result = f_34(arg);
+    printf("%d", result);
     break;
   case 35:
     f_35(buf, buf_len);
+    print_buf(buf, buf_len);
     break;
   case 36:
-    f_36(buf, buf_len, arg, arg2);
+    result = f_36(buf, buf_len, arg, arg2);
+    if (result == -1)
+      eprintf("f36 error");
+    else
+      printf("%d", result);
     break;
-    /*
   case 37:
-    f_37();
+    result = f_37(buf, buf_len);
+    printf("%d", result);
     break;
-case 38:
-        f_38();
-        break;
-      case 39:
-        f_39();
-        break;
-      case 40:
-        f_40();
-        break;
-      case 41:
-        f_41();
-        break;
-      case 42:
-        f_42();
-        break;
-      case 43:
-        f_43();
-        break;
-      case 44:
-        f_44();
-        break;
-      case 45:
-        f_45();
-        break;
-      case 46:
-        f_46();
-        break;
-      case 47:
-        f_47();
-        break;
-      case 48:
-        f_48();
-        break;
-      case 49:
-        f_49();
-        break;
-      case 50:
-        f_50();
-        break;
-      case 51:
-        f_51();
-        break;
-      case 52:
-        f_52();
-        break;
-      case 53:
-        f_53();
-        break;
-      case 54:
-        f_54();
-        break;
-      case 55:
-        f_55();
-        break;
-      case 56:
-        f_56();
-        break;
-      case 57:
-        f_57();
-        break;
-      case 58:
-        f_58();
-        break; */
+  case 38:
+    result = f_38(buf, buf_len);
+    printf("%d", result);
+    break;
+  case 39:
+    result = f_39(buf, buf_len);
+    printf("%d", result);
+    break;
+  case 40:
+    result = f_40(buf, buf_len);
+    printf("%d", result);
+    break;
+  case 41:
+    result = f_41(buf, buf_len);
+    printf("%d", result);
+    break;
+  case 42:
+    result = f_42(buf, buf_len);
+    printf("%d", result);
+    break;
+  case 43:
+    result = f_43(buf, buf_len);
+    printf("%d", result);
+    break;
+  case 44:
+    f_44(buf, buf2, buf_len);
+    print_buf(buf2, buf_len);
+    break;
+  case 45:
+    f_45(buf, buf2, buf_len);
+    print_buf(buf, buf_len);
+    print_buf(buf2, buf_len);
+    break;
+  case 46:
+    f_46(buf, buf_len);
+    print_buf(buf, buf_len);
+    break;
+  case 47:
+    f_47(buf, buf_len);
+    print_buf(buf, buf_len);
+    break;
+  case 48:
+    f_48(buf, buf_len);
+    print_buf(buf, buf_len);
+    break;
+  case 49:
+    result = f_49(buf, buf_len);
+    if (result == -1)
+      eprintf("f49 error");
+    break;
+  case 50:
+    result = f_50(buf, buf_len);
+    if (result == -1)
+      eprintf("f50 error");
+    else
+      printf("%d", result);
+
+    break;
+  case 51:
+    result = f_51(buf, buf_len);
+    if (result == -1)
+      eprintf("f51 error");
+    else
+      printf("%d", result);
+    break;
+  case 52:
+    result = f_52(buf, buf_len);
+    if (result == -1)
+      eprintf("f52 error");
+    else
+      printf("%d", result);
+    break;
+  case 53:
+    result = f_53(buf, buf_len);
+    if (result == -1)
+      eprintf("f53 error");
+    else
+      printf("%d", result);
+    break;
+  case 54:
+    result = f_54(buf, buf_len);
+    if (result == -1)
+      eprintf("f54 error");
+    else
+      printf("%d", result);
+    break;
+  case 55:
+    result = f_55(buf, buf_len);
+    if (result == -1)
+      eprintf("f55 error");
+    else
+      printf("%d", result);
+    break;
+  case 56:
+    result = f_56(buf, buf_len);
+    if (result == -1)
+      eprintf("f56 error");
+    else
+      printf("%d", result);
+    break;
+  case 57:
+    result = f_57(buf, buf_len);
+    if (result == -1)
+      eprintf("f57 error");
+    else
+      printf("%d", result);
+    break;
+  case 58:
+    result = f_58(buf, buf_len);
+    if (result == -1)
+      eprintf("f58 error");
+    else
+      printf("%d", result);
+    break;
   default:
     eprintf("task must be 13 to 58");
     return EXIT_FAILURE;

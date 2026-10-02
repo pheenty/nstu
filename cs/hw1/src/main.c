@@ -26,7 +26,7 @@ int get_len() {
 
 void print_buf(int *buf, int len) {
   for (int i = 0; i < len; i++)
-    printf("%d  ", buf[i]);
+    printf("%d ", buf[i]);
 }
 
 void ub(int *buf, int len) { print_buf(buf + len, MAX_LEN - len); }
