@@ -570,7 +570,7 @@ int f_49(int *A, int n) {
       k = i;
   }
 
-  return 0;
+  return k;
 }
 
 // -1 for error
