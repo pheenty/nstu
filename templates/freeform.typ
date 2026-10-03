@@ -26,6 +26,8 @@
     lang: "ru",
   )
 
+  show raw: set text(font: "New Computer Modern Mono")
+
   set par(justify: true)
 
   show heading: title => {

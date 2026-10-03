@@ -13,6 +13,8 @@
     lang: "ru",
   )
 
+  show raw: set text(font: "Liberation Mono")
+
   set par(
     leading: 0.75em,
     spacing: 0.75em,
@@ -48,7 +50,8 @@
     )
   }
 
-  show " —": [~---] // why can't you just search by content bruh
+  // why can't you just search by content bruh
+  show sym.space + sym.dash.em: [~---]
 
   body
 }

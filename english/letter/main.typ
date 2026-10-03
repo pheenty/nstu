@@ -2,7 +2,7 @@
 #show: letterloom.with(
   from-name: "Theodore Lukin",
   from-address: [
-    Room 7-402 of NSTU \
+    Room 7-401 of NSTU \
     Novosibirsk, Russia \
   ],
   to-name: "John Friend",
@@ -17,10 +17,8 @@
   subject: title(smallcaps("Regarding our higher education")),
   closing: "Sincerely yours,",
   signatures: (
-    (
       name: "Theodore Lukin",
       signature: image("assets/signature.svg", width: 20%),
-    ),
   ),
   main-font: "New Computer Modern Mono",
 )
@@ -34,14 +32,14 @@ In accordance with your previous query regarding my academic pursuits, I am plea
 Specifically, I have matriculated into the Faculty of Automation and Computer Engineering, commonly referred to as AVTF.
 Currently we are getting expertise in a modern programming language known as COBOL, and I have programmed my first application recently:
 
-#align(center, block(fill: luma(240), inset: 1em, stroke: luma(0))[
+#align(center, block(fill: luma(245), inset: 1em, stroke: luma(0))[
   #show raw: set text(size: 1.25em, font: "New Computer Modern Mono")
   ```
-  000100    IDENTIFICATION DIVISION.
-  000200        PROGRAM-ID. HELLO-WORLD.
-  000300        PROCEDURE DIVISION.
-  000400            DISPLAY "HELLO, WORLD!".
-  000500            GOBACK.
+  000100  IDENTIFICATION DIVISION.
+  000200  PROGRAM-ID. HELLO-WORLD.
+  000300  PROCEDURE DIVISION.
+  000400  DISPLAY "HELLO, WORLD!".
+  000500  STOP RUN.
   ```
 ])
 
