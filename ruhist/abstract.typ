@@ -13,7 +13,7 @@
   show list: _ => panic(
     "НЕНУМЕРОВАННЫЙ СПИСОК НАРУШАЕТ ЛИТЕРАТУРНУЮ ЧИСТОТУ РЕФЕРАТА.",
   )
-  show regex(`\s-+|-+\s`.text): _ => panic(
+  show regex(`\s-|-\s`.text): _ => panic(
     "ОБНАРУЖЕНО НЕПОЛНОЦЕННОЕ ТИРЕ ВОЗЛЕ СВЯЩЕННОГО ПРОБЕЛА.",
   )
 
@@ -34,11 +34,11 @@
   )
 
   body
-  pagebreak()
+  pagebreak(weak: true)
 
   // biblography shit
   layout(size => {
-    // i don't fucking know why 10 but it doesn't work if it's less
+    // i don't fucking know why but it's 9.17pt if it doesn't exist
     let exists(bib) = measure(bib, width: page.width).height > 10pt
 
     // still need to have them in the document for measuring them, so can't just assign the title directly
