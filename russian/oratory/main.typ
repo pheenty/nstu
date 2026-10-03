@@ -1,4 +1,4 @@
-#import "/templates/title.typ": *
+#import "/templates/utils.typ": *
 #import "/templates/freeform.typ": format
 #show: format
 

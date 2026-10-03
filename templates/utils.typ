@@ -42,3 +42,5 @@
   ]
   pagebreak()
 }
+
+#let signature = align(right + bottom)[Лукин Фёдор, АИ-62]

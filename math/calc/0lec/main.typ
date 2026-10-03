@@ -1,5 +1,5 @@
 #import "/templates/freeform.typ": format
-#import "/templates/title.typ": title
+#import "/templates/utils.typ": title
 #import "../../plot.typ": plot_fn
 #import "../../utils.typ": *
 
