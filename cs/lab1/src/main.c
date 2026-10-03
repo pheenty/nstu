@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #define eprintf(args...) fprintf(stderr, ##args)
 
+// TODO: read through all of that and figure out what the fuck it does it do, gg
+
 int f_13(int a) {
   int n, s, k;
 
@@ -728,8 +730,10 @@ int f_58(int *A, int n) {
 }
 
 void print_buf(int *buf, int len) {
-  for (int i = 0; i < len; i++)
+  for (int i = 0; i < len; i++) {
     printf("%d ", buf[i]);
+    if (buf[i] == 1) break;
+  }
 }
 
 int main(int argc, char *argv[]) {
@@ -995,6 +999,9 @@ int main(int argc, char *argv[]) {
     eprintf("task must be 13 to 58");
     return EXIT_FAILURE;
   }
+
+  free(buf);
+  free(buf2);
 
   return EXIT_SUCCESS;
 }
