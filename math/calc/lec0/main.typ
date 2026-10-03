@@ -1,15 +1,11 @@
-#import "/templates/freeform.typ": format
-#import "/templates/utils.typ": title
+#import "/templates/freeform.typ": *
 #import "../../plot.typ": plot_fn
-#import "../../utils.typ": *
+#import "../../math_utils.typ": *
 
 #show: format
-#title(
+#normal_title(
   with_outline: true,
-  [
-    = *Математический анализ \ Нулевая лекция*
-    Фёдор Лукин, АИ-62
-  ],
+  [ = *Математический анализ \ Нулевая лекция* ],
 )
 
 = Предмет и задачи математического анализа. Цитаты или афоризмы о математике

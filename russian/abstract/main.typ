@@ -1,5 +1,4 @@
-#import "/templates/gost.typ": format
-#import "/templates/utils.typ": uni_title
+#import "/templates/gost.typ": *
 
 #show: format
 #uni_title(

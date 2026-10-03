@@ -1,16 +1,21 @@
-#import "/templates/gost.typ"
-#import "/templates/utils.typ": *
+#import "/templates/gost.typ": *
 
 #let abstract(
   theme,
   seminary: none,
-  authors: ([Лукин Фёдор],),
+  authors: ([Лукин Фёдор], [Садков Артём], [Потапов Артём]),
   group: [АИ-62],
   year: datetime.today().year(),
   body,
 ) = context {
-  show: gost.format
+  show: format
   set enum(numbering: "1)")
+  show list: _ => panic(
+    "НЕНУМЕРОВАННЫЙ СПИСОК НАРУШАЕТ ЛИТЕРАТУРНУЮ ЧИСТОТУ РЕФЕРАТА.",
+  )
+  show regex(`\s-+|-+\s`.text): _ => panic(
+    "ОБНАРУЖЕНО НЕПОЛНОЦЕННОЕ ТИРЕ ВОЗЛЕ СВЯЩЕННОГО ПРОБЕЛА.",
+  )
 
   uni_title(
     (

@@ -1,13 +1,15 @@
-#import "/templates/freeform.typ": format
-#import "../../utils.typ": *
+#import "/templates/freeform.typ": *
+#import "../../math_utils.typ": *
 
 #show: format
 #set align(center + horizon)
 
-= Математический анализ
-Лекция 29.09.2026
+#normal_title[
+  = Математический анализ
+  Лекция 29.09.2026
+]
+#v(2fr)
 
-#v(1fr)
 == Правила дифференцирования
 #table(
   columns: 2,

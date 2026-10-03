@@ -1,15 +1,13 @@
-#import "/templates/freeform.typ": format
-#import "/templates/utils.typ": title
-#import "../../plot.typ": plot_points
-#import "../../utils.typ": *
+#import "/templates/freeform.typ": *
+#import "../../plot.typ": plot_pts
+#import "../../math_utils.typ": *
 #import "@preview/auto-div:0.1.0": poly-div
 
 #show: format
 #set grid(columns: (1fr, 1fr))
 
-#title[
+#normal_title[
   = Индивидуальное домашнее задание
-  АИ-62, Лукин Фёдор
   $ "Вариант" = 12 => k = 3; m = 1 $
 ]
 
@@ -75,7 +73,7 @@
   #let abses = ($4$, $8$, $6 sqrt(2)$)
   #let args = ($(4pi) / 3$, $pi / 6$, $(7pi) / 4$)
 
-  #plot_points(
+  #plot_pts(
     zs.enumerate().map(zi => ($z_#(zi.at(0) + 1)$, zi.at(1))),
   )
 
@@ -124,7 +122,7 @@
       $cbrt(-9) i$,
     )
     $ cbrt(9i) = cases(..roots) $
-    plot_points(
+    plot_pts(
       complex_roots(roots, calc.root(3, 9), 30deg),
       xs: (-3, 3),
       ys: (-3, 3),
@@ -142,7 +140,7 @@
       $sqrt(2)/2 - sqrt(2)/2 i$,
     )
     $ root(6, -1) = cases(..roots) $
-    plot_points(
+    plot_pts(
       complex_roots(roots, 1, 30deg),
       xs: (-1.5, 1.5),
       ys: (-1.5, 1.5),

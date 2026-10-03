@@ -3,7 +3,7 @@
 #import draw: *
 
 #let plot_fn(
-  // todo: rewrite for dicts
+  // todo: rewrite for tuples like plot_pts
   labels,
   fns,
   xs: (-5, 5),
@@ -25,8 +25,10 @@
     {
       for (num, (fn, label)) in fns.zip(labels).enumerate() {
         let style = if calc.rem(num, 2) != 0 {
-          (stroke: (dash: "dashed"))
-        } else { (:) } // default
+          (stroke: (dash: "dashed", paint: black))
+        } else {
+          (stroke: (paint: black))
+        }
         plot.add(fn, domain: xs, label: label, samples: 333, style: style)
       }
     },
@@ -57,7 +59,7 @@
   }
 }))
 
-#let plot_points(
+#let plot_pts(
   points, // (("name", (x, y)),)
   xs: (-8, 8),
   ys: (-8, 8),

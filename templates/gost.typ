@@ -21,7 +21,7 @@
   )
 
   set heading(numbering: "1.1.")
-  show heading: it => {
+  show heading: title => {
     set text(weight: "bold", size: 14pt, hyphenate: false)
     set align(center)
 
@@ -32,21 +32,51 @@
       "Список литературы",
     )
 
-    let it = if unnumbered.contains(it.body.at("text", default: none)) {
+    let title = if unnumbered.contains(title.body.at("text", default: none)) {
       counter(heading).update(n => n - 1) // roll the heading number back
-      it.body
+      title.body
     } else {
-      it
+      title
     }
 
     block(
       above: 1.5em,
       below: 1.5em,
-      it,
+      width: 100%,
+      breakable: false,
+      title,
     )
   }
 
   show " —": [~---] // why can't you just search by content bruh
 
   body
+}
+
+#let uni_title(
+  theme,
+  authors: ([Лукин Фёдор Петрович],),
+  reviewer,
+  group: [АИ-62],
+  uni: [ Федеральное государственное бюджетное образовательное учреждение \ высшего образования \ "Новосибирский государственный технический университет" ],
+  city: [Новосибирск],
+  authors_fmt: (authors, group) => [
+    #if authors.len() > 1 [Выполнили студенты] else [Выполнил студент] группы #group \
+    #authors.join[,\ ]
+  ],
+  year: datetime.today().year(),
+) = {
+  set align(center)
+  uni
+  v(3fr)
+  theme.intersperse(v(2fr)).sum()
+  v(2fr)
+  align(right)[
+    #authors_fmt(authors, group)
+    #v(1fr)
+    #reviewer
+  ]
+  v(2fr)
+  [#city #year]
+  pagebreak()
 }

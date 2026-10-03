@@ -1,7 +1,6 @@
 #import "../abstract.typ": abstract
 #show: abstract.with(
   [Княжение Юрия Даниловича],
-  authors: ([Лукин Фёдор], [Садков Артём], [Потапов Артём]),
   seminary: [Семинар 3. Русские земли в середине XIII в.--XIV в.],
 )
 

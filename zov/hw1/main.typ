@@ -1,10 +1,9 @@
-#import "/templates/utils.typ": *
-#import "/templates/freeform.typ": format
+#import "/templates/freeform.typ": *
 #show: format
 
 #v(5fr)
-#title[ = Герои среди нас: \ Юрий Оганесян ]
-#v(5fr)
+#normal_title[ Герои среди нас: Юрий Оганесян ]
+#v(8fr)
 
 = Краткая биография
 
@@ -23,5 +22,3 @@
 И то, что элемент назвали его именем, --- это признание, которое получают единицы учёных в истории.
 
 #v(8fr)
-
-#align(center)[Фёдор Лукин, АИ-62]
