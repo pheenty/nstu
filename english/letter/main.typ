@@ -17,8 +17,8 @@
   subject: title(smallcaps("Regarding our higher education")),
   closing: "Sincerely yours,",
   signatures: (
-      name: "Theodore Lukin",
-      signature: image("assets/signature.svg", width: 20%),
+    name: "Theodore Lukin",
+    signature: image("assets/signature.svg", width: 20%),
   ),
   main-font: "New Computer Modern Mono",
 )
