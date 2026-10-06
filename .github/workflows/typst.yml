@@ -23,9 +23,9 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v7
       - name: install fonts
         run: |
-          wget https://mirrors.ctan.org/fonts/newcomputermodern.zip
+          wget https://download.gnu.org.ua/release/newcm/newcm-8.1.1.txz
           mkdir --parents ~/.local/share/fonts/ncm
-          unzip -j newcomputermodern.zip "*.otf" -d ~/.local/share/fonts/ncm/
+          tar --extract --file newcm-8.1.1.txz --directory="$HOME/.local/share/fonts/ncm"
       - run: .github/workflows/compile_typst.nu
         env:
           MAX_AGE: "45day"
