@@ -14,23 +14,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-        with: # this is needed so we can apply MAX_AGE (see below)
+        with:
           fetch-depth: 0
       - run: git lfs pull
       - uses: hustcer/setup-nu@v3
       - uses: typst-community/setup-typst@v5
       - uses: typstyle-rs/typstyle-action@v1.0.1
       - uses: stefanzweifel/git-auto-commit-action@v7
-      - uses: awalsh128/cache-apt-pkgs-action@v1
-        with:
-          packages: texlive-fonts-extra
+      - name: install fonts
+        run: |
+          wget https://mirrors.ctan.org/fonts/newcomputermodern.zip
+          mkdir --parents ~/.local/share/fonts/ncm
+          unzip -j newcomputermodern.zip "*.otf" -d ~/.local/share/fonts/ncm/
       - run: .github/workflows/compile_typst.nu
         env:
-          # only compile documents that were changed less than long ago to save on build time
-          # this includes other files in the directory with the main.typ
-          # to disable, just comment out the fetch-depth (above)
           MAX_AGE: "45day"
           PDFS: "_site"
-          TYPST_FONT_PATHS: "/usr/share/texlive/texmf-dist/fonts/"
       - uses: actions/upload-pages-artifact@v3
       - uses: actions/deploy-pages@v4
