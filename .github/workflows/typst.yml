@@ -24,6 +24,9 @@ jobs:
       # if you need extra fonts you can use fontist tool (or just repos where possible)
       #- uses: fontist/setup-fontist@v2
       #- run: fontist install "Times New Roman" --confirm-license
+      - uses: awalsh128/cache-apt-pkgs-action@v1
+        with:
+          packages: texlive-fonts-extra
       - run: .github/workflows/compile_typst.nu
         env:
           # only compile documents that were changed less than long ago to save on build time

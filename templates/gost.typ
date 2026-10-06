@@ -8,12 +8,12 @@
   )
 
   set text(
-    font: "Liberation Serif", // technically should be Times New Roman but who gives a fuck
+    font: ("Times New Roman", "Liberation Serif"),
     size: 14pt,
     lang: "ru",
   )
 
-  show raw: set text(font: "Liberation Mono")
+  show raw: set text(font: ("Courier New", "Liberation Mono"))
 
   set par(
     leading: 0.75em,
@@ -42,10 +42,11 @@
     }
 
     block(
-      above: 1.5em,
-      below: 1.5em,
+      above: 1.25em,
+      below: 1.25em,
       width: 100%,
       breakable: false,
+      sticky: true,
       title,
     )
   }
