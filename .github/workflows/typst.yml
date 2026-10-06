@@ -21,9 +21,6 @@ jobs:
       - uses: typst-community/setup-typst@v5
       - uses: typstyle-rs/typstyle-action@v1.0.1
       - uses: stefanzweifel/git-auto-commit-action@v7
-      # if you need extra fonts you can use fontist tool (or just repos where possible)
-      #- uses: fontist/setup-fontist@v2
-      #- run: fontist install "Times New Roman" --confirm-license
       - uses: awalsh128/cache-apt-pkgs-action@v1
         with:
           packages: texlive-fonts-extra
@@ -34,6 +31,6 @@ jobs:
           # to disable, just comment out the fetch-depth (above)
           MAX_AGE: "45day"
           PDFS: "_site"
-          TYPST_FONT_PATHS: "~/.fontist/fonts"
+          TYPST_FONT_PATHS: "/usr/share/texlive/texmf-dist/fonts/"
       - uses: actions/upload-pages-artifact@v3
       - uses: actions/deploy-pages@v4
