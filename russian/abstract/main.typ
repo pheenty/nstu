@@ -1,7 +1,7 @@
 #import "/templates/gost.typ": *
 
 #show: format
-#uni_title(
+#init(
   ([ Реферат научной статьи ],),
   [ Проверил: доцент \ Нечипуренко Нина Георгиевна ],
 )

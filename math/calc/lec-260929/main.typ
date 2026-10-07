@@ -1,10 +1,10 @@
-#import "/templates/freeform.typ": *
+#import "/templates/default.typ": *
 #import "../../math_utils.typ": *
 
 #show: format
 #set align(center + horizon)
 
-#normal_title[
+#init[
   = Математический анализ
   Лекция 29.09.2026
 ]

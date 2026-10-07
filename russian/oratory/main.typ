@@ -1,8 +1,8 @@
-#import "/templates/freeform.typ": *
+#import "/templates/default.typ": *
 #show: format
 
 #v(5fr)
-#normal_title[ Жизнь замечательного человека: \ Джон фон Нейман ]
+#init[ Жизнь замечательного человека: \ Джон фон Нейман ]
 #v(8fr)
 
 Здравствуйте, уважаемые слушатели!

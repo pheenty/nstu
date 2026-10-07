@@ -1,6 +1,4 @@
-#let format(body, author: [Лукин Фёдор, АИ-62]) = {
-  let outside(page) = if calc.even(page) { left } else { right } // why is it not built in
-
+#let format(body) = {
   let end = <end> // shitty but better than counter(page).final().first()
   let total_pages() = query(end).first().location().page()
   let real_page() = here().page()
@@ -9,25 +7,20 @@
     paper: "a4",
     // margin:
     footer: context if real_page() > 1 and total_pages() > 2 {
-      align(outside(real_page()))[#counter(page).get().first()]
-    },
-    header: context if real_page() > 1 or total_pages() == 1 {
-      align(outside(real_page()), author)
+      align(center)[#counter(page).get().first()]
     },
   )
 
   set text(
-    font: "New Computer Modern",
-    size: 12pt,
+    font: "DejaVu Serif",
+    size: 13pt,
     lang: "ru",
   )
 
-  show raw: set text(font: "New Computer Modern Mono")
-
-  set par(justify: true)
+  show raw: set text(font: "DejaVu Sans Mono")
 
   let title_fmt(title, above, below) = {
-    set text(hyphenate: false, font: "New Computer Modern Sans")
+    set text(hyphenate: false, font: "DejaVu Sans")
     set align(center)
 
     block(
@@ -53,20 +46,4 @@
   }
 
   [#metadata(none)#end] // bruh
-}
-
-#let normal_title(body, with_outline: false) = {
-  set heading(numbering: none, outlined: false)
-  set text(hyphenate: false)
-
-  if with_outline {
-    v(5fr)
-    normal_title(body) // yes
-    v(8fr)
-    outline()
-    v(3fr)
-    pagebreak()
-  } else {
-    align(center, title(body))
-  }
 }

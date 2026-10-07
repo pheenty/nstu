@@ -57,7 +57,7 @@
   body
 }
 
-#let uni_title(
+#let init(
   theme,
   authors: ([Лукин Фёдор Петрович],),
   reviewer,

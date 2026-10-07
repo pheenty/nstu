@@ -1,0 +1,81 @@
+# ok apparently the template does not support cyrillic because uhh
+# error: string index 1 is not a character boundary
+#     ┌─ @preview/griddle:0.2.1/src/loader.typ:127:21
+#     │
+# 127 │       let new-content = entry.word.at(k)
+#     │                         ^^^^^^^^^^^^^^^^
+# well who cares. not like anyone sees the internal words
+
+across:
+- number: 1
+  word: putin
+  definition: Путин
+  row: 0
+  col: 0
+
+- number: 2
+  word: putin
+  definition: Путин
+  row: 1
+  col: 5
+
+- number: 3
+  word: putin
+  definition: Путин
+  row: 1
+  col: 0
+
+- number: 4
+  word: putin
+  definition: Путин
+  row: 2
+  col: 5
+
+- number: 5
+  word: putin
+  definition: Путин
+  row: 2
+  col: 0
+
+- number: 6
+  word: putin
+  definition: Путин
+  row: 3
+  col: 5
+
+down:
+- number: 7
+  word: putin
+  definition: Путин
+  row: 5
+  col: 0
+
+- number: 8
+  word: putin
+  definition: Путин
+  row: 5
+  col: 1
+
+- number: 9
+  word: putin
+  definition: Путин
+  row: 5
+  col: 3
+
+- number: 10
+  word: putin
+  definition: Путин
+  row: 5
+  col: 5
+
+- number: 11
+  word: putin
+  definition: Путин
+  row: 5
+  col: 7
+
+- number: 12
+  word: putin
+  definition: Путин
+  row: 5
+  col: 9

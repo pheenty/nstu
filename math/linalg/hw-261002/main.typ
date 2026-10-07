@@ -1,4 +1,4 @@
-#import "/templates/freeform.typ": *
+#import "/templates/default.typ": *
 #import "../../plot.typ": plot_pts
 #import "../../math_utils.typ": *
 #import "@preview/auto-div:0.1.0": poly-div
@@ -6,7 +6,7 @@
 #show: format
 #set grid(columns: (1fr, 1fr))
 
-#normal_title[
+#init[
   = Индивидуальное домашнее задание
   $ "Вариант" = 12 => k = 3; m = 1 $
 ]

@@ -1,9 +1,9 @@
-#import "/templates/freeform.typ": *
+#import "/templates/default.typ": *
 #import "../../plot.typ": plot_fn
 #import "../../math_utils.typ": *
 
 #show: format
-#normal_title(
+#init(
   with_outline: true,
   [
     = Математический анализ

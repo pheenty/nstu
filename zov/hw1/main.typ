@@ -1,8 +1,8 @@
-#import "/templates/freeform.typ": *
+#import "/templates/default.typ": *
 #show: format
 
 #v(5fr)
-#normal_title[ Герои среди нас: Юрий Оганесян ]
+#init[Герои среди нас: Юрий Оганесян]
 #v(8fr)
 
 = Краткая биография

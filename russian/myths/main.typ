@@ -1,7 +1,7 @@
-#import "/templates/freeform.typ": *
+#import "/templates/default.typ": *
 #show: format
 
-#normal_title[Мифологемы]
+#init[Мифологемы]
 
 #let idiom(title, meaning, origin) = [
   + *#title* \
