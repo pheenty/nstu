@@ -210,3 +210,47 @@
   date: 2017
   page-range: 1358-1360
   url: https://cyberleninka.ru/article/n/ekonomicheskaya-politika-ivana-iii-i-vasiliya-iii
+
+5-местное-самоуправление:
+  type: article
+  author: Локшина, Ксения Николаевна
+  title: "Местное самоуправление в России: самобытная история формирования (до начала XX в.)"
+  parent:
+    title: "Локус: люди, общество, культуры, смыслы"
+    issue: 2
+  date: 2014
+  page-range: 76-87
+  url: https://cyberleninka.ru/article/n/mestnoe-samoupravlenie-v-rossii-samobytnaya-istoriya-formirovaniya-do-nachala-xx-v
+
+5-реформы:
+  type: article
+  author: Долгих, Аркадий Наумович
+  title: Административные реформы в России середины XVI века как историографическая проблема
+  parent:
+    title: "История: факты и символы"
+    issue: 2 (35)
+  date: 2023
+  page-range: 103-112
+  url: https://cyberleninka.ru/article/n/administrativnye-reformy-v-rossii-serediny-xvi-veka-kak-istoriograficheskaya-problema
+
+5-крах-реформ:
+  type: article
+  author: Братцева, Е. А.
+  title: Самоуправление в дореволюционной России (историко-правовой аспект)
+  parent:
+    title: Вестник Университета имени О. Е. Кутафина
+    issue: 5 (81)
+  date: 2021
+  page-range: 219-224
+  url: https://cyberleninka.ru/article/n/samoupravlenie-v-dorevolyutsionnoy-rossii-istoriko-pravovoy-aspekt
+
+5-самоуправление:
+  type: article
+  author: Швец, Юрий Павлович
+  title: Крах реформ Ивана IV Грозного
+  parent:
+    title: Известия АлтГУ
+    issue: 4 (3)
+  date: 2008
+  page-range: 264-266
+  url: https://cyberleninka.ru/article/n/krah-reform-ivana-iv-groznogo
