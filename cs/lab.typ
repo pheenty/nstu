@@ -10,7 +10,6 @@
   body,
 ) = context {
   show: format
-  show heading: heading => align(right, heading)
 
   align(center)[
     #text(size: 12pt)[

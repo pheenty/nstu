@@ -29,10 +29,8 @@
     "Источники",
     "Список литературы",
   )
-
   show heading: title => {
     set text(weight: "bold", size: 14pt, hyphenate: false)
-    set align(center)
 
     let title = if unnumbered.contains(title.body.at("text", default: none)) {
       counter(heading).update(n => n - 1) // roll the heading number back
@@ -41,13 +39,16 @@
       title
     }
 
-    if title.at("body", default: ``).text.contains("Вступление") {
+    if title // holy shit
+      .at("body", default: ``)
+      .at("text", default: "")
+      .contains("Вступление") {
       panic("Введение блядь")
     }
 
     block(
-      above: 1.25em,
-      below: 1.25em,
+      above: 1.618em,
+      below: 1em,
       width: 100%,
       breakable: false,
       sticky: true,
