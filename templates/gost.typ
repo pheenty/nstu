@@ -23,22 +23,26 @@
   )
 
   set heading(numbering: "1.1.")
+  let unnumbered = (
+    "Введение",
+    "Заключение",
+    "Источники",
+    "Список литературы",
+  )
+
   show heading: title => {
     set text(weight: "bold", size: 14pt, hyphenate: false)
     set align(center)
-
-    let unnumbered = (
-      "Введение",
-      "Заключение",
-      "Источники",
-      "Список литературы",
-    )
 
     let title = if unnumbered.contains(title.body.at("text", default: none)) {
       counter(heading).update(n => n - 1) // roll the heading number back
       title.body
     } else {
       title
+    }
+
+    if title.at("body", default: ``).text.contains("Вступление") {
+      panic("Введение блядь")
     }
 
     block(
