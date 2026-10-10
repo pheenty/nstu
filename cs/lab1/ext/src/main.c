@@ -40,9 +40,9 @@ int main(int argc, char *argv[]) {
   int f9 = F9(1357642); // expected: 7
   printf("f9 = %d\n", f9);
 
-  #define len 10
+  #define len 7
   int buf[len] = {1, 3, 5, 12, 4, 13, 2};
-  F14(100, buf, len);
+  F14(10, buf, len);
   printf("f14 = ");
   print_buf(buf, len);
 
