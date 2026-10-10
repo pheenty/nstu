@@ -9,7 +9,6 @@
   body,
 ) = context {
   show: format
-  show heading: heading => align(center, heading)
   set enum(numbering: "1)")
 
   show list: _ => panic(

@@ -77,15 +77,15 @@
     zs.enumerate().map(zi => ($z_#(zi.at(0) + 1)$, zi.at(1))),
   )
 
-  $ #for i in range(zs.len()) [ $|z_#(i + 1)| = #abses.at(i)$ \ ] $
-  $ #for i in range(zs.len()) [ $arg(z_#(i + 1)) = #args.at(i)$ \ ] $
+  #let each = range(zs.len())
+  $ #each.map(i => $|z_#(i + 1)| = #abses.at(i)$).join(linebreak()) $
+  $ #each.map(i => $arg(z_#(i + 1)) = #args.at(i)$).join(linebreak()) $
   $
-    #for i in range(zs.len()) {
+    #each.map(i => {
       let abs = abses.at(i)
       let arg = args.at(i)
       $z_#(i + 1) = #trig(abs, arg) = #canon(abs, arg)$
-      linebreak()
-    }
+    }).join(linebreak())
   $
 
 + Найти и записать в показательной, тригонометрической и алгебраической формах числа:

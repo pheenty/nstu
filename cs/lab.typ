@@ -9,43 +9,53 @@
   year: datetime.today().year(),
   body,
 ) = context {
-  show: format
+  show: format.with(
+    strict: true,
+    numbering: none,
+    structural: (),
+    heading-weight: "regular",
+  )
 
-  align(center)[
-    #text(size: 12pt)[
-      МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ \
-      ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \
-      "НОВОСИБИРСКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ" \
+  show outline.entry: e => { if e.element.level < 2 { e } }
+  show heading: h => if h.level > 1 {
+    set block(inset: 0pt)
+    align(center, h)
+  } else {
+    strong(h)
+  }
+
+  init(
+    uni: [
+      #text(size: 12pt)[
+        МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ \
+        ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ \
+        УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \
+        "НОВОСИБИРСКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ" \
+      ]
       Кафедра вычислительной техники
-    ]
+    ],
+    (
+      strong[
+        ОТЧЁТ ПО ЛАБОРАТОРНОЙ РАБОТЕ №#num \
+        ПО ДИСЦИПЛИНЕ "ИНФОРМАТИКА" \
+        "#theme"
+      ],
 
-    #v(1fr)
+      align(left + horizon, grid(columns: (1fr, 1fr), inset: 1em, stroke: gray)[
+        Факультет: АВТФ \
+        Группа: #group \
+        Студент(ы): #authors.join([, ])
+      ][
+        Преподаватель: \ #teach
+      ]),
+    ),
+    none,
+    authors_fmt: (_, _) => none,
+    city: [Новосибирск, #year г.],
+  )
 
-    *
-    ОТЧЁТ ПО ЛАБОРАТОРНОЙ РАБОТЕ №#num \
-    ПО ДИСЦИПЛИНЕ "ИНФОРМАТИКА" \
-    "#theme"
-    *
-
-    #v(1fr)
-
-    #align(left, grid(columns: (1fr, 1fr), inset: 1em, stroke: gray)[
-      Факультет: АВТФ \
-      Группа: #group \
-      Студент(ы): #authors.join([, ])
-    ][
-      Преподаватель: #teach
-    ])
-
-    #v(2fr)
-
-    Новосибирск, #year г.
-  ]
-
+  outline(title: [Содержание])
   pagebreak()
 
-  outline()
-
   body
-  pagebreak(weak: true)
 }

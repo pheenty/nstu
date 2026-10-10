@@ -1,6 +1,6 @@
 #import "../abstract.typ": abstract
 #show: abstract.with(
-  [Приказная и губная реформы.],
+  [Земельная реформа],
   seminary: [Семинар 5. Россия в XVI веке.],
 )
 

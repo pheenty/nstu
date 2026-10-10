@@ -1,8 +1,8 @@
-#let lb = $op("lb")$
-#let rest = $op("rest")$
-#let arctg = $op("arctg")$
-#let arcctg = $op("arcctg")$
-#let cbrt(x) = $root(3, #x)$
+#let lb = math.op("lb")
+#let rest = math.op("rest")
+#let arctg = math.op("arctg")
+#let arcctg = math.op("arcctg")
+#let cbrt(x) = math.root($3$, x)
 
 #let abs(xs) = {
   let sum = xs.map(x => calc.pow(x, 2)).sum()
