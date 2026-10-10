@@ -732,7 +732,8 @@ int f_58(int *A, int n) {
 void print_buf(int *buf, int len) {
   for (int i = 0; i < len; i++) {
     printf("%d ", buf[i]);
-    if (buf[i] == 1) break;
+    if (buf[i] == 1)
+      break;
   }
 }
 
