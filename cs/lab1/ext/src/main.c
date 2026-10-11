@@ -1,6 +1,7 @@
-// finds the largest digit in the number's decimal repr
 #include <stdio.h>
 #include <stdlib.h>
+
+// finds the largest digit in the number's decimal repr
 int F9(int number) {
   int x, current_last_digit, max_digit;
 
@@ -13,11 +14,11 @@ int F9(int number) {
   return max_digit;
 }
 
-// fill the buf with prime numbers up to `to`, terminating with 0
-void F14(int to, int buf[], int len) {
+// fills the buf with prime numbers up to `max`, terminating with 0
+void F14(int max, int buf[], int len) {
   int idx, useless, i, j;
 
-  for (idx = 0, i = 2; i < to && idx < len - 1; i++) {
+  for (idx = 0, i = 2; i < max && idx < len - 1; i++) {
     for (j = 0; j < idx; j++) {
       if (i % buf[j] == 0)
         break;
@@ -40,11 +41,11 @@ int main(int argc, char *argv[]) {
   int f9 = F9(1357642); // expected: 7
   printf("f9 = %d\n", f9);
 
-  #define len 7
+#define len 7
   int buf[len] = {1, 3, 5, 12, 4, 13, 2};
   F14(10, buf, len);
   printf("f14 = ");
-  print_buf(buf, len);
+  print_buf(buf, len); // expected: 2, 3, 5, 7, 0, ...
 
   return EXIT_SUCCESS;
 }
