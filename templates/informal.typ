@@ -18,6 +18,7 @@
   )
 
   show raw: set text(font: "DejaVu Sans Mono")
+  show math.equation: set text(font: "DejaVu Math TeX Gyre")
 
   let title_fmt(title, above, below) = {
     set text(hyphenate: false, font: "DejaVu Sans")

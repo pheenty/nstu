@@ -67,7 +67,11 @@
   body
 
   pagebreak(weak: true)
-  bibliography("literatype.yml", title: [Список литературы], style: "gost-r-705-2008-numeric")
+  bibliography(
+    "literatype.yml",
+    title: [Список литературы],
+    style: "gost-r-705-2008-numeric",
+  )
 
   if code1 != none {
     pagebreak(weak: true)

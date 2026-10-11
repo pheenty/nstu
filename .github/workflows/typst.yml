@@ -23,9 +23,11 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v7
       - name: install fonts
         run: |
+          mkdir --parents ~/.local/share/fonts/
           wget https://download.gnu.org.ua/release/newcm/newcm-8.1.1.txz
-          mkdir --parents ~/.local/share/fonts/ncm
-          tar --extract --file newcm-8.1.1.txz --directory="$HOME/.local/share/fonts/ncm"
+          tar --extract --file newcm-8.1.1.txz --directory="$HOME/.local/share/fonts/"
+          wget https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyretermes-math-1543.zip
+          unzip texgyretermes-math-1543.zip -d "$HOME/.local/share/fonts/"
       - run: .github/workflows/compile_typst.nu
         env:
           MAX_AGE: "45day"

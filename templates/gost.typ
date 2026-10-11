@@ -19,12 +19,13 @@
   )
 
   set text(
-    font: ("Times New Roman", "Liberation Serif"),
+    font: ("Times New Roman", "Liberation Serif", "TeX Gyre Termes"),
     size: 14pt,
     lang: "ru",
   )
 
   show raw: set text(font: ("Courier New", "Liberation Mono"))
+  show math.equation: set text(font: "TeX Gyre Termes Math")
 
   let indent = 1.25cm
   set par(

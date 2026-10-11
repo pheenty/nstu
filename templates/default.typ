@@ -23,6 +23,7 @@
   )
 
   show raw: set text(font: "New Computer Modern Mono")
+  show math.equation: set text(font: "New Computer Modern Math")
 
   set par(justify: true)
 
