@@ -1,3 +1,6 @@
+// gcc version 16.2.1 20260810 (GCC)
+// $ gcc -fopenmp main.c
+
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>

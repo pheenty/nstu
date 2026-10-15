@@ -254,3 +254,61 @@
   date: 2008
   page-range: 264-266
   url: https://cyberleninka.ru/article/n/krah-reform-ivana-iv-groznogo
+
+6-смута-в-москве:
+  type: article
+  author: Омельченко, Николай Алексеевич
+  title: Смута в Московском государстве в начале XVII в. и ее влияние на трансформацию основ и принципов российской государственности (политологический аспект)
+  parent:
+    title: Вестник РУДН
+    volume: 10
+    issue: 1
+  date: 2023
+  page-range: 7-17
+  url: https://cyberleninka.ru/article/n/smuta-v-moskovskom-gosudarstve-v-nachale-xvii-v-i-ee-vliyanie-na-transformatsiyu-osnov-i-printsipov-rossiyskoy-gosudarstvennosti
+
+6-царь-и-бояре:
+  type: article
+  author: Москаленко, Анастасия Юрьевна
+  title: "Царь и бояре: поиск путей взаимодействия в первые годы правления Михаила Романова (1613-1618 гг.)"
+  parent:
+    title: Вестник ВолГУ
+    issue: 14
+  date: 2016
+  page-range: 44-47
+  url: https://cyberleninka.ru/article/n/tsar-i-boyare-poisk-putey-vzaimodeystviya-v-pervye-gody-pravleniya-mihaila-romanova-1613-1618-gg
+
+6-отсвет-смуты:
+  type: article
+  author: Кобзарева, Елена Игоревна
+  title: "Отсвет Смуты: отношение в Новгороде к «Изменникам» в первые годы после заключения Столбовского мира (1617 г.)"
+  parent:
+    title: Труды Исторического факультета Санкт-Петербургского университета
+    issue: 10
+  date: 2012
+  page-range: 102-106
+  url: https://cyberleninka.ru/article/n/otsvet-smuty-otnoshenie-v-novgorode-k-izmennikam-v-pervye-gody-posle-zaklyucheniya-stolbovskogo-mira-1617-g
+
+6-россия-и-славяне:
+  type: article
+  author: Кочегаров, Кирилл Александрович
+  title: Россия и славянские народы в XVII в.
+  parent:
+    title: Славянский альманах
+  date: 2010
+  page-range: 110-119
+  url: https://cyberleninka.ru/article/n/rossiya-i-slavyanskie-narody-v-xvii-v
+
+6-влияние-смуты:
+  type: article
+  author:
+    - Чаленко, А. С.
+    - Гриднев, Д. И.
+    - Плотникова, Е. В.
+  title: Влияние смутного времени на эволюцию российской государственности
+  parent:
+    title: Международный журнал гуманитарных и естественных наук
+    issue: 5 (1)
+  date: 2022
+  page-range: 91-94
+  url: https://cyberleninka.ru/article/n/vliyanie-smutnogo-vremeni-na-evolyutsiyu-rossiyskoy-gosudarstvennosti
