@@ -94,7 +94,7 @@ $ y = f(x) | x, y in RR $
   $
 
   #v(3cm)
-  #plot_fn(($y = x^2$,), (x => calc.pow(x, 2),))
+  #plot_fn((($y = x^2$, x => calc.pow(x, 2)),))
 ]
 
 #block(breakable: false)[
@@ -105,7 +105,7 @@ $ y = f(x) | x, y in RR $
   Очень распространена экспонента --- $y = e^x$. Кстати, это единственная функция, чья производная $f prime$ равна ей самой, то есть $(d f(x)) / (d x) = f(x)$.
 
   #v(3cm)
-  #plot_fn(($y = e^x$,), (calc.exp,), xs: (-7, 3))
+  #plot_fn((($y = e^x$, calc.exp),), xs: (-7, 3))
 ]
 
 #block(breakable: false)[
@@ -121,45 +121,32 @@ $ y = f(x) | x, y in RR $
 
   #v(3cm)
   #let ln(x) = if x > 0 { calc.ln(x) } else { -65 } // it wants function defined on whole domain
-  #plot_fn(($y = ln x$,), (ln,), xs: (-1, 9), ys: (-7, 3))
+  #plot_fn((($y = ln x$, ln),), xs: (-1, 9), ys: (-7, 3))
 ]
 
 
-#block(breakable: false)[
-  == Тригонометрические функции
+== Тригонометрические функции
 
-  $ y = sin x, y = cos x, y = tg x, y = ctg x $
+$ y = sin x, y = cos x, y = tg x, y = ctg x $
 
-  Синус и косинус имеют область значений $[-1; 1]$ и период $2 pi$. Тангенс и котангенс же имеют период $pi$, а также бесконечное количество точек разрыва второго порядка.
+Синус и косинус имеют область значений $[-1; 1]$ и период $2 pi$. Тангенс и котангенс же имеют период $pi$, а также бесконечное количество точек разрыва второго порядка.
 
-  #v(3cm)
-  #plot_fn(
+#v(3cm)
+#plot_fn(
+  (
     (
       $y = sin x$,
-      $y = cos x$,
+      calc.sin,
     ),
     (
-      calc.sin,
+      $y = cos x$,
       calc.cos,
     ),
-    xs: (-3.5, 3.5),
-    ys: (-1.5, 1.5),
-    trig: true,
-  )
-
-  /* it sucks because of discontinuities
-  #plot((
-    $y = tg  x$, $y = ctg x$
-  ), (
-    calc.tan, x => 1 / calc.tan(x)
   ),
-    xs: (-3.5, 3.5),
-    ys: (-5, 5),
-    trig: true
-  )
-  remove outer block if uncommented
-  */
-]
+  xs: (-3.5, 3.5),
+  ys: (-1.5, 1.5),
+  trig: true,
+)
 
 #block(breakable: false)[
   = Явно и неявно заданные функции. Параметрическое задание функций
@@ -172,10 +159,10 @@ $ y = f(x) | x, y in RR $
     #v(3cm)
     #plot_fn(
       (
-        $y(x) = cases(x = cos t, y = sin t)$,
-      ),
-      (
-        t => (calc.cos(t), calc.sin(t)),
+        (
+          $y(x) = cases(x = cos t, y = sin t)$,
+          t => (calc.cos(t), calc.sin(t)),
+        ),
       ),
       xs: (0, 6.3),
       ys: (-1.05, 1.05),
@@ -191,10 +178,10 @@ $ y = f(x) | x, y in RR $
   #v(3cm)
   #plot_fn(
     (
-      $rho = theta$,
-    ),
-    (
-      theta => (theta * calc.cos(theta), theta * calc.sin(theta)),
+      (
+        $rho = theta$,
+        theta => (theta * calc.cos(theta), theta * calc.sin(theta)),
+      ),
     ),
     xs: (0, 12),
     ys: (-12, 8),

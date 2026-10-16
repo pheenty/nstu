@@ -3,9 +3,7 @@
 #import draw: *
 
 #let plot_fn(
-  // todo: rewrite for tuples like plot_pts
-  labels,
-  fns,
+  functions, // (("name", F,)
   xs: (-5, 5),
   ys: (-1, 9),
   trig: false,
@@ -23,7 +21,7 @@
     y-max: ys.at(1),
     legend-style: (padding: .3),
     {
-      for (num, (fn, label)) in fns.zip(labels).enumerate() {
+      for (num, (label, fn)) in functions.enumerate() {
         let style = if calc.rem(num, 2) != 0 {
           (stroke: (dash: "dashed", paint: black))
         } else {
