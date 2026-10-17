@@ -1,4 +1,5 @@
 #import "../lab.typ": *
+#import "plots.typ": plot_difference, plot_n
 #show: lab.with(
   2,
   [Итерационные циклы и приближенные вычисления],
@@ -60,6 +61,17 @@ x = 0.7 | actual = 0.766965 | approx = 0.766974 | n = 26
 x = 0.8 | actual = 0.745356 | approx = 0.745364 | n = 40
 x = 0.9 | actual = 0.725476 | approx = 0.725467 | n = 79
 ```
+
+= Графики
+
+#plot_difference(5)
+#plot_difference(10)
+#plot_difference(20)
+/*
+#plot_n(0.01)
+#plot_n(0.001)
+#plot_n(0.0001)
+*/
 
 = Ошибки и неточности
 
