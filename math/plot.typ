@@ -5,28 +5,38 @@
 #let plot_fn(
   functions, // (("name", F,)
   xs: (-5, 5),
-  ys: (-1, 9),
+  ys: (-1, 9), // optional third arg for name
+  x-tick-step: 1,
+  y-tick-step: 1,
   trig: false,
   polar: false,
+  log: false,
 ) = align(center, canvas({
   plot.plot(
     size: (11, 11),
     axis-style: if polar { none } else { "school-book" },
-    x-tick-step: if trig { calc.pi / 2 } else { 1 },
+    x-tick-step: x-tick-step * if trig { calc.pi / 2 } else { 1 },
     x-format: if trig { plot.formats.multiple-of } else {
       plot.formats.decimal
     },
-    y-tick-step: 1,
+    y-tick-step: y-tick-step,
+    x-label: xs.at(2, default: auto),
+    y-label: ys.at(2, default: auto),
     y-min: ys.at(0),
     y-max: ys.at(1),
+    y-mode: if log { "log" },
     legend-style: (padding: .3),
     {
       for (num, (label, fn)) in functions.enumerate() {
-        let style = if calc.rem(num, 2) != 0 {
-          (stroke: (dash: "dashed", paint: black))
-        } else {
-          (stroke: (paint: black))
-        }
+        let styles = (
+          (stroke: (paint: black)),
+          (stroke: (dash: "dashed", paint: black)),
+          (stroke: (paint: gray)),
+          (stroke: (dash: "dotted", paint: black)),
+          (stroke: (dash: "dashed", paint: gray)),
+          (stroke: (dash: "dotted", paint: gray)),
+        )
+        let style = styles.at(calc.rem(num, styles.len()))
         plot.add(fn, domain: xs, label: label, samples: 333, style: style)
       }
     },

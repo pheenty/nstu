@@ -5,7 +5,7 @@
 
   set page(
     paper: "a4",
-    // margin:
+    margin: (rest: 20mm),
     footer: context if real_page() > 1 and total_pages() > 2 {
       align(center)[#counter(page).get().first()]
     },
@@ -13,7 +13,7 @@
 
   set text(
     font: "DejaVu Serif",
-    size: 13pt,
+    size: 12pt,
     lang: "ru",
   )
 
@@ -37,14 +37,7 @@
   show title: title => smallcaps(title_fmt(title, 1.8em, 1.2em))
   show heading: heading => title_fmt(heading, 1.2em, 0.8em)
 
-  // https://github.com/typst/typst/issues/5182
-  context if total_pages() > 2 {
-    set page(margin: (top: 20mm, outside: 15mm, rest: 25mm))
-    body
-  } else {
-    set page(margin: (bottom: 25mm, rest: 20mm))
-    body
-  }
+  body
 
   [#metadata(none)#end] // bruh
 }

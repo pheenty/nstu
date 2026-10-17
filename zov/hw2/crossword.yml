@@ -1,81 +1,151 @@
-# ok apparently the template does not support cyrillic because uhh
-# error: string index 1 is not a character boundary
-#     ┌─ @preview/griddle:0.2.1/src/loader.typ:127:21
-#     │
-# 127 │       let new-content = entry.word.at(k)
-#     │                         ^^^^^^^^^^^^^^^^
-# well who cares. not like anyone sees the internal words
-
 across:
 - number: 1
-  word: putin
-  definition: Путин
+  word: Обморок
+  definition: Внезапная кратковременная потеря сознания из-за нарушения мозгового кровотока
   row: 0
-  col: 0
-
-- number: 2
-  word: putin
-  definition: Путин
-  row: 1
-  col: 5
-
-- number: 3
-  word: putin
-  definition: Путин
-  row: 1
-  col: 0
+  col: 4
 
 - number: 4
-  word: putin
-  definition: Путин
-  row: 2
-  col: 5
-
-- number: 5
-  word: putin
-  definition: Путин
-  row: 2
-  col: 0
+  word: Пароль
+  definition: Секретный набор символов
+  row: 1
+  col: 12
 
 - number: 6
-  word: putin
-  definition: Путин
-  row: 3
-  col: 5
-
-down:
-- number: 7
-  word: putin
-  definition: Путин
-  row: 5
+  word: Приватность
+  definition: Конфиденциальность личной жизни в цифровом пространстве
+  row: 2
   col: 0
 
 - number: 8
-  word: putin
-  definition: Путин
-  row: 5
+  word: Замыкание
+  definition: Физическое явление при случайном соединении двух проводов с разными потенциалами
+  row: 4
   col: 1
 
-- number: 9
-  word: putin
-  definition: Путин
-  row: 5
+- number: 12
+  word: Аутентификация
+  definition: Способ защиты аккаунта, когда дополнительно нужно ввести одноразовый код — двухфакторная…
+  row: 7
   col: 3
 
-- number: 10
-  word: putin
-  definition: Путин
-  row: 5
-  col: 5
+- number: 14
+  word: Спам
+  definition: Рассылка, которая забивает электронную почту
+  row: 9
+  col: 16
 
-- number: 11
-  word: putin
-  definition: Путин
-  row: 5
+- number: 18
+  word: Шифрование
+  definition: Изменение информации с помощью специального алгоритма
+  row: 11
+  col: 0
+
+- number: 19
+  word: Инженерия
+  definition: Метод обмана, основанный на психологии человека — социальная…
+  row: 11
+  col: 11
+
+- number: 20
+  word: Огнетушитель
+  definition: Первичное средство пожаротушения
+  row: 13
+  col: 4
+
+- number: 22
+  word: Медпункт
+  definition: Кабинет, где могут оказать медицинскую помощь
+  row: 15
+  col: 8
+
+- number: 23
+  word: Дым
+  definition: Главная опасность при пожаре, от которой защищаются мокрой тканью
+  row: 15
+  col: 17
+
+- number: 24
+  word: Жгут
+  definition: Медицинское приспособление для временной остановки сильного артериального кровотечения
+  row: 16
+  col: 1
+
+- number: 25
+  word: Эвакуация
+  definition: Организованный выход из здания при чрезвычайной ситуации
+  row: 18
   col: 7
 
-- number: 12
-  word: putin
-  definition: Путин
-  row: 5
-  col: 9
+down:
+- number: 2
+  word: Респиратор
+  definition: Приспособление, закрывающее лицо и органы дыхания при работе с опасными химикатами
+  row: 0
+  col: 8
+
+- number: 3
+  word: План
+  definition: Карта, показывающая пути спасения при пожаре
+  row: 0
+  col: 16
+
+- number: 5
+  word: Аптечка
+  definition: Ящик, сумка, пакет с медикаментами
+  row: 1
+  col: 13
+
+- number: 7
+  word: Ток
+  definition: Опасность, которая таится в неисправных розетках
+  row: 2
+  col: 5
+
+- number: 9
+  word: Безопасности
+  definition: Прежде всего нужно соблюдать технику…
+  row: 6
+  col: 6
+
+- number: 10
+  word: Рана
+  definition: Механическое повреждение кожи
+  row: 6
+  col: 18
+
+- number: 11
+  word: Обочина
+  definition: Часть загородной дороги, по которой пешеход идёт навстречу движению транспорта
+  row: 7
+  col: 1
+
+- number: 13
+  word: Спокойствие
+  definition: При чрезвычайной ситуации прежде всего нужно сохранять…
+  row: 9
+  col: 4
+
+- number: 15
+  word: Переход
+  definition: Безопасное место для пересечения оживленной трассы — пешеходный…
+  row: 9
+  col: 17
+
+- number: 16
+  word: Инструктаж
+  definition: Мероприятие, где разбирают правила поведения и действий в разных ситуациях
+  row: 10
+  col: 12
+
+- number: 17
+  word: Геолокация
+  definition: Система, которая помогает не потеряться в городе
+  row: 10
+  col: 14
+
+- number: 21
+  word: Ожог
+  definition: Термическое повреждение кожи
+  row: 15
+  col: 1

@@ -39,10 +39,10 @@ int main(int argc, char *argv[]) {
     f64 actual = 1 / sqrt(1 + x);
 
     f64 approx = 0, nth = 1;
-    u8 n = 1;
+    u8 n = 0;
     do {
       approx += nth;
-      nth = next_member(x, nth, n++);
+      nth = next_member(x, nth, ++n);
     } while (fabs(actual - approx) > MAX_ERROR);
 
     printf("x = %.1f | actual = %f | approx = %f | n = %d\n", x, actual, approx,

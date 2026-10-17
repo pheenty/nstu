@@ -24,6 +24,8 @@
     lang: "ru",
   )
 
+  set figure(supplement: "Рисунок")
+
   show raw: set text(font: ("Courier New", "Liberation Mono"))
   show math.equation: set text(font: "TeX Gyre Termes Math")
 
