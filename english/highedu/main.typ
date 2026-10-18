@@ -1,14 +1,10 @@
 #import "@preview/touying:0.8.0": *
 #import themes.aqua: *
-
 #show: aqua-theme.with(
   aspect-ratio: "16-9",
   config-info(
     title: [Novosibirsk State University],
-    subtitle: [History, Campus Life, and Outstanding Alumni],
-    author: ([Theodore Lukin], [Artem Potapov], [Artem Sadkov])
-      .sorted(key: c => c.text)
-      .join([, ]),
+    author: [Artem Potapov, Artem Sadkov, Theodore Lukin],
   ),
 )
 

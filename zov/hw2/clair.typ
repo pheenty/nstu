@@ -1,0 +1,40 @@
+#let to-clair(str) = {
+  // https://www.consultant.ru/document/cons_doc_LAW_116298/6535874516fa34e7995e5716a162922bab41c9dd/
+  let table = (
+    "а": "a",
+    "б": "b",
+    "в": "v",
+    "г": "g",
+    "д": "d",
+    "е": "e",
+    "ё": "2",
+    "ж": "j",
+    "з": "z",
+    "и": "i",
+    "й": "q",
+    "к": "k",
+    "л": "l",
+    "м": "m",
+    "н": "n",
+    "о": "o",
+    "п": "p",
+    "р": "r",
+    "с": "s",
+    "т": "t",
+    "у": "u",
+    "ф": "f",
+    "х": "h",
+    "ц": "c",
+    "ч": "3",
+    "ш": "4",
+    "щ": "w",
+    "ъ": "x",
+    "ы": "y",
+    "ь": "9",
+    "э": "6",
+    "ю": "7",
+    "я": "8",
+  )
+  lower(str).clusters().map(ch => table.at(ch, default: ch)).join()
+}
+cw_data.map(dir => dir.map(entry => entry + (word: to-clair(entry.word))))

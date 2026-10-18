@@ -1,6 +1,6 @@
 #import "/math/plot.typ": plot_fn
 
-#let actual(x) = 1 / calc.sqrt(1 + x)
+#let actual = ($ 1 / sqrt(1 + x) $, x => 1 / calc.sqrt(1 + x))
 #let next_member(x, prev, n) = prev * (-x) * (2 * n - 1) / (2 * n)
 #let partial_sum_at(x, n) = {
   let approx = 0
@@ -12,7 +12,7 @@
   approx
 }
 #let n_for(x, precision) = {
-  let actual = actual(x)
+  let actual = actual.at(1)(x)
 
   let approx = 0
   let n = 0
@@ -30,7 +30,7 @@
   let fns = ns
     .pos()
     .map(n => ([Приближение, $n = #n$], x => partial_sum_at(x, n)))
-  fns.push(($ 1 / sqrt(1 + x) $, actual))
+  fns.push(actual)
   plot_fn(
     fns,
     xs: (0, 1),
