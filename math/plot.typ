@@ -11,9 +11,10 @@
   trig: false,
   polar: false,
   log: false,
+  size: (11, 11),
 ) = align(center, canvas({
   plot.plot(
-    size: (11, 11),
+    size: size,
     axis-style: if polar { none } else { "school-book" },
     x-tick-step: x-tick-step * if trig { calc.pi / 2 } else { 1 },
     x-format: if trig { plot.formats.multiple-of } else {

@@ -1,4 +1,5 @@
 #let lb = math.op("lb")
+#let inf = math.infinity
 #let rest = math.op("rest")
 #let arctg = math.op("arctg")
 #let arcctg = math.op("arcctg")
