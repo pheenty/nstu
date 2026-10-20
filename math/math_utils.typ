@@ -9,6 +9,7 @@
   let sum = xs.map(x => calc.pow(x, 2)).sum()
   let approx = calc.sqrt(sum)
 
+  // floating point shit
   let factor = 10000
   calc.round(approx * factor) / factor
 }
