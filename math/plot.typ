@@ -38,7 +38,7 @@
           (stroke: (dash: "dotted", paint: gray)),
         )
         let style = styles.at(calc.rem(num, styles.len()))
-        plot.add(fn, domain: xs, label: label, samples: 333, style: style)
+        plot.add(fn, domain: xs, label: label, samples: 200, style: style)
       }
     },
   )
