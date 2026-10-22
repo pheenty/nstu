@@ -1,4 +1,5 @@
 #let lb = math.op("lb")
+#let sgn = math.op("sgn")
 #let rest = math.op("rest")
 #let arctg = math.op("arctg")
 #let arcctg = math.op("arcctg")
@@ -33,4 +34,14 @@
 #let quarter_signs(quarter) = {
   let angle = 45deg + quarter * 90deg
   (calc.cos(angle), calc.sin(angle)).map(t => t > 0)
+}
+
+#let shorthands(body) = {
+  import "@preview/quick-maths:0.2.1": shorthands
+  show: shorthands.with(
+    ($+-$, math.plus.minus),
+    ($-+$, math.minus.plus),
+  )
+
+  body
 }
