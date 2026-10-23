@@ -1,11 +1,13 @@
 #import "definitions.typ": *
 #import "../../math_utils.typ": *
+#import "/templates/default.typ": *
 
+#show: format
 #show: shorthands
 #show heading: []
 #set text(size: 8pt)
 #set align(center + horizon)
-#set page(margin: (rest: 12mm))
+#set page(margin: (rest: 12mm), header: none)
 
 #let thing(..which) = (
   range(5)

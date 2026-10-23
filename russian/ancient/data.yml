@@ -1,0 +1,139 @@
+- meaning: вода
+  greek: гидро
+  latin: аква
+  examples:
+    - гидроэлектростанция
+    - аквариум
+
+- meaning: земля
+  greek: гео
+  latin: терра
+  examples:
+    - география
+    - территория
+
+- meaning: человек
+  greek: антропо
+  latin: гумано
+  examples:
+    - антропология
+    - гуманизм
+
+- meaning: жизнь
+  greek: био
+  latin: вита
+  examples:
+    - биология
+    - витамин
+
+- meaning: писать
+  greek: графо
+  latin: скрибо
+  examples:
+    - графология
+    - манускрипт
+
+- meaning: звук
+  greek: фоно
+  latin: соно
+  examples:
+    - фонограф
+    - сонорный
+
+- meaning: свет
+  greek: фото
+  latin: люмино
+  examples:
+    - фотография
+    - люминесценция
+
+- meaning: тепло
+  greek: термо
+  latin: калори
+  examples:
+    - термометр
+    - калория
+
+- meaning: много
+  greek: поли
+  latin: мульти
+  examples:
+    - поликлиника
+    - мультимедиа
+
+- meaning: один
+  greek: моно
+  latin: уни
+  examples:
+    - монополия
+    - университет
+
+- meaning: два
+  greek: ди
+  latin: би
+  examples:
+    - дихотомия
+    - бинарный
+
+- meaning: большой
+  greek: макро
+  latin: макси
+  examples:
+    - макрокосм
+    - максимум
+
+- meaning: малый
+  greek: микро
+  latin: мини
+  examples:
+    - микроскоп
+    - минимум
+
+- meaning: новый
+  greek: нео
+  latin: ново
+  examples:
+    - неологизм
+    - инновация
+
+- meaning: древний
+  greek: палео
+  latin: антикво
+  examples:
+    - палеонтология
+    - антиквариат
+
+- meaning: первый
+  greek: прото
+  latin: примо
+  examples:
+    - прототип
+    - примула
+
+- meaning: далеко
+  greek: теле
+  latin: дистан
+  examples:
+    - телефон
+    - дистанция
+
+- meaning: сам
+  greek: ауто
+  latin: суи
+  examples:
+    - аутотренинг
+    - суицид
+
+- meaning: любовь
+  greek: фило
+  latin: амо
+  examples:
+    - филантроп
+    - амурный
+
+- meaning: разум
+  greek: лого
+  latin: рацио
+  examples:
+    - логика
+    - рациональный
