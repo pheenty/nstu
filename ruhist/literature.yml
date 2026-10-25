@@ -36,16 +36,22 @@
   edition: 4
   page-total: 528
 
+# https://cyberleninka.ru/article/n/iz-varyag-v-greki-nachalo-istoricheskogo-puti-rossii
 1-из-варяг-в-греки:
-  type: article
+  type: anthos
   author: Петрухин, В. Я.
   title: "«Из варяг в греки»: начало исторического пути России"
   parent:
+    type: anthology
     title: Славянский альманах
   date: 1997
+  issue: 1
+  publisher:
+    name: Индрик
+    location: М.
   page-range: 63-67
-  url: https://cyberleninka.ru/article/n/iz-varyag-v-greki-nachalo-istoricheskogo-puti-rossii
 
+# https://cyberleninka.ru/article/n/kreschenie-rusi
 1-крещение-руси:
   type: article
   author:
@@ -59,8 +65,8 @@
     issn: 2224-6150
   date: 2015
   page-range: 1571
-  url: https://cyberleninka.ru/article/n/kreschenie-rusi
 
+# https://cyberleninka.ru/article/n/velikoe-posolstvo-1697-1698-gg-kak-opyt-lichnogo-vospriyatiya-petrom-i-zapadnoevropeyskoy-arhitektury
 1-великое-посольство:
   type: article
   author: Гольцева, Т. Н.
@@ -71,8 +77,8 @@
     issue: 3
   date: 2022
   page-range: 40-64
-  url: https://cyberleninka.ru/article/n/velikoe-posolstvo-1697-1698-gg-kak-opyt-lichnogo-vospriyatiya-petrom-i-zapadnoevropeyskoy-arhitektury
 
+# https://cyberleninka.ru/article/n/reformy-petra-i-soderzhanie-i-ih-vliyanie-na-razvitie-rossii
 1-реформы-петра1:
   type: article
   author:
@@ -84,8 +90,8 @@
     issue: 11 (3)
   date: 2021
   page-range: 97-99
-  url: https://cyberleninka.ru/article/n/reformy-petra-i-soderzhanie-i-ih-vliyanie-na-razvitie-rossii
 
+# https://cyberleninka.ru/article/n/venskiy-kongress-1814-1815-godov-i-ego-uchastniki-kommunikativnye-instrumenty-oshibki-dostizheniya
 1-венский-конгресс:
   type: article
   author:
@@ -97,8 +103,8 @@
     issue: 40
   date: 2013-10
   page-range: 237-271
-  url: https://cyberleninka.ru/article/n/venskiy-kongress-1814-1815-godov-i-ego-uchastniki-kommunikativnye-instrumenty-oshibki-dostizheniya
 
+# https://cyberleninka.ru/article/n/uchastie-sssr-v-peredele-sfer-vliyaniya-v-period-formirovaniya-bipolyarnoy-sistemy-mezhdunarodnyh-otnosheniy-1945-1964-gg
 1-биполярка-ссср:
   type: article
   author: Еремин, А. Г.
@@ -108,8 +114,8 @@
     issue: 1 (11)
   date: 2012
   page-range: 31-33
-  url: https://cyberleninka.ru/article/n/uchastie-sssr-v-peredele-sfer-vliyaniya-v-period-formirovaniya-bipolyarnoy-sistemy-mezhdunarodnyh-otnosheniy-1945-1964-gg
 
+# https://cyberleninka.ru/article/n/russkie-i-pechenegi-ot-konflikta-k-konfederatsii
 2-русские-и-печенеги:
   type: article
   author: Киселева, Марина Владимировна
@@ -119,8 +125,8 @@
     issue: 7 (63)
   date: 2008
   page-range: 321-326
-  url: https://cyberleninka.ru/article/n/russkie-i-pechenegi-ot-konflikta-k-konfederatsii
 
+# https://cyberleninka.ru/article/n/stanovlenie-territorii-drevney-rusi
 2-становление-руси:
   type: article
   author: Поляков, Александр Николаевич
@@ -130,8 +136,8 @@
     issue: 4 (140)
   date: 2012
   page-range: 95-102
-  url: https://cyberleninka.ru/article/n/stanovlenie-territorii-drevney-rusi
 
+# https://cyberleninka.ru/article/n/brachnaya-diplomatiya-ryurikovichey-kak-faktor-ukrepleniya-mezhdunarodnyh-otnosheniy
 2-брачная-дипломатия-рюриковичей:
   type: article
   author: Чугунная, Елена Сергеевна
@@ -141,8 +147,8 @@
     issue: 33 (77)
   date: 2016
   page-range: 49-51
-  url: https://cyberleninka.ru/article/n/brachnaya-diplomatiya-ryurikovichey-kak-faktor-ukrepleniya-mezhdunarodnyh-otnosheniy
 
+# https://cyberleninka.ru/article/n/protivostoyanie-moskvy-i-tveri-na-stranitsah-ustyuzhskoy-letopisi-originalnyy-vzglyad-na-izvestnye-sobytiya
 3-москва-тверь:
   type: article
   author: Андреева, Екатерина Александровна
@@ -152,8 +158,8 @@
     issue: 22
   date: 2023
   page-range: 385-406
-  url: https://cyberleninka.ru/article/n/protivostoyanie-moskvy-i-tveri-na-stranitsah-ustyuzhskoy-letopisi-originalnyy-vzglyad-na-izvestnye-sobytiya
 
+# https://cyberleninka.ru/article/n/moskovskiy-knyaz-v-pohode-hana-uzbeka-shtrihi-k-hronologii-prebyvaniya-v-orde-knyazya-yuriya-danilovicha-moskovskogo-i
 3-узбеки:
   type: article
   author: Селезнев, Юрий Васильевич
@@ -164,8 +170,8 @@
     issue: 4
   date: 2025
   page-range: 416-422
-  url: https://cyberleninka.ru/article/n/moskovskiy-knyaz-v-pohode-hana-uzbeka-shtrihi-k-hronologii-prebyvaniya-v-orde-knyazya-yuriya-danilovicha-moskovskogo-i
 
+# https://cyberleninka.ru/article/n/etnicheskiy-sostav-naseleniya-prinevya-i-yuzhnogo-priladozhya-v-kontse-xv-v
 3-этника-приневья:
   type: article
   author: Чибисов, Борис Игоревич
@@ -176,8 +182,8 @@
     issue: 1
   date: 2020
   page-range: 62-72
-  url: https://cyberleninka.ru/article/n/etnicheskiy-sostav-naseleniya-prinevya-i-yuzhnogo-priladozhya-v-kontse-xv-v
 
+# https://cyberleninka.ru/article/n/kachestvo-gosudarstvennogo-upravleniya-pri-ivane-iii-i-ego-preemnikah-1462-1606-gg
 4-качество-управления:
   type: article
   author: Братченко, Светлана Анатольевна
@@ -187,8 +193,8 @@
     issue: 1
   date: 2022
   page-range: 163-185
-  url: https://cyberleninka.ru/article/n/kachestvo-gosudarstvennogo-upravleniya-pri-ivane-iii-i-ego-preemnikah-1462-1606-gg
 
+# https://cyberleninka.ru/article/n/gosudar-vseya-rusi-ivan-iii-i-russkaya-aristokratiya
 4-государь:
   type: article
   author: Корзинин, Александр Леонидович
@@ -198,8 +204,8 @@
     issue: 1 (5)
   date: 2016
   page-range: 163-180
-  url: https://cyberleninka.ru/article/n/gosudar-vseya-rusi-ivan-iii-i-russkaya-aristokratiya
 
+# https://cyberleninka.ru/article/n/ekonomicheskaya-politika-ivana-iii-i-vasiliya-iii
 4-экономическая-политика:
   type: article
   author: Ярославцев, В. Г.
@@ -209,8 +215,8 @@
     issue: 12 (43)
   date: 2017
   page-range: 1358-1360
-  url: https://cyberleninka.ru/article/n/ekonomicheskaya-politika-ivana-iii-i-vasiliya-iii
 
+# https://cyberleninka.ru/article/n/mestnoe-samoupravlenie-v-rossii-samobytnaya-istoriya-formirovaniya-do-nachala-xx-v
 5-местное-самоуправление:
   type: article
   author: Локшина, Ксения Николаевна
@@ -220,8 +226,8 @@
     issue: 2
   date: 2014
   page-range: 76-87
-  url: https://cyberleninka.ru/article/n/mestnoe-samoupravlenie-v-rossii-samobytnaya-istoriya-formirovaniya-do-nachala-xx-v
 
+# https://cyberleninka.ru/article/n/administrativnye-reformy-v-rossii-serediny-xvi-veka-kak-istoriograficheskaya-problema
 5-реформы:
   type: article
   author: Долгих, Аркадий Наумович
@@ -231,8 +237,8 @@
     issue: 2 (35)
   date: 2023
   page-range: 103-112
-  url: https://cyberleninka.ru/article/n/administrativnye-reformy-v-rossii-serediny-xvi-veka-kak-istoriograficheskaya-problema
 
+# https://cyberleninka.ru/article/n/samoupravlenie-v-dorevolyutsionnoy-rossii-istoriko-pravovoy-aspekt
 5-самоуправление:
   type: article
   author: Братцева, Е. А.
@@ -242,8 +248,8 @@
     issue: 5 (81)
   date: 2021
   page-range: 219-224
-  url: https://cyberleninka.ru/article/n/samoupravlenie-v-dorevolyutsionnoy-rossii-istoriko-pravovoy-aspekt
 
+# https://cyberleninka.ru/article/n/krah-reform-ivana-iv-groznogo
 5-крах-реформ:
   type: article
   author: Швец, Юрий Павлович
@@ -253,8 +259,8 @@
     issue: 4 (3)
   date: 2008
   page-range: 264-266
-  url: https://cyberleninka.ru/article/n/krah-reform-ivana-iv-groznogo
 
+# https://cyberleninka.ru/article/n/smuta-v-moskovskom-gosudarstve-v-nachale-xvii-v-i-ee-vliyanie-na-transformatsiyu-osnov-i-printsipov-rossiyskoy-gosudarstvennosti
 6-смута-в-москве:
   type: article
   author: Омельченко, Николай Алексеевич
@@ -265,8 +271,8 @@
     issue: 1
   date: 2023
   page-range: 7-17
-  url: https://cyberleninka.ru/article/n/smuta-v-moskovskom-gosudarstve-v-nachale-xvii-v-i-ee-vliyanie-na-transformatsiyu-osnov-i-printsipov-rossiyskoy-gosudarstvennosti
 
+# https://cyberleninka.ru/article/n/tsar-i-boyare-poisk-putey-vzaimodeystviya-v-pervye-gody-pravleniya-mihaila-romanova-1613-1618-gg
 6-царь-и-бояре:
   type: article
   author: Москаленко, Анастасия Юрьевна
@@ -276,8 +282,8 @@
     issue: 14
   date: 2016
   page-range: 44-47
-  url: https://cyberleninka.ru/article/n/tsar-i-boyare-poisk-putey-vzaimodeystviya-v-pervye-gody-pravleniya-mihaila-romanova-1613-1618-gg
 
+# https://cyberleninka.ru/article/n/otsvet-smuty-otnoshenie-v-novgorode-k-izmennikam-v-pervye-gody-posle-zaklyucheniya-stolbovskogo-mira-1617-g
 6-отсвет-смуты:
   type: article
   author: Кобзарева, Елена Игоревна
@@ -287,18 +293,23 @@
     issue: 10
   date: 2012
   page-range: 102-106
-  url: https://cyberleninka.ru/article/n/otsvet-smuty-otnoshenie-v-novgorode-k-izmennikam-v-pervye-gody-posle-zaklyucheniya-stolbovskogo-mira-1617-g
 
+# https://cyberleninka.ru/article/n/rossiya-i-slavyanskie-narody-v-xvii-v
 6-россия-и-славяне:
-  type: article
+  type: anthos
   author: Кочегаров, Кирилл Александрович
   title: Россия и славянские народы в XVII в.
   parent:
+    type: anthology
     title: Славянский альманах
   date: 2010
+  issue: 14
+  publisher:
+    name: Индрик
+    location: М.
   page-range: 110-119
-  url: https://cyberleninka.ru/article/n/rossiya-i-slavyanskie-narody-v-xvii-v
 
+# https://cyberleninka.ru/article/n/vliyanie-smutnogo-vremeni-na-evolyutsiyu-rossiyskoy-gosudarstvennosti
 6-влияние-смуты:
   type: article
   author:
@@ -311,8 +322,8 @@
     issue: 5 (1)
   date: 2022
   page-range: 91-94
-  url: https://cyberleninka.ru/article/n/vliyanie-smutnogo-vremeni-na-evolyutsiyu-rossiyskoy-gosudarstvennosti
 
+# https://cyberleninka.ru/article/n/forma-rossiyskogo-gosudarstva-v-xvii-veke-ot-soslovnosti-k-absolyutizmu
 7-форма-государства:
   type: article
   author:
@@ -324,24 +335,30 @@
     title: Вестник Уральского юридического института МВД России
   date: 2025
   issue: 3 (47)
-  url: https://cyberleninka.ru/article/n/forma-rossiyskogo-gosudarstva-v-xvii-veke-ot-soslovnosti-k-absolyutizmu
+  page-range: 20-26
 
+# https://cyberleninka.ru/article/n/gosudarevo-slovo-i-delo-vo-vremena-pervyh-romanovyh
 7-государево-слово:
   type: article
   author: Черникова, Татьяна Васильевна
-  title: "«Государево слово и дело» во времена первых Романовых"
+  title: «Государево слово и дело» во времена первых Романовых
   parent:
-    title: РСМ
+    title: Раннеславянский мир
   date: 2021
   issue: 4 (113)
-  url: https://cyberleninka.ru/article/n/gosudarevo-slovo-i-delo-vo-vremena-pervyh-romanovyh
+  page-range: 6-28
 
+# https://cyberleninka.ru/article/n/k-izucheniyu-istorii-soborov-1666-i-1666-1667-gg/viewer
 7-история-соборов:
   type: article
   author: Белякова, Елена Владимировна
   title: К изучению истории соборов 1666 и 1666–1667 гг.
   parent:
+    type: web
     title: Исторический курьер
   date: 2019
-  issue: 2
-  url: https://cyberleninka.ru/article/n/k-izucheniyu-istorii-soborov-1666-i-1666-1667-gg
+  issue: 2 (4)
+  page-range: 51-66
+  url:
+    value: http://istkurier.ru/data/2019/ISTKURIER-2019-2-05.pdf
+    date: 2026-10-22

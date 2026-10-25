@@ -92,18 +92,18 @@
 
   <macro name="page">
     <choose>
-      <if type="article-journal article-magazine article-newspaper chapter paper-conference" match="any">
+      <if variable="page" match="any">
         <group delimiter=" ">
           <text term="page" form="short"/>
           <text variable="page"/>
         </group>
       </if>
-      <else>
+      <else-if variable="number-of-pages" match="any">
         <group delimiter=" ">
           <text variable="number-of-pages"/>
           <text term="number-of-pages" form="short"/>
         </group>
-      </else>
+      </else-if>
     </choose>
   </macro>
 
