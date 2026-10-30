@@ -362,3 +362,25 @@
   url:
     value: http://istkurier.ru/data/2019/ISTKURIER-2019-2-05.pdf
     date: 2026-10-22
+
+# https://cyberleninka.ru/article/n/predystoriya-tabelya-o-rangah
+8-предыстория-табеля:
+  type: article
+  author: Виноградов, Алексей Павлович
+  title: Предыстория «Табеля о рангах»
+  parent:
+    title: Ярославский педагогический вестник
+    issue: 4
+  date: 2007
+  page-range: 65-70
+
+# https://cyberleninka.ru/article/n/sluzhba-dvoryanina-v-pervoy-chetverti-xviii-v-soglasno-tabeli-o-rangah
+8-служба-дворянина:
+  type: article
+  author: Пудина, Светлана Ивановна
+  title: Служба дворянина в первой четверти XVIII в. согласно «Табели о рангах»
+  parent:
+    title: Экономические и социально-гуманитарные исследования
+    issue: 1 (33)
+  date: 2022
+  page-range: 167-173
