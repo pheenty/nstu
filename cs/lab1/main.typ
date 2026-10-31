@@ -3,7 +3,7 @@
   1,
   [Арифметические задачи],
   code1: read("src/main.c"),
-  code2: read("ext/src/main.c"),
+  code2: read("src/extra.c"),
 )
 
 = Задание

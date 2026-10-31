@@ -77,9 +77,7 @@ bool find_repeated_fragment(const strbuf *strbuf, size_t min_len,
 }
 
 #define LEN 6
-#define INIT                                                                   \
-  "saddsjofsajf jsdjfs dj fjfdsjifjodsjofsdj oifdujsaids jkfiosdjfd opl"       \
-  "jfdsjisakjfiolfpo dsakjfiolsd jfkujsaidkdf jfdsjifjodsoil sdjdsdolik"
+#define INIT "ababab 123456g 1234567h qwerty 123456 12345678"
 
 int main(int argc, char *argv[]) {
   int exitcode = EXIT_FAILURE;

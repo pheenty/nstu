@@ -4,7 +4,7 @@
   2,
   [Итерационные циклы и приближенные вычисления],
   code1: read("src/main.c"),
-  // code2: read("ext/src/main.c"),
+  code2: read("src/extra.c"),
 )
 
 = Задание

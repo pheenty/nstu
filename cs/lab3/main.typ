@@ -3,7 +3,7 @@
   3,
   [Работа с текстом],
   code1: read("src/main.c"),
-  // code2: read("ext/src/main.c"),
+  code2: read("src/extra.c"),
 )
 
 = Задание
@@ -48,7 +48,7 @@
 
 ```bash
 ❯ ./a.out
-Result: dsjofsdsjofsjfdsjijfdsjiujsaidujsaidsakjfiolsakjfiolsadajf jsdjfs dj ffjodj oifds jkfiosdjfd oplfpo dsd jfkkdf jfdsjifjodsoil sdjdsdolik
+Result: 123456123456123456123456ababab g 7h qwerty  78
 ```
 
 = Ошибки и неточности
