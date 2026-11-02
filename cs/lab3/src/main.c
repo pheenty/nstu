@@ -4,8 +4,8 @@
 #include <string.h>
 
 #define eprintf(args...) fprintf(stderr, ##args)
-#define max(a, b) (a) > (b) ? (a) : (b)
-#define min(a, b) (a) < (b) ? (a) : (b)
+#define max(a, b) ((a) > (b) ? (a) : (b))
+#define min(a, b) ((a) < (b) ? (a) : (b))
 
 // init: {NULL, 0, 0}
 // the owner calls free(.ptr)
