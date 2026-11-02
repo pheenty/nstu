@@ -3,8 +3,8 @@
 #show: lab.with(
   2,
   [Итерационные циклы и приближенные вычисления],
-  code1: read("src/main.c"),
-  code2: read("src/extra.c"),
+  code1: read("main.c"),
+  code2: read("extra.c"),
 )
 
 = Задание
@@ -49,7 +49,7 @@ $ n_i = (n_(i-1) (-x) (2n - 1)) / (2n) $
 
 = Пример работы программы
 
-```bash
+```sh
 ❯ ./a.out
 x = 0.1 | actual = 0.953463 | approx = 0.953465 | n = 5
 x = 0.2 | actual = 0.912871 | approx = 0.912873 | n = 7

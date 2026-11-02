@@ -2,8 +2,8 @@
 #show: lab.with(
   1,
   [Арифметические задачи],
-  code1: read("src/main.c"),
-  code2: read("src/extra.c"),
+  code1: read("main.c"),
+  code2: read("extra.c"),
 )
 
 = Задание
@@ -44,7 +44,7 @@
 
 = Пример работы программы
 
-```bash
+```sh
 ❯ ./a.out
 6210001000
 ```
