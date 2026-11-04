@@ -1,2 +1,5 @@
 **/*.pdf
+
 **/a.out
+**/build*
+**/compile_commands.json
