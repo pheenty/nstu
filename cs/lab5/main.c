@@ -8,7 +8,7 @@
 constexpr GLint INIT_WINDOW_WIDTH = 1000;
 constexpr GLint INIT_WINDOW_HEIGHT = 1000;
 
-constexpr uint32_t SEED = 65;
+constexpr unsigned int SEED = 65;
 constexpr float TARGET_FPS = 64;
 constexpr size_t BALL_COUNT = 10;
 
@@ -30,9 +30,10 @@ typedef struct {
 } Ball;
 
 // have to do global state cuz glut owns the loop and only gives callbacks
-static Ball BALLS[BALL_COUNT];
 static GLint WINDOW_WIDTH = INIT_WINDOW_WIDTH;
 static GLint WINDOW_HEIGHT = INIT_WINDOW_HEIGHT;
+// technically soa would be better here but it's negligible on actual values
+static Ball BALLS[BALL_COUNT];
 
 float rand_range(float min, float max) {
   return min + ((float)rand() / RAND_MAX) * (max - min);
@@ -57,14 +58,14 @@ void apply_gravity() {
       float dy = fst->y - snd->y;
 
       float r2 = MAX(dx * dx + dy * dy, MIN_PAIR_DISTANCE_2);
-      float force = FORCE_K * (1 / r2 - 1 / FORCE_R02) / sqrtf(r2);
+      float force_per_unit = FORCE_K * (1 / r2 - 1 / FORCE_R02) / sqrtf(r2);
 
-      float fx = dx * force;
-      float fy = dy * force;
+      float fx = dx * force_per_unit;
+      float fy = dy * force_per_unit;
 
       fst->vx += fx;
       fst->vy += fy;
-      // newton's third
+      // we only go through unique pairs so apply newton's third
       snd->vx -= fx;
       snd->vy -= fy;
     }
@@ -99,6 +100,13 @@ void apply_wall_collisions() {
       ball->vy *= -1;
     }
   }
+}
+
+void step_physics() {
+  // no dt because again glut owns the loop
+  apply_gravity();
+  apply_velocity();
+  apply_wall_collisions();
 }
 
 void on_display() {
@@ -136,16 +144,14 @@ void on_reshape(GLint w, GLint h) {
   glLoadIdentity();
 }
 
-void on_keyboard(uint8_t key, int32_t, int32_t) {
-  constexpr uint8_t ESCAPE = '\033';
+void on_keyboard(unsigned char key, int, int) {
+  constexpr unsigned char ESCAPE = '\033';
   if (key == ESCAPE)
     exit(EXIT_SUCCESS);
 }
 
-void on_timer(int32_t) {
-  apply_gravity();
-  apply_velocity();
-  apply_wall_collisions();
+void on_timer(int) {
+  step_physics();
   glutPostRedisplay();
 
   glutTimerFunc(1000 / TARGET_FPS, on_timer, 0);
@@ -155,7 +161,7 @@ int main(int argc, char *argv[]) {
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_RGB);
   glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
-  glutCreateWindow("test");
+  glutCreateWindow("balls");
 
   srand(SEED);
   init_balls();
@@ -168,5 +174,6 @@ int main(int argc, char *argv[]) {
 
   glutMainLoop();
 
-  return EXIT_SUCCESS;
+  // glut shouldn't leave the loop
+  return EXIT_FAILURE;
 }
