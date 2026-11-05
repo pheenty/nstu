@@ -384,3 +384,58 @@
     issue: 1 (33)
   date: 2022
   page-range: 167-173
+
+# https://cyberleninka.ru/article/n/neudachnyy-pravovoy-eksperiment-imperatritsy-ekateriny-ii-v-rossii-v-1767-1768-gg
+9-неудачный-правовой-эксперимент:
+  type: article
+  author: Варенцова, Лариса Юрьевна
+  title: Неудачный правовой эксперимент императрицы Екатерины II в России в 1767–1768 гг.
+  parent:
+    title: Юридическая техника
+    issue: 19
+  date: 2025
+  page-range: 143-147
+
+# https://cyberleninka.ru/article/n/pravovoy-status-deputatov-komissii-ob-ulozhenii-1767
+9-правовой-статус-депутатов:
+  type: article
+  author: Верхогляд, Александр Сергеевич
+  title: Правовой статус депутатов «Комиссии об уложении» (1767)
+  parent:
+    title: Ленинградский юридический журнал
+    issue: 4 (34)
+  date: 2013
+  page-range: 9-14
+
+# https://cyberleninka.ru/article/n/problema-ekonomicheskih-prav-dvoryanstva-v-ulozhennoy-komissii-v-1761-1762-gg-i-manifest-o-volnosti-dvoryanskoy
+9-экономические-права-дворянства:
+  type: article
+  author: Киселев, Михаил Александрович
+  title: Проблема экономических прав дворянства в Уложенной комиссии в 1761-1762 гг. и манифест о вольности дворянской
+  parent:
+    title: Вестник ТГУ
+    issue: 449
+  date: 2019
+  page-range: 135-142
+
+# https://cyberleninka.ru/article/n/proekty-otmeny-krepostnogo-prava-v-posledney-treti-xviii-veka-1
+9-проекты-отмены-крепостного-права:
+  type: article
+  author: Коршунова, Надежда Владимировна
+  title: Проекты отмены крепостного права в последней трети XVIII века
+  parent:
+    title: Вестник ЧелГУ
+    issue: 34 (135)
+  date: 2008
+  page-range: 60-67
+
+# https://cyberleninka.ru/article/n/ulozhennaya-komissiya-ekateriny-ii-problemy-obrazovaniya-v-nakazah-pskovskim-deputatami-pravitelstvennyh-uchrezhdeniy
+9-уложенная-комиссия-образование:
+  type: article
+  author: Лещиков, Валерий Николаевич
+  title: Уложенная комиссия Екатерины II. Проблемы образования в наказах псковским депутатами правительственных учреждений
+  parent:
+    title: Псков
+    issue: 43
+  date: 2015
+  page-range: 44-50
