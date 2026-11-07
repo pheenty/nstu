@@ -54,8 +54,10 @@ $ j = ((C-A_min) * n) / (A_max-A_min). $
 
 ```sh
 ❯ ./a.out
-after swap sort: 0 -4 -6 -2 -1 0 2 1 4 4
-after bubble sort: -6 -4 -2 -1 0 0 1 2 4 4
+-6 -4 -2 -1 0 0 1 2 4 4
+ops for 1000-sized buf: 1000500
+ops for 5000-sized buf: 25002500
+ops for 10000-sized buf: 100005000
 ```
 
 = Выводы

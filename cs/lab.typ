@@ -1,7 +1,7 @@
 #import "/templates/gost.typ": *
 
 #let lab(
-  num,
+  lab,
   theme,
   group: [АИ-62],
   authors: ([Лукин Фёдор],),
@@ -43,7 +43,9 @@
     ],
     (
       strong[
-        ОТЧЁТ ПО ЛАБОРАТОРНОЙ РАБОТЕ №#num \
+        #if (type(lab) == content) {
+          lab
+        } else [ОТЧЁТ ПО ЛАБОРАТОРНОЙ РАБОТЕ №#lab] \
         ПО ДИСЦИПЛИНЕ "ИНФОРМАТИКА" \
         "#theme"
       ],
@@ -68,7 +70,7 @@
 
   pagebreak(weak: true)
   bibliography(
-    "literatype.yml",
+    "literature.yml",
     title: [Список литературы],
     style: "gost-r-705-2008-numeric",
   )

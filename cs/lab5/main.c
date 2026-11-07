@@ -4,6 +4,15 @@
 #include <math.h>
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
+#define MIN(a, b) ((a) < (b) ? (a) : (b))
+
+typedef struct {
+  float x, y, vx, vy;
+} Ball;
+
+typedef struct {
+  float r, g, b;
+} Rgb;
 
 constexpr GLint INIT_WINDOW_WIDTH = 1000;
 constexpr GLint INIT_WINDOW_HEIGHT = 1000;
@@ -17,23 +26,17 @@ constexpr float FORCE_R02 = 1e5;
 constexpr float MIN_PAIR_DISTANCE_2 = 10;
 
 constexpr size_t CIRCLE_SEGMENTS = 16;
-constexpr float BALL_RADIUS = 15;
-constexpr float BG_R = .2f;
-constexpr float BG_G = .2f;
-constexpr float BG_B = .2f;
-constexpr float BALL_R = .9f;
-constexpr float BALL_G = .9f;
-constexpr float BALL_B = .9f;
-
-typedef struct {
-  float x, y, vx, vy;
-} Ball;
+constexpr float INIT_BALL_RADIUS = 15;
+constexpr Rgb BG = {.2f, .2f, .2f};
+constexpr Rgb BALL_INIT = {.9f, .9f, .9f};
 
 // have to do global state cuz glut owns the loop and only gives callbacks
 static GLint WINDOW_WIDTH = INIT_WINDOW_WIDTH;
 static GLint WINDOW_HEIGHT = INIT_WINDOW_HEIGHT;
 // technically soa would be better here but it's negligible on actual values
 static Ball BALLS[BALL_COUNT];
+static float BALL_RADIUS = INIT_BALL_RADIUS;
+static Rgb BALL_COLOR = BALL_INIT;
 
 float rand_range(float min, float max) {
   return min + ((float)rand() / RAND_MAX) * (max - min);
@@ -110,13 +113,13 @@ void step_physics() {
 }
 
 void on_display() {
-  glClearColor(BG_R, BG_G, BG_B, 1);
+  glClearColor(BG.r, BG.g, BG.b, 1);
   glClear(GL_COLOR_BUFFER_BIT);
 
-  glColor3f(BALL_R, BALL_G, BALL_B);
+  glColor3f(BALL_COLOR.r, BALL_COLOR.g, BALL_COLOR.b);
 
   for (Ball *ball = BALLS; ball < BALLS + BALL_COUNT; ball++) {
-    glBegin(GL_TRIANGLE_FAN);
+    glBegin(GL_POLYGON);
 
     constexpr float SEGMENT_ANGLE = 6.2831853f / CIRCLE_SEGMENTS;
     for (size_t segment = CIRCLE_SEGMENTS; segment-- > 0;)
@@ -144,10 +147,37 @@ void on_reshape(GLint w, GLint h) {
   glLoadIdentity();
 }
 
-void on_keyboard(unsigned char key, int, int) {
-  constexpr unsigned char ESCAPE = '\033';
-  if (key == ESCAPE)
+typedef unsigned char key;
+void on_keyboard(key code, int, int) {
+  constexpr key ESCAPE = '\033';
+  constexpr key PLUS = '=';
+  constexpr key MINUS = '-';
+  constexpr key R = 'r';
+  constexpr key G = 'g';
+  constexpr key B = 'b';
+
+  float dump;
+
+  switch (code) {
+  case ESCAPE:
     exit(EXIT_SUCCESS);
+    break;
+  case PLUS:
+    BALL_RADIUS += 1;
+    break;
+  case MINUS:
+    BALL_RADIUS = MAX(BALL_RADIUS - 1, 1);
+    break;
+  case R:
+    BALL_COLOR.r = modff(BALL_COLOR.r + 0.2, &dump);
+    break;
+  case G:
+    BALL_COLOR.g = modff(BALL_COLOR.g + 0.2, &dump);
+    break;
+  case B:
+    BALL_COLOR.b = modff(BALL_COLOR.b + 0.2, &dump);
+    break;
+  }
 }
 
 void on_timer(int) {
@@ -158,20 +188,17 @@ void on_timer(int) {
 }
 
 int main(int argc, char *argv[]) {
+  srand(SEED);
+  init_balls();
+
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_RGB);
   glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
   glutCreateWindow("balls");
-
-  srand(SEED);
-  init_balls();
-  on_reshape(WINDOW_WIDTH, WINDOW_HEIGHT);
-
   glutDisplayFunc(on_display);
   glutReshapeFunc(on_reshape);
   glutKeyboardFunc(on_keyboard);
   glutTimerFunc(1000 / TARGET_FPS, on_timer, 0);
-
   glutMainLoop();
 
   // glut shouldn't leave the loop
