@@ -439,3 +439,38 @@
     issue: 43
   date: 2015
   page-range: 44-50
+
+# https://cyberleninka.ru/article/n/voprosy-normativnogo-regulirovaniya-soderzhaniya-obschego-obrazovaniya-v-rossiyskoy-imperii-pervoy-poloviny-xix-v
+10-нормативное-регулирование:
+  type: article
+  author: Сорокин, Владислав Петрович
+  title: Вопросы нормативного регулирования содержания общего образования в Российской империи первой половины XIX в.
+  parent:
+    title: Вестник БГУ
+    issue: 4
+  date: 2024
+  page-range: 34-39
+
+# https://cyberleninka.ru/article/n/ot-avtonomii-k-tsentralizatsii-analiz-universitetskih-ustavov-rossiyskoy-imperii-1804-i-1835-gg
+10-автономия-централизация:
+  type: article
+  author: Моцарт, Наталья Владимировна
+  title: "От автономии к централизации: анализ университетских уставов Российской империи 1804 и 1835 гг."
+  parent:
+    title: Известия РАО
+    issue: 3 (71)
+  date: 2025
+  page-range: 185-198
+
+# https://cyberleninka.ru/article/n/problemy-tsenzury-pechati-v-rossiyskoy-imperii-xviii-nachalo-xx-v
+10-роскомнадзор:
+  type: article
+  author:
+    - Жигарев, Филипп Валерьевич
+    - Новичков, Алексей Валерьевич
+  title: Проблемы цензуры печати в Российской империи (XVIII – начало XX в.)
+  parent:
+    title: Манускрипт
+    issue: 3
+  date: 2025
+  page-range: 898-903
