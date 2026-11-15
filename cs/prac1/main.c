@@ -4,8 +4,7 @@
 #include <stdlib.h>
 #define eprintf(args...) fprintf(stderr, ##args)
 
-// TODO: read through all of that and figure out what the fuck it does it do, gg
-
+// sum of digits (hereinafter all is decimal repr)
 int f_13(int a) {
   int n, s, k;
 
@@ -17,6 +16,7 @@ int f_13(int a) {
   return s;
 }
 
+// largest digit
 int f_14(int a) {
   int n, s, k;
 
@@ -29,6 +29,7 @@ int f_14(int a) {
   return s;
 }
 
+// reverse digits
 int f_15(int a) {
   int n, s, k;
 
@@ -40,7 +41,7 @@ int f_15(int a) {
   return s;
 }
 
-// impure
+// write a digits into A, msd, -1-terminated
 void f_16(int *A, int a) {
   int i, n;
 
@@ -51,8 +52,8 @@ void f_16(int *A, int a) {
     A[i] = n % 10;
 }
 
+// A = 10..30000 | filter sumofdigits == cubed
 // -1 for error
-// impure
 int f_17(int *A, int len) {
   if (len < 30000) {
     return -1;
@@ -73,7 +74,7 @@ int f_17(int *A, int len) {
   return 0;
 }
 
-// impure
+// A = 10..v | filter ispalindrome
 void f_18(int *A, int v) {
   int j, a, s, n, k;
 
@@ -88,7 +89,7 @@ void f_18(int *A, int v) {
   }
 }
 
-// impure
+// A = A | filter < 0
 void f_19(int *A, int n) {
   int i, j;
 
@@ -103,7 +104,7 @@ void f_19(int *A, int n) {
   }
 }
 
-// impure
+// removes first entry of max el
 void f_20(int *A, int n) {
   int i, k, j;
 
@@ -117,7 +118,7 @@ void f_20(int *A, int n) {
   n--; // ??
 }
 
-// impure
+// A = primes < v, 0-terminated
 void f_21(int *A, int v) {
   int i, a, n;
 
@@ -134,7 +135,7 @@ void f_21(int *A, int v) {
   A[i] = 0;
 }
 
-// impure
+// same
 void f_22(int *A, int v) {
   int i, a, n, s;
 
@@ -152,8 +153,8 @@ void f_22(int *A, int v) {
   A[i] = 0;
 }
 
-// impure B
-void f_23(int *A, int *B, int n) {
+// B = A | filter isprime
+void f_23(int const *A, int *B, int n) {
   int j, i, m;
 
   for (j = 0, i = 0; i < n; i++) {
@@ -169,8 +170,8 @@ void f_23(int *A, int *B, int n) {
   B[j] = 0;
 }
 
-// impure
-void f_24(int *A, int *B, int n) {
+// same
+void f_24(int const *A, int *B, int n) {
   int j, i, s, m;
 
   for (j = 0, i = 0; i < n; i++) {
@@ -187,7 +188,7 @@ void f_24(int *A, int *B, int n) {
   B[j] = 0;
 }
 
-// impure
+// A = A | filter isntprime
 void f_25(int *A, int n) {
   int i, m, j;
 
@@ -207,7 +208,7 @@ void f_25(int *A, int n) {
   }
 }
 
-// impure
+// same
 void f_26(int *A, int n) {
   int j, i, s, m;
 
@@ -228,7 +229,7 @@ void f_26(int *A, int n) {
   }
 }
 
-// impure
+// store n prime factors in A, 0-terminated
 void f_27(int *A, int n, int val) {
   int i, m;
 
@@ -243,6 +244,7 @@ void f_27(int *A, int n, int val) {
   A[i] = 0;
 }
 
+// gcd
 int f_28(int *A, int n) {
   int v, i, s;
 
@@ -261,6 +263,7 @@ int f_28(int *A, int n) {
   return v;
 }
 
+// gcd < v
 int f_29(int *A, int n, int v) {
   int i;
 
@@ -270,11 +273,15 @@ int f_29(int *A, int n, int v) {
       i = -1;
     }
 
-  return i;
+  return v;
 }
 
-// impure
-void f_30(int *A, int n, int v, int m) {
+// A = primes < v, at most m, 0-terminated
+// -1 for error
+int f_30(int *A, int len, int v, int m) {
+  if (len < m)
+    return -1;
+
   int i, a, s, j;
 
   for (i = 0, a = 2; a < v && i < m - 1; a++) {
@@ -289,10 +296,13 @@ void f_30(int *A, int n, int v, int m) {
   }
 
   A[i] = 0;
+
+  return 0;
 }
 
+// fst found idx of a duplicate
 // -1 for err
-int f_31(int *c, int n) {
+int f_31(int const *c, int n) {
   int i, j;
 
   for (i = 0; i < n - 1; i++)
@@ -303,8 +313,9 @@ int f_31(int *c, int n) {
   return -1;
 }
 
+// idx of fst entry of most common el
 // -1 for err
-int f_32(int *c, int n) {
+int f_32(int const *c, int n) {
   int s, i, k, j, b = -1;
 
   for (s = 0, i = 0; i < n; i++) {
@@ -319,9 +330,10 @@ int f_32(int *c, int n) {
   return b;
 }
 
+// idx of longest run of equal els
 // -1 for err
-int f_33(int *A, int n) {
-  int s, i, k, j, b = -1;
+int f_33(int const *A, int n) {
+  int s, i, k, b = -1;
 
   for (s = 0, i = 0; i < n - 1; i++)
     if (A[i] == A[i + 1]) {
@@ -335,6 +347,7 @@ int f_33(int *A, int n) {
   return b;
 }
 
+// binary log?
 int f_34(int n) {
   int k, m;
 
@@ -344,7 +357,7 @@ int f_34(int n) {
   return k - 1;
 }
 
-// impure
+// reverse
 void f_35(int *c, int n) {
   int k, i, j;
 
@@ -355,9 +368,10 @@ void f_35(int *c, int n) {
   }
 }
 
+// median
 // -1 for err
-int f_36(int *c, int n, int k1, int k2) {
-  int i, j;
+int f_36(int const *c, int n) {
+  int i, j, k1, k2;
 
   for (i = 0; i < n; i++) {
     for (j = k1 = k2 = 0; j < n; j++)
@@ -375,7 +389,8 @@ int f_36(int *c, int n, int k1, int k2) {
   return -1;
 }
 
-int f_37(int *c, int n) {
+// idx of fst entry of most common el
+int f_37(int const *c, int n) {
   int s, i, j, m, b;
 
   for (s = 0, i = 0; i < n - 1; i++) {
@@ -390,8 +405,9 @@ int f_37(int *c, int n) {
   return b;
 }
 
-int f_38(int *c, int n) {
-  int i, k, m, b;
+// longest equal run len
+int f_38(int const *c, int n) {
+  int i, k, m, b = 0;
 
   for (i = k = m = 0; i < n - 1; i++)
     if (c[i] == c[i + 1])
@@ -406,7 +422,8 @@ int f_38(int *c, int n) {
   return b;
 }
 
-int f_39(int *A, int n) {
+// A | filter >= 0 | takewhile != 0. sum
+int f_39(int const *A, int n) {
   int s, i;
 
   for (s = 0, i = 0; i < n; i++) {
@@ -422,7 +439,8 @@ int f_39(int *A, int n) {
   return s;
 }
 
-int f_40(int *A, int n) {
+// A | takewhile > 0 | sum
+int f_40(int const *A, int n) {
   int s, i;
 
   for (s = 0, i = 0; i < n && A[i] > 0; i++)
@@ -431,7 +449,8 @@ int f_40(int *A, int n) {
   return s;
 }
 
-int f_41(int *A, int n) {
+// A | takewhile INCLUSIVE >= 0 | sum
+int f_41(int const *A, int n) {
   int k, s, i;
 
   for (k = 0, s = 0, i = 0; i < n && k == 0; i++) {
@@ -444,7 +463,8 @@ int f_41(int *A, int n) {
   return s;
 }
 
-int f_42(int *A, int n) {
+// heuristic partition point where two part sums are equal, assumes xs > 0
+int f_42(int const *A, int n) {
   int s1, s2, i, j;
 
   for (s1 = 0, s2 = 0, i = 0, j = n - 1; i <= j;) {
@@ -454,10 +474,11 @@ int f_42(int *A, int n) {
       s2 += A[j], j--;
   }
 
-  return i; // ?
+  return i;
 }
 
-int f_43(int *A, int n) {
+// alternating sum
+int f_43(int const *A, int n) {
   int s, i;
 
   for (s = 0, i = 0; i < n; i++) {
@@ -470,7 +491,7 @@ int f_43(int *A, int n) {
   return s;
 }
 
-// impure B
+// B = A | sort
 void f_44(int *A, int *B, int n) {
   int j, k, i;
 
@@ -488,7 +509,7 @@ void f_44(int *A, int *B, int n) {
   }
 }
 
-// impure A B
+// same
 void f_45(int *A, int *B, int n) {
   int j, max, k, i;
 
@@ -506,7 +527,7 @@ void f_45(int *A, int *B, int n) {
   }
 }
 
-// impure
+// descending selection sort
 void f_46(int *A, int n) {
   int k, i, c;
 
@@ -522,8 +543,13 @@ void f_46(int *A, int n) {
   }
 }
 
-// impure
-void f_47(int *A, int v) {
+// A = 10..v | map (x, digits x | filter != 0)
+//      | filter (snd | all % fst == 0) | map fst
+// -1 for error
+int f_47(int *A, int len, int v) {
+  if (v > len)
+    return -1;
+
   int j, a, k, s, n;
 
   for (j = 0, a = 10; a < v; a++) {
@@ -539,9 +565,11 @@ void f_47(int *A, int v) {
     if (s == 0)
       A[j++] = a;
   }
+
+  return 0;
 }
 
-// impure
+// rm adjacent equal pairs
 void f_48(int *A, int n) {
   int i, j;
 
@@ -555,8 +583,9 @@ void f_48(int *A, int n) {
     }
 }
 
+// idx of min non-negative in A[0..10]
 // -1 for error
-int f_49(int *A, int n) {
+int f_49(int const *A, int n) {
   if (n < 10)
     return -1;
 
@@ -575,8 +604,9 @@ int f_49(int *A, int n) {
   return k;
 }
 
+// negative-to-positive transitions in A[0..10]
 // -1 for error
-int f_50(int *A, int n) {
+int f_50(int const *A, int n) {
   if (n < 10)
     return -1;
 
@@ -592,11 +622,12 @@ int f_50(int *A, int n) {
       k = 0;
     }
 
-  return 0;
+  return s;
 }
 
+// A | take 10 | max | max 0
 // -1 for error
-int f_51(int *A, int n) {
+int f_51(int const *A, int n) {
   if (n < 10)
     return -1;
 
@@ -609,8 +640,9 @@ int f_51(int *A, int n) {
   return s;
 }
 
+// idx of max in A[0..10]
 // -1 for error
-int f_52(int *A, int n) {
+int f_52(int const *A, int n) {
   if (n < 10)
     return -1;
 
@@ -623,8 +655,9 @@ int f_52(int *A, int n) {
   return k;
 }
 
+// idx of min non-negative in A[0..10]
 // -1 for error
-int f_53(int *A, int n) {
+int f_53(int const *A, int n) {
   if (n < 10)
     return -1;
 
@@ -643,8 +676,9 @@ int f_53(int *A, int n) {
   return k;
 }
 
+// same
 // -1 for error
-int f_54(int *A, int n) {
+int f_54(int const *A, int n) {
   if (n < 10)
     return -1;
 
@@ -661,8 +695,9 @@ int f_54(int *A, int n) {
   return k;
 }
 
+// A | take 10 | filter > 0 | count
 // -1 for error
-int f_55(int *A, int n) {
+int f_55(int const *A, int n) {
   if (n < 10)
     return -1;
 
@@ -675,8 +710,9 @@ int f_55(int *A, int n) {
   return s;
 }
 
+// negative-to-positive transitions in A[0..10] part 2
 // -1 for error
-int f_56(int *A, int n) {
+int f_56(int const *A, int n) {
   if (n < 10)
     return -1;
 
@@ -689,8 +725,9 @@ int f_56(int *A, int n) {
   return s;
 }
 
+// longest run of growing numbers in A[0..9]
 // -1 for error
-int f_57(int *A, int n) {
+int f_57(int const *A, int n) {
   if (n < 10)
     return -1;
 
@@ -710,8 +747,9 @@ int f_57(int *A, int n) {
   return s;
 }
 
+// negative-to-positive transitions in A[0..10] part 3
 // -1 for error
-int f_58(int *A, int n) {
+int f_58(int const *A, int n) {
   if (n < 10)
     return -1;
 
@@ -739,34 +777,28 @@ void print_buf(int *buf, int len) {
 
 int main(int argc, char *argv[]) {
   if (argc < 2) {
-    eprintf("Usage: prac1 <num>");
+    eprintf("Usage: %s <num>", argv[0]);
     return EXIT_FAILURE;
   }
-
-  int result;
 
   int arg = 10; // can be anything really
   int arg2 = 65;
 
-  int buf_len = 30000; // see f17 for why
-  int *buf = malloc(buf_len * sizeof(int));
-  int *buf2 = malloc(buf_len * sizeof(int));
+#define BUF_LEN 30000 // see f17 for why
+  int *buf = malloc(BUF_LEN * sizeof(int));
+  int *buf2 = malloc(BUF_LEN * sizeof(int));
   if (buf == NULL || buf2 == NULL) {
     eprintf("Alloc fault");
-    return EXIT_FAILURE;
+    exit(EXIT_FAILURE);
   } else {
-    for (int i = 0; i < buf_len; i++) {
+    for (int i = 0; i < BUF_LEN; i++) {
       buf[i] = 1; // same ^
       buf2[i] = 2;
     }
   }
 
-  long fn = strtol(argv[1], NULL, 10);
-  // if (errno != 0) {
-  //   return EXIT_FAILURE;
-  // }
-
-  switch (fn) {
+  int result;
+  switch (strtol(argv[1], NULL, 10)) {
   case 13:
     result = f_13(arg);
     printf("%d", result);
@@ -780,84 +812,87 @@ int main(int argc, char *argv[]) {
     printf("%d", result);
     break;
   case 16:
-    f_16(buf, buf_len);
-    print_buf(buf, buf_len);
+    f_16(buf, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 17:
-    result = f_17(buf, buf_len);
+    result = f_17(buf, BUF_LEN);
     if (result == -1)
       eprintf("f17 error");
     else
-      print_buf(buf, buf_len);
+      print_buf(buf, BUF_LEN);
     break;
   case 18:
-    f_18(buf, buf_len);
-    print_buf(buf, buf_len);
+    f_18(buf, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 19:
-    f_19(buf, buf_len);
-    print_buf(buf, buf_len);
+    f_19(buf, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 20:
-    f_20(buf, buf_len);
-    print_buf(buf, buf_len);
+    f_20(buf, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 21:
-    f_21(buf, buf_len);
-    print_buf(buf, buf_len);
+    f_21(buf, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 22:
-    f_22(buf, buf_len);
-    print_buf(buf, buf_len);
+    f_22(buf, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 23:
-    f_23(buf, buf2, buf_len);
-    print_buf(buf2, buf_len);
+    f_23(buf, buf2, BUF_LEN);
+    print_buf(buf2, BUF_LEN);
     break;
   case 24:
-    f_24(buf, buf2, buf_len);
-    print_buf(buf, buf_len);
+    f_24(buf, buf2, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 25:
-    f_25(buf, buf_len);
-    print_buf(buf, buf_len);
+    f_25(buf, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 26:
-    f_26(buf, buf_len);
-    print_buf(buf, buf_len);
+    f_26(buf, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 27:
-    f_27(buf, buf_len, arg);
-    print_buf(buf, buf_len);
+    f_27(buf, BUF_LEN, arg);
+    print_buf(buf, BUF_LEN);
     break;
   case 28:
-    result = f_28(buf, buf_len);
+    result = f_28(buf, BUF_LEN);
     printf("%d", result);
     break;
   case 29:
-    result = f_29(buf, buf_len, arg);
+    result = f_29(buf, BUF_LEN, arg);
     printf("%d", result);
     break;
   case 30:
-    f_30(buf, buf_len, arg, arg2);
-    print_buf(buf, buf_len);
+    result = f_30(buf, BUF_LEN, arg, arg2);
+    if (result == -1)
+      eprintf("f31 error");
+    else
+      print_buf(buf, BUF_LEN);
     break;
   case 31:
-    result = f_31(buf, buf_len);
+    result = f_31(buf, BUF_LEN);
     if (result == -1)
       eprintf("f31 error");
     else
       printf("%d", result);
     break;
   case 32:
-    result = f_32(buf, buf_len);
+    result = f_32(buf, BUF_LEN);
     if (result == -1)
       eprintf("f32 error");
     else
       printf("%d", result);
     break;
   case 33:
-    result = f_33(buf, buf_len);
+    result = f_33(buf, BUF_LEN);
     if (result == -1)
       eprintf("f33 error");
     else
@@ -868,129 +903,133 @@ int main(int argc, char *argv[]) {
     printf("%d", result);
     break;
   case 35:
-    f_35(buf, buf_len);
-    print_buf(buf, buf_len);
+    f_35(buf, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 36:
-    result = f_36(buf, buf_len, arg, arg2);
+    result = f_36(buf, BUF_LEN);
     if (result == -1)
       eprintf("f36 error");
     else
       printf("%d", result);
     break;
   case 37:
-    result = f_37(buf, buf_len);
+    result = f_37(buf, BUF_LEN);
     printf("%d", result);
     break;
   case 38:
-    result = f_38(buf, buf_len);
+    result = f_38(buf, BUF_LEN);
     printf("%d", result);
     break;
   case 39:
-    result = f_39(buf, buf_len);
+    result = f_39(buf, BUF_LEN);
     printf("%d", result);
     break;
   case 40:
-    result = f_40(buf, buf_len);
+    result = f_40(buf, BUF_LEN);
     printf("%d", result);
     break;
   case 41:
-    result = f_41(buf, buf_len);
+    result = f_41(buf, BUF_LEN);
     printf("%d", result);
     break;
   case 42:
-    result = f_42(buf, buf_len);
+    result = f_42(buf, BUF_LEN);
     printf("%d", result);
     break;
   case 43:
-    result = f_43(buf, buf_len);
+    result = f_43(buf, BUF_LEN);
     printf("%d", result);
     break;
   case 44:
-    f_44(buf, buf2, buf_len);
-    print_buf(buf2, buf_len);
+    f_44(buf, buf2, BUF_LEN);
+    print_buf(buf2, BUF_LEN);
     break;
   case 45:
-    f_45(buf, buf2, buf_len);
-    print_buf(buf, buf_len);
-    print_buf(buf2, buf_len);
+    f_45(buf, buf2, BUF_LEN);
+    print_buf(buf, BUF_LEN);
+    print_buf(buf2, BUF_LEN);
     break;
   case 46:
-    f_46(buf, buf_len);
-    print_buf(buf, buf_len);
+    f_46(buf, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 47:
-    f_47(buf, buf_len);
-    print_buf(buf, buf_len);
+    result = f_47(buf, BUF_LEN, arg);
+    if (result == -1)
+      eprintf("f47 error");
+    else
+      print_buf(buf, BUF_LEN);
     break;
   case 48:
-    f_48(buf, buf_len);
-    print_buf(buf, buf_len);
+    f_48(buf, BUF_LEN);
+    print_buf(buf, BUF_LEN);
     break;
   case 49:
-    result = f_49(buf, buf_len);
+    result = f_49(buf, BUF_LEN);
     if (result == -1)
       eprintf("f49 error");
+    else
+      printf("%d", result);
     break;
   case 50:
-    result = f_50(buf, buf_len);
+    result = f_50(buf, BUF_LEN);
     if (result == -1)
       eprintf("f50 error");
     else
       printf("%d", result);
-
     break;
   case 51:
-    result = f_51(buf, buf_len);
+    result = f_51(buf, BUF_LEN);
     if (result == -1)
       eprintf("f51 error");
     else
       printf("%d", result);
     break;
   case 52:
-    result = f_52(buf, buf_len);
+    result = f_52(buf, BUF_LEN);
     if (result == -1)
       eprintf("f52 error");
     else
       printf("%d", result);
     break;
   case 53:
-    result = f_53(buf, buf_len);
+    result = f_53(buf, BUF_LEN);
     if (result == -1)
       eprintf("f53 error");
     else
       printf("%d", result);
     break;
   case 54:
-    result = f_54(buf, buf_len);
+    result = f_54(buf, BUF_LEN);
     if (result == -1)
       eprintf("f54 error");
     else
       printf("%d", result);
     break;
   case 55:
-    result = f_55(buf, buf_len);
+    result = f_55(buf, BUF_LEN);
     if (result == -1)
       eprintf("f55 error");
     else
       printf("%d", result);
     break;
   case 56:
-    result = f_56(buf, buf_len);
+    result = f_56(buf, BUF_LEN);
     if (result == -1)
       eprintf("f56 error");
     else
       printf("%d", result);
     break;
   case 57:
-    result = f_57(buf, buf_len);
+    result = f_57(buf, BUF_LEN);
     if (result == -1)
       eprintf("f57 error");
     else
       printf("%d", result);
     break;
   case 58:
-    result = f_58(buf, buf_len);
+    result = f_58(buf, BUF_LEN);
     if (result == -1)
       eprintf("f58 error");
     else
