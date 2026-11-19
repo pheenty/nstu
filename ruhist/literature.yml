@@ -474,3 +474,48 @@
     issue: 3
   date: 2025
   page-range: 898-903
+
+# https://cyberleninka.ru/article/n/universitetskiy-ustav-1884-g-i-organizatsiya-uchebnoy-povsednevnosti-v-kazanskom-universitete-na-rubezhe-xix-xx-vekov
+11-университетский-устав:
+  type: article
+  author: Бушуева, Людмила Александровна
+  title: Университетский устав 1884 г. и организация учебной повседневности в Казанском университете на рубеже XIX–XX веков
+  parent:
+    title: Известия СГУ
+    issue: 3
+  date: 2022
+
+# https://cyberleninka.ru/article/n/kontrreformy-aleksandra-iii-soderzhanie-osobennosti-itogi
+11-контрреформы-александра:
+  type: article
+  author:
+    - Шаруда, А. А.
+    - Ярмонова, В. В.
+    - Хабибулина, Е. Б.
+  title: Контрреформы Александра III. Содержание, особенности, итоги
+  parent:
+    title: Инновационная наука
+    issue: 3
+  date: 2021
+
+# https://cyberleninka.ru/article/n/tserkovno-prihodskie-shkoly-rossiyskoy-imperii-v-sisteme-nachalnogo-obrazovaniya-v-kontse-xix-nachale-xx-stoletiy
+11-церковно-приходские-школы:
+  type: article
+  author:
+    - Кучеров, Иван Владимирович
+    - Гордиенко, Татьяна Петровна
+  title: Церковно-приходские школы Российской империи в системе начального образования в конце XIX – начале XX столетий
+  parent:
+    title: Педагогическое образование в России
+    issue: 3
+  date: 2024
+
+# https://cyberleninka.ru/article/n/preobrazovanie-moskovskih-vysshih-zhenskih-kursov-vo-vtoroy-moskovskiy-gosudarstvennyy-universitet
+11-преобразование-курсов:
+  type: article
+  author: Дубицкая, Елена Александровна
+  title: Преобразование московских высших женских курсов во Второй Московский государственный университет
+  parent:
+    title: Педагогика и психология образования
+    issue: 1
+  date: 2022
