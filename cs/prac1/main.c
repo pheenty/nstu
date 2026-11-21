@@ -566,6 +566,8 @@ int f_47(int *A, int len, int v) {
       A[j++] = a;
   }
 
+  A[j] = 0;
+
   return 0;
 }
 
@@ -769,9 +771,9 @@ int f_58(int const *A, int n) {
 
 void print_buf(int *buf, int len) {
   for (int i = 0; i < len; i++) {
-    printf("%d ", buf[i]);
-    if (buf[i] == 1)
+    if (buf[i] == 0)
       break;
+    printf("%d ", buf[i]);
   }
 }
 
@@ -781,10 +783,10 @@ int main(int argc, char *argv[]) {
     return EXIT_FAILURE;
   }
 
-  int arg = 10; // can be anything really
-  int arg2 = 65;
+  int arg = 65; // can be anything really
+  int arg2 = 100;
 
-#define BUF_LEN 30000 // see f17 for why
+#define BUF_LEN 100 // see f17 for why
   int *buf = malloc(BUF_LEN * sizeof(int));
   int *buf2 = malloc(BUF_LEN * sizeof(int));
   if (buf == NULL || buf2 == NULL) {
@@ -792,8 +794,8 @@ int main(int argc, char *argv[]) {
     exit(EXIT_FAILURE);
   } else {
     for (int i = 0; i < BUF_LEN; i++) {
-      buf[i] = 1; // same ^
-      buf2[i] = 2;
+      buf[i] = i + 1; // same ^
+      buf2[i] = 2 * i + 1;
     }
   }
 

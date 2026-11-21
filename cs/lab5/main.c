@@ -43,9 +43,7 @@ float rand_range(float min, float max) {
 }
 
 void init_balls() {
-  for (size_t i = BALL_COUNT; i-- > 0;) {
-    Ball *ball = &BALLS[i];
-
+  for (Ball *ball = BALLS; ball < BALLS + BALL_COUNT; ball++) {
     // spawn fully inside
     ball->x = rand_range(BALL_RADIUS, WINDOW_WIDTH - BALL_RADIUS);
     ball->y = rand_range(BALL_RADIUS, WINDOW_HEIGHT - BALL_RADIUS);

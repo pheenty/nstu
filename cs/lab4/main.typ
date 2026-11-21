@@ -3,7 +3,7 @@
   4,
   [Сортировка и поиск],
   code1: read("main.c"),
-  //code2: read("extra.c"),
+  code2: read("extra.c"),
 )
 
 = Задание
