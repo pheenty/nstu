@@ -484,6 +484,7 @@
     title: Известия СГУ
     issue: 3
   date: 2022
+  page-range: 291-297
 
 # https://cyberleninka.ru/article/n/kontrreformy-aleksandra-iii-soderzhanie-osobennosti-itogi
 11-контрреформы-александра:
@@ -497,6 +498,7 @@
     title: Инновационная наука
     issue: 3
   date: 2021
+  page-range: 67-73
 
 # https://cyberleninka.ru/article/n/tserkovno-prihodskie-shkoly-rossiyskoy-imperii-v-sisteme-nachalnogo-obrazovaniya-v-kontse-xix-nachale-xx-stoletiy
 11-церковно-приходские-школы:
@@ -509,6 +511,7 @@
     title: Педагогическое образование в России
     issue: 3
   date: 2024
+  page-range: 10-17
 
 # https://cyberleninka.ru/article/n/preobrazovanie-moskovskih-vysshih-zhenskih-kursov-vo-vtoroy-moskovskiy-gosudarstvennyy-universitet
 11-преобразование-курсов:
@@ -519,3 +522,4 @@
     title: Педагогика и психология образования
     issue: 1
   date: 2022
+  page-range: 21-36
