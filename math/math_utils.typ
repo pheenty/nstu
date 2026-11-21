@@ -45,3 +45,5 @@
 
   body
 }
+
+#let int = math.integral
