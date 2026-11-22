@@ -1,5 +1,6 @@
 #import "@preview/touying:0.8.0": *
 #import themes.aqua: *
+#import "../img.typ": img
 #show: aqua-theme.with(
   aspect-ratio: "16-9",
   config-info(
@@ -9,14 +10,6 @@
 )
 
 #title-slide()
-
-#let img(path, src, caption) = {
-  meanwhile
-  align(
-    center + bottom,
-    link(src, image("assets/" + path, height: 40%) + caption),
-  )
-}
 
 = Introduction
 
