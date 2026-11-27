@@ -519,3 +519,57 @@
     title: Педагогика и психология образования
     issue: 1
   date: 2022
+
+# https://cyberleninka.ru/article/n/stolypinskiy-otvet-strategiya-i-taktika-reform
+12-столыпинский-ответ:
+  type: article
+  author: Елисеев, И. Н.
+  title: "Столыпинский ответ: стратегия и тактика реформ"
+  parent:
+    type: web
+    title: Московский экономический журнал
+  date: 2018
+  volume: 3
+  issue: 1
+  page-range: 127-142
+  url:
+    value: https://qje.su/ru/nauka/article/6a9c154832807fdbab8681bd/view
+    date: 2026-11-25
+
+# https://cyberleninka.ru/article/n/golod-i-prodovolstvennaya-politika-rossiyskoy-imperii-v-kontse-xix-nachale-hh-vekov
+12-продовольственная-политика:
+  type: article
+  author: Рогожина, Ангелина Сергеевна
+  title: Голод и продовольственная политика Российской империи в конце XIX – начале XX веков
+  parent:
+    title: Научный диалог
+    issue: 4
+  date: 2021
+  page-range: 423-437
+
+# https://cyberleninka.ru/article/n/stolypinskie-reformy-istoricheskaya-rol-i-vliyanie-na-formirovanie-zemleustroystva-v-rossii
+12-землеустройство:
+  type: article
+  author: Фомин, Александр Анатольевич
+  title: "Столыпинские реформы: историческая роль и влияние на формирование землеустройства в России"
+  parent:
+    type: web
+    title: Столыпинский вестник
+  date: 2020
+  volume: 2
+  issue: 1
+  page-range: 7-19
+  url:
+    value: https://stolypinvestnik.ru/ru/storage/view/217493#page=7
+    date: 2026-11-25
+
+# https://cyberleninka.ru/article/n/geopoliticheskaya-suschnost-pereselencheskoy-politiki-p-a-stolypina
+12-переселенческая-политика:
+  type: article
+  author: Смирнов, Сергей Сергеевич
+  title: Геополитическая сущность переселенческой политики П. А. Столыпина
+  parent:
+    title: Социум и власть
+    issue: 5 (49)
+  date: 2014
+  page-range: 101-105
